@@ -1,0 +1,4 @@
+signature,original_up,original_down,mapped_up,mapped_down,mapping_file,up_file,down_file
+ATLAS_SIG_B_TOP100,100,100,99,100,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP100_entrez_mapping.csv,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP100_up_entrez.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP100_dn_entrez.gmt
+ATLAS_SIG_B_TOP150,150,150,149,150,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP150_entrez_mapping.csv,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP150_up_entrez.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP150_dn_entrez.gmt
+ATLAS_SIG_A_TOP150,150,150,150,150,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_A_TOP150_entrez_mapping.csv,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_A_TOP150_up_entrez.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_A_TOP150_dn_entrez.gmt

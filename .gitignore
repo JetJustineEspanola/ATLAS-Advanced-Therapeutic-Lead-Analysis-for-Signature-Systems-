@@ -24,4 +24,5 @@ env/
 # Large/generated data
 data/raw/
 data/processed/
-results/
+
+results/cmap/*submission_response.json

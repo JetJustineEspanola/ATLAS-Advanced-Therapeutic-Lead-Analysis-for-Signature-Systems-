@@ -1,0 +1,15 @@
+check,result
+Salmon files found,6
+tx2gene mapping rows,670670
+Transcript match rate,99.53%
+Duplicate transcript mappings,0
+Transcripts mapping to multiple genes,0
+Gene matrix rows,61490
+Gene matrix columns,6
+Missing gene counts,0
+Duplicate gene IDs,0
+Genes with zero counts,36128
+Genes with detected counts,25362
+PCA PC1 variance,54.76%
+PCA PC2 variance,13.07%
+PCA PC1+PC2 variance,67.83%
