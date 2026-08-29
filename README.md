@@ -30,3 +30,6 @@ Q3 ── Molecular docking
 Q4 ── Dual-target candidates
 ↓
 Q5 ── ADMET + drug-likeness
+
+How to use venv in bash
+source .venv/bin/activate
