@@ -1,0 +1,12 @@
+{
+  "stage": "04M",
+  "input_file": "/home/regulus/Documents/ATLAS/results/cmap/prioritized/ATLAS_CMap_prioritized_all.csv",
+  "input_compounds": 2837,
+  "annotated_compounds": 2837,
+  "pubchem_resolved": 2564,
+  "candidate_for_drug_status_review": 1090,
+  "research_compounds": 190,
+  "manual_review": 149,
+  "regulatory_status_verified": false,
+  "next_stage": "04N_regulatory_and_drug_status_verification"
+}
