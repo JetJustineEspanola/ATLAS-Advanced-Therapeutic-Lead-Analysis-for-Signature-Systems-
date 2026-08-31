@@ -1,0 +1,12 @@
+==============================================================================
+ATLAS — 00S VALIDATED RESISTANCE EVIDENCE EXPORT
+==============================================================================
+Strict-core genes exported: 242
+  Up: 130 | Down: 112
+TGF-beta positive module overlap with strict core: 1/16
+TGF-beta negative module overlap with strict core: 0/7
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/downstream/validated_resistance_gene_evidence.csv
+/home/regulus/Documents/ATLAS/results/external_validation/downstream/validated_tgfb_module_evidence.csv
+/home/regulus/Documents/ATLAS/results/external_validation/downstream/validated_evidence_summary.csv

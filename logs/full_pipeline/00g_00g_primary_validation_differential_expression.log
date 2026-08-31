@@ -1,0 +1,115 @@
+==============================================================================
+ATLAS — 00G PRIMARY VALIDATION DIFFERENTIAL EXPRESSION
+==============================================================================
+
+[GSE121105]
+  samples: 9
+  genes after count filter: 22622
+  phenotype counts:
+phenotype
+RESISTANT                6
+SENSITIVE_OR_PARENTAL    3
+Fitting size factors...
+Using None as control genes, passed at DeseqDataSet initialization
+... done in 0.01 seconds.
+
+Fitting dispersions...
+... done in 7.82 seconds.
+
+Fitting dispersion trend curve...
+... done in 0.24 seconds.
+
+Fitting MAP dispersions...
+... done in 8.41 seconds.
+
+Fitting LFCs...
+... done in 4.22 seconds.
+
+Calculating cook's distance...
+... done in 0.01 seconds.
+
+Replacing 0 outlier genes.
+
+Running Wald tests...
+... done in 0.95 seconds.
+
+Log2 fold change & Wald test p-value: phenotype RESISTANT vs SENSITIVE_OR_PARENTAL
+                               baseMean  log2FoldChange  ...    pvalue      padj
+gene_id                                                  ...                    
+A1BG-AS1|ENSG00000268895.5     4.006509        0.145542  ...  0.828908  0.905939
+A1CF|ENSG00000148584.14        5.329297        0.400697  ...  0.480333  0.650072
+A2M-AS1|ENSG00000245105.2      9.001079       -0.417738  ...  0.360162  0.540922
+A2ML1|ENSG00000166535.19      54.062641       -0.093441  ...  0.685368  0.809703
+A2MP1|ENSG00000256069.7       19.095066       -1.791990  ...  0.000002  0.000043
+...                                 ...             ...  ...       ...       ...
+snoU2_19|ENSG00000201592.1     4.095937       -0.630129  ...  0.340005  0.520908
+uc_338|ENSG00000274051.1       1.210331       -0.970597  ...  0.375226       NaN
+uc_338|ENSG00000275227.1       1.523751       -1.777539  ...  0.072731       NaN
+uc_338|ENSG00000277948.1       1.221529        0.931275  ...  0.437575       NaN
+yR211F11.2|ENSG00000213076.3  93.902590        0.450456  ...  0.020600  0.073713
+
+[22622 rows x 6 columns]
+  FDR<0.05 genes: 4781
+  up in resistant: 2448
+  down in resistant: 2333
+
+[GSE237606]
+  samples: 40
+  genes after count filter: 28293
+  phenotype counts:
+phenotype
+SENSITIVE_OR_PARENTAL    20
+RESISTANT                20
+  strata: 10
+Fitting size factors...
+Using None as control genes, passed at DeseqDataSet initialization
+... done in 0.02 seconds.
+
+Fitting dispersions...
+... done in 15.68 seconds.
+
+Fitting dispersion trend curve...
+... done in 0.38 seconds.
+
+Fitting MAP dispersions...
+... done in 13.10 seconds.
+
+Fitting LFCs...
+... done in 8.38 seconds.
+
+Calculating cook's distance...
+... done in 0.04 seconds.
+
+Replacing 0 outlier genes.
+
+Running Wald tests...
+... done in 1.33 seconds.
+
+Log2 fold change & Wald test p-value: phenotype RESISTANT vs SENSITIVE_OR_PARENTAL
+             baseMean  log2FoldChange  ...        pvalue          padj
+gene_id                                ...                            
+A1BG         6.451350        0.111181  ...  6.042220e-01  6.641066e-01
+A1BG-AS1     3.713498       -0.254016  ...  3.864929e-01  4.534764e-01
+A1CF        11.537131       -0.822385  ...  1.870904e-06  3.965336e-06
+A2M          1.959189       -0.710596  ...  1.527576e-01  1.990343e-01
+A2M-AS1     15.136250       -0.857784  ...  4.511522e-08  1.037204e-07
+...               ...             ...  ...           ...           ...
+ZYG11B    1569.435273        0.458108  ...  1.497765e-69  1.236167e-68
+ZYX       1790.557455       -0.604830  ...  2.307862e-11  6.120167e-11
+ZYX_1      393.523328       -0.629356  ...  1.698736e-14  5.018153e-14
+ZZEF1     2408.100758       -0.208117  ...  1.579818e-22  5.798777e-22
+ZZZ3      1294.298873        0.068262  ...  2.520253e-03  4.239918e-03
+
+[28293 rows x 6 columns]
+  FDR<0.05 genes: 18534
+  up in resistant: 8572
+  down in resistant: 9962
+
+==============================================================================
+00G COMPLETE
+==============================================================================
+accession  samples  genes_tested  fdr05_genes  up_fdr05  down_fdr05                design                                                                     output
+GSE121105        9         22622         4781      2448        2333           ~ phenotype /home/regulus/Documents/ATLAS/results/external_validation/GSE121105_DE.csv
+GSE237606       40         28293        18534      8572        9962 ~ stratum + phenotype /home/regulus/Documents/ATLAS/results/external_validation/GSE237606_DE.csv
+
+Summary: /home/regulus/Documents/ATLAS/results/external_validation/primary_validation_DE_summary.csv

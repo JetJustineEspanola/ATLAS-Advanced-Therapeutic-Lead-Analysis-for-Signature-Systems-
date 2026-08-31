@@ -13,11 +13,11 @@
       "up_genes": 149,
       "down_genes": 150,
       "http_status": 200,
-      "status": "completed",
-      "job_id": "6a92f7a00262700013c4e5f1",
+      "status": "pending",
+      "job_id": "6a953bd20262700013c4e65a",
       "submitted": true,
       "errors": [],
-      "download_status": "completed"
+      "download_status": null
     },
     {
       "signature": "ATLAS_SIG_A_TOP150",
@@ -25,11 +25,11 @@
       "up_genes": 150,
       "down_genes": 150,
       "http_status": 200,
-      "status": "completed",
-      "job_id": "6a92f7a109168d001496ada7",
+      "status": "pending",
+      "job_id": "6a953bd30262700013c4e65c",
       "submitted": true,
       "errors": [],
-      "download_status": "completed"
+      "download_status": null
     }
   ]
 }

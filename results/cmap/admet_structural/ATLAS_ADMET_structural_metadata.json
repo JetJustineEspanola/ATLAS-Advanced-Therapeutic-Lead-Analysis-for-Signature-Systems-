@@ -1,7 +1,7 @@
 {
   "stage": "04T",
   "implementation": "v2_corrected_esol_coefficient",
-  "created_utc": "2026-08-31T04:23:22.726002+00:00",
+  "created_utc": "2026-08-31T09:06:42.111002+00:00",
   "inputs": {
     "04R": "/home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_final_candidate_prioritization.csv",
     "04S": "/home/regulus/Documents/ATLAS/results/cmap/docking/ATLAS_docking_results.csv",

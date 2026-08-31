@@ -1,7 +1,7 @@
 {
   "stage": "04U",
   "implementation": "v2_convergent_priority_gate",
-  "created_utc": "2026-08-31T04:29:03.626654+00:00",
+  "created_utc": "2026-08-31T09:06:42.490476+00:00",
   "inputs": {
     "04R": "/home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_final_candidate_prioritization.csv",
     "04T": "/home/regulus/Documents/ATLAS/results/cmap/admet_structural/ATLAS_ADMET_structural_assessment.csv",

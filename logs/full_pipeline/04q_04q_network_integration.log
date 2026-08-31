@@ -1,0 +1,52 @@
+
+============================================================================
+ATLAS — Stage 04Q PPI + Pathway / Network Integration
+============================================================================
+
+Selected drugs: 25
+04P target-pair rows: 168
+Using validated three-dataset resistance core: 242/242 genes
+Resistance genes selected: 242
+Mapped targets: 66
+Mapped resistance genes: 235
+STRING network nodes submitted: 300
+
+============================================================================
+STAGE 04Q SUMMARY
+============================================================================
+ selected_drugs  target_query_rows  mapped_target_symbols  resistance_genes_requested  mapped_resistance_genes  string_network_edges  target_resistance_links  targets_with_network_support
+             25                136                     66                         242                      235                   179                       62                            32
+
+============================================================================
+TOP NETWORK-SUPPORTED DRUGS
+============================================================================
+ priority_rank         pert_iname target_support_category  target_evidence_strength_score best_network_target best_network_support_category  best_network_support_score  best_target_linked_resistance_gene_n  integrated_target_network_score
+            71        zolantidine   STRONG_TARGET_SUPPORT                               3                TP53        STRONG_NETWORK_SUPPORT                         6.0                                  10.0                              9.0
+             3  PKCbeta-inhibitor   STRONG_TARGET_SUPPORT                               4               CASP1      MODERATE_NETWORK_SUPPORT                         4.0                                   2.0                              8.0
+            34         resorcinol   STRONG_TARGET_SUPPORT                               4              CYP3A4      MODERATE_NETWORK_SUPPORT                         4.0                                   2.0                              8.0
+            47           GR-55562   STRONG_TARGET_SUPPORT                               4              CYP3A4      MODERATE_NETWORK_SUPPORT                         4.0                                   2.0                              8.0
+            57         cinalukast   STRONG_TARGET_SUPPORT                               4              CYP3A4      MODERATE_NETWORK_SUPPORT                         4.0                                   2.0                              8.0
+            75        rilmenidine   STRONG_TARGET_SUPPORT                               4              ADRA2A      MODERATE_NETWORK_SUPPORT                         4.0                                   0.0                              8.0
+            78 GSK-3-inhibitor-II   STRONG_TARGET_SUPPORT                               4               CASP3      MODERATE_NETWORK_SUPPORT                         4.0                                   3.0                              8.0
+            82       palonosetron   STRONG_TARGET_SUPPORT                               4              SLC6A4      MODERATE_NETWORK_SUPPORT                         4.0                                   2.0                              8.0
+            61          tiotidine   STRONG_TARGET_SUPPORT                               4              CYP2D6      MODERATE_NETWORK_SUPPORT                         3.0                                   1.0                              7.0
+            66           L-701324   STRONG_TARGET_SUPPORT                               4              CYP2D6      MODERATE_NETWORK_SUPPORT                         3.0                                   1.0                              7.0
+           102          BMY-45778   STRONG_TARGET_SUPPORT                               4              CYP2D6      MODERATE_NETWORK_SUPPORT                         3.0                                   1.0                              7.0
+            69           SR-27897   STRONG_TARGET_SUPPORT                               4               CCKAR          WEAK_NETWORK_SUPPORT                         2.0                                   1.0                              6.0
+            85               YC-1   STRONG_TARGET_SUPPORT                               4               FOLH1          WEAK_NETWORK_SUPPORT                         2.0                                   1.0                              6.0
+            80           SIB-1893   STRONG_TARGET_SUPPORT                               3                GRM5      MODERATE_NETWORK_SUPPORT                         3.0                                   1.0                              6.0
+             5         clofibrate MODERATE_TARGET_SUPPORT                               2              CYP3A4      MODERATE_NETWORK_SUPPORT                         4.0                                   2.0                              6.0
+
+============================================================================
+STAGE 04Q COMPLETE
+============================================================================
+
+Outputs:
+  /home/regulus/Documents/ATLAS/results/cmap/network_integration/ATLAS_drug_target_network_edges.csv
+  /home/regulus/Documents/ATLAS/results/cmap/network_integration/ATLAS_target_resistance_gene_links.csv
+  /home/regulus/Documents/ATLAS/results/cmap/network_integration/ATLAS_target_network_scores.csv
+  /home/regulus/Documents/ATLAS/results/cmap/network_integration/ATLAS_drug_network_prioritized.csv
+  /home/regulus/Documents/ATLAS/results/cmap/network_integration/ATLAS_network_summary.csv
+  /home/regulus/Documents/ATLAS/results/cmap/network_integration/ATLAS_network_metadata.json
+
+Next: 04R — Final candidate prioritization

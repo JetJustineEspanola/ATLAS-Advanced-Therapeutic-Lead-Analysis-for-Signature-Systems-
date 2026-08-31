@@ -1,0 +1,24 @@
+==============================================================================
+ATLAS — 00P TGF-BETA MODULE SCORE VALIDATION
+==============================================================================
+
+[GSE121105]
+  POSITIVE_TGFB_16: genes=16, Δ(R-S)=0.696, MWU p=0.09524
+  GSE121105_NEGATIVE_TGFB_7: genes=7, Δ(R-S)=-1.902, MWU p=0.02381
+
+[GSE237606]
+  POSITIVE_TGFB_16: genes=16, Δ(R-S)=1.772, MWU p=6.796e-08
+    stratum-adjusted Δ=1.772, paired p=1.82e-10
+  GSE121105_NEGATIVE_TGFB_7: genes=7, Δ(R-S)=-1.002, MWU p=9.127e-07
+    stratum-adjusted Δ=-1.002, paired p=6.668e-07
+
+Summary:
+  dataset                    module  genes_present_n                                                                                     genes_present  resistant_n  sensitive_parental_n  mean_score_resistant  mean_score_sensitive  mean_difference_resistant_minus_sensitive  mannwhitney_p  stratum_adjusted_mean_difference  stratum_paired_t_p
+GSE121105          POSITIVE_TGFB_16               16 ACVR1;ARID4B;FURIN;HDAC1;LTBP2;MAP3K7;NOG;RAB31;RHOA;SMAD1;SMURF2;SPTBN1;TGFB1;TGFBR1;TRIM33;XIAP            6                     3              0.266955             -0.429051                                   0.696006   9.523810e-02                               NaN                 NaN
+GSE121105 GSE121105_NEGATIVE_TGFB_7                7                                                             HIPK2;ID1;ID3;SKI;SLC20A1;SMAD7;THBS1            6                     3             -0.818806              1.082905                                  -1.901712   2.380952e-02                               NaN                 NaN
+GSE237606          POSITIVE_TGFB_16               16 ACVR1;ARID4B;FURIN;HDAC1;LTBP2;MAP3K7;NOG;RAB31;RHOA;SMAD1;SMURF2;SPTBN1;TGFB1;TGFBR1;TRIM33;XIAP           20                    20              0.886116             -0.886116                                   1.772233   6.795615e-08                          1.772233        1.819709e-10
+GSE237606 GSE121105_NEGATIVE_TGFB_7                7                                                             HIPK2;ID1;ID3;SKI;SLC20A1;SMAD7;THBS1           20                    20             -0.501245              0.501245                                  -1.002491   9.126647e-07                         -1.002491        6.667829e-07
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_module_sample_scores.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_module_score_summary.csv

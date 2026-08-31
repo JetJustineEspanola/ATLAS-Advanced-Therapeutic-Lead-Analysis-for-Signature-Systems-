@@ -1,0 +1,23 @@
+==============================================================================
+ATLAS — 00D3 DATASET RELATIONSHIP / OVERLAP AUDIT
+==============================================================================
+
+Potentially non-independent datasets:
+   dataset_id  sample_n               relationship_role                                              relationship_reason
+GEO:GSE237607        80 SUPERSERIES_OR_UMBRELLA_DATASET Contains complete sample sets from: GEO:GSE237605, GEO:GSE237606
+GEO:GSE237605        40     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE237607
+GEO:GSE237606        40     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE237607
+GEO:GSE244537        20 SUPERSERIES_OR_UMBRELLA_DATASET Contains complete sample sets from: GEO:GSE244533, GEO:GSE244535
+GEO:GSE244535        14     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE244537
+GEO:GSE244533         6     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE244537
+
+Overlapping dataset pairs:
+    dataset_a     dataset_b  samples_a  samples_b  shared_samples  fraction_a_shared  fraction_b_shared  jaccard  relationship
+GEO:GSE237605 GEO:GSE237607         40         80              40                1.0                0.5      0.5 A_SUBSET_OF_B
+GEO:GSE237606 GEO:GSE237607         40         80              40                1.0                0.5      0.5 A_SUBSET_OF_B
+GEO:GSE244535 GEO:GSE244537         14         20              14                1.0                0.7      0.7 A_SUBSET_OF_B
+GEO:GSE244533 GEO:GSE244537          6         20               6                1.0                0.3      0.3 A_SUBSET_OF_B
+
+Outputs:
+/home/regulus/Documents/ATLAS/data/enriched/dataset_relationship_audit.csv
+/home/regulus/Documents/ATLAS/data/enriched/dataset_overlap_pairs.csv

@@ -6,16 +6,12 @@
   },
   {
     "signature": "ATLAS_SIG_B_TOP150",
-    "job_id": "6a92f7a00262700013c4e5f1",
-    "status": "downloaded",
-    "archive": "/home/regulus/Documents/ATLAS/results/cmap/raw/cmap_6a92f7a00262700013c4e5f1.tar.gz",
-    "extract_dir": "/home/regulus/Documents/ATLAS/results/cmap/raw/job_6a92f7a00262700013c4e5f1"
+    "job_id": "6a953bd20262700013c4e65a",
+    "status": "pending"
   },
   {
     "signature": "ATLAS_SIG_A_TOP150",
-    "job_id": "6a92f7a109168d001496ada7",
-    "status": "downloaded",
-    "archive": "/home/regulus/Documents/ATLAS/results/cmap/raw/cmap_6a92f7a109168d001496ada7.tar.gz",
-    "extract_dir": "/home/regulus/Documents/ATLAS/results/cmap/raw/job_6a92f7a109168d001496ada7"
+    "job_id": "6a953bd30262700013c4e65c",
+    "status": "pending"
   }
 ]

@@ -1,0 +1,23 @@
+==============================================================================
+ATLAS — 00E PRIMARY VALIDATION EXPRESSION FETCH
+==============================================================================
+
+[GSE121105]
+  supplementary files listed: 4
+  selected expression/count files: 1
+  cached: GSE121105_geneCount.csv.gz
+
+[GSE237606]
+  supplementary files listed: 3
+  selected expression/count files: 1
+  cached: GSE237606_RawCounts.txt.gz
+
+==============================================================================
+00E COMPLETE
+==============================================================================
+accession                   filename  size_bytes  extracted
+GSE121105 GSE121105_geneCount.csv.gz     1185096      False
+GSE237606 GSE237606_RawCounts.txt.gz     1769237      False
+
+Manifest: /home/regulus/Documents/ATLAS/data/validation_expression/primary_expression_manifest.csv
+Data root: /home/regulus/Documents/ATLAS/data/validation_expression

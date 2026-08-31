@@ -1,0 +1,8 @@
+AutoDock Vina Python API
+receptor=/home/regulus/Documents/ATLAS/results/cmap/docking/02_sitagliptin_DPP4_1X70/receptor.pdbqt
+ligand=/home/regulus/Documents/ATLAS/results/cmap/docking/02_sitagliptin_DPP4_1X70/candidate.pdbqt
+center=[41.18414285714285, 51.04503571428571, 35.62867857142857]
+box_size=[27.394, 22.0, 22.0]
+exhaustiveness=16
+num_modes=9
+energies=[[-9.327, -12.871, -0.553, 3.544, -0.553], [-9.09, -12.361, -0.736, 3.454, -0.553], [-9.027, -12.553, -0.457, 3.43, -0.553], [-8.927, -12.119, -0.752, 3.392, -0.553], [-8.703, -12.001, -0.562, 3.307, -0.553], [-8.637, -11.801, -0.672, 3.282, -0.553], [-8.592, -11.552, -0.858, 3.265, -0.553], [-8.456, -11.568, -0.653, 3.213, -0.553], [-8.327, -11.534, -0.509, 3.164, -0.553]]

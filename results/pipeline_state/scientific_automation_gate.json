@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-08-31T08:29:28.011130+00:00",
+  "input": "/home/regulus/Documents/ATLAS/data/enriched/transcriptomic_validation_candidates.csv",
+  "accession_column": "source_accession",
+  "authoritative_category_column": "independence_aware_category",
+  "candidate_rows": 94,
+  "minimum_primary_required": 2,
+  "selected_primary_dataset_n": 2,
+  "selected_primary_accessions": [
+    "GSE121105",
+    "GSE237606"
+  ],
+  "checks_applied": [
+    "authoritative 00C4 category via independence_aware_category",
+    "transcriptomic sanity via modality_class",
+    "relationship sanity via relationship_role",
+    "direct_resistance sanity via direct_trastuzumab_resistance",
+    "her2_confirmed sanity via her2_positive_confirmed",
+    "groups_defined sanity via resistant_sensitive_groups_defined",
+    "biological_replication sanity via biological_replication"
+  ],
+  "warnings": [],
+  "gate_pass": true,
+  "selection_principle": "00C4 independence_aware_category is authoritative. Earlier raw/manual flags are not re-applied after integrated scoring."
+}

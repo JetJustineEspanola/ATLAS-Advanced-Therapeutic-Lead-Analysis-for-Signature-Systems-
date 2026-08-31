@@ -1,6 +1,6 @@
 {
   "stage": "04Q",
-  "created_utc": "2026-08-31T07:46:27.151064+00:00",
+  "created_utc": "2026-08-31T09:03:51.985591+00:00",
   "input_target_pairs": "/home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_pairs.csv",
   "input_target_annotations": "/home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_annotations.csv",
   "validated_resistance_genes": "/home/regulus/Documents/ATLAS/results/external_validation/downstream/validated_resistance_gene_evidence.csv",

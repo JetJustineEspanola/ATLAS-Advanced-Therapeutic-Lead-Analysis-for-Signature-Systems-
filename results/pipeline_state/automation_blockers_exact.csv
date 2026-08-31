@@ -1,0 +1,41 @@
+script,syntax_ok,input_calls,required_cli,main_guard,top_level_execution,network_calls,external_calls,automation_status,notes
+00a_dataset_discovery.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00b_metadata_catalog.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00c_dataset_eligibility.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00d_metadata_enrichment.py,True,,,True,True,requests.get,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+00d1_phenotype_audit.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00d2_conservative_phenotype_classifier.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00d2b_curated_study_phenotype_mapping.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00d2c_confirm_her2_status.py,True,,,False,True,,,READY_NONINTERACTIVE,NO_MAIN_GUARD_BUT_HAS_TOP_LEVEL_EXECUTION
+00d3_dataset_relationship_audit.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00c4_independence_modality_scoring.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00e_primary_validation_expression_fetch.py,True,,,True,True,requests.get,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+00f_primary_validation_matrix_inspection.py,True,,,True,False,,,READY_NONINTERACTIVE,
+00f1_primary_validation_design_audit.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00g_primary_validation_differential_expression.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00h_cross_study_deg_concordance.py,True,,,True,False,,,READY_NONINTERACTIVE,
+00i_consensus_resistance_signature.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00j_discovery_consensus_validation.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00k_strict_core_pathway_validation.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00l_tgfb_ranked_validation.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00m_tgfb_gene_level_audit.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00n_tgfb_leading_edge_comparison.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00o_tgfb_reproducible_module_validation.py,True,,,True,False,,,READY_NONINTERACTIVE,
+00p_tgfb_module_score_validation.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00q_tgfb_dual_module_cross_dataset_audit.py,True,,,True,True,,,READY_NONINTERACTIVE,
+00r_tgfb_final_evidence_synthesis.py,True,,,True,False,,,READY_NONINTERACTIVE,
+00s_validated_resistance_evidence_export.py,True,,,True,True,,,READY_NONINTERACTIVE,
+04g_cmap_submit_all.py,True,,,False,True,requests.post,,READY_NONINTERACTIVE,NO_MAIN_GUARD_BUT_HAS_TOP_LEVEL_EXECUTION | NETWORK_DEPENDENT
+04h_cmap_check_all_jobs.py,True,,,False,True,requests.get,,READY_NONINTERACTIVE,NO_MAIN_GUARD_BUT_HAS_TOP_LEVEL_EXECUTION | NETWORK_DEPENDENT
+04j_cmap_download_all.py,True,,,False,True,requests.get,,READY_NONINTERACTIVE,NO_MAIN_GUARD_BUT_HAS_TOP_LEVEL_EXECUTION | NETWORK_DEPENDENT
+04k_cmap_parse_all_tau.py,True,,,False,True,,,READY_NONINTERACTIVE,NO_MAIN_GUARD_BUT_HAS_TOP_LEVEL_EXECUTION
+04l_cmap_prioritize.py,True,,,True,False,,,READY_NONINTERACTIVE,
+04m_cmap_drug_filter.py,True,,,True,True,requests.Session | requests.utils.quote,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+04n_regulatory_status.py,True,,,True,True,requests.Session,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+04o_safety_screening.py,True,,,True,True,requests.Session,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+04p_drug_target_annotation.py,True,,,True,True,requests.Session,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+04q_network_integration.py,True,,,True,True,requests.Session,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+04r_final_candidate_prioritization.py,True,,,True,True,requests.get,,READY_NONINTERACTIVE,NETWORK_DEPENDENT
+04s_target_supported_docking.py,True,,,True,True,requests.get | requests.utils.quote,subprocess.run,READY_NONINTERACTIVE,NETWORK_DEPENDENT | EXTERNAL_SUBPROCESS
+04t_admet_structural_assessment.py,True,,,True,True,,,READY_NONINTERACTIVE,
+04u_integrated_evidence_matrix.py,True,,,True,True,,,READY_NONINTERACTIVE,

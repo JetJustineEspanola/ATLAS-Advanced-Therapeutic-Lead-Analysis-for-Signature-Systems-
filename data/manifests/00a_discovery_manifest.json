@@ -1,12 +1,14 @@
 {
-  "created_utc": "2026-08-31T05:26:06.210109+00:00",
+  "created_utc": "2026-08-31T08:25:18.942133+00:00",
   "sources": [
     "geo",
-    "sra"
+    "sra",
+    "gdc",
+    "cbioportal"
   ],
-  "query_family": "trastuzumab_resistance",
-  "retmax": 10,
-  "unique_candidates": 50,
+  "query_family": "all",
+  "retmax": 25,
+  "unique_candidates": 168,
   "output_csv": "/home/regulus/Documents/ATLAS/data/discovery/dataset_candidates.csv",
   "output_parquet": "/home/regulus/Documents/ATLAS/data/discovery/dataset_candidates.parquet"
 }

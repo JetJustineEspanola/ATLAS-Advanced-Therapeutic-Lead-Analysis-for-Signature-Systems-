@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -11,12 +12,16 @@ import argparse
 import json
 import re
 import xml.etree.ElementTree as ET
-from pathlib import Path
 import pandas as pd
 
 from atlas_data.common import (
-    PROJECT_ROOT, DISCOVERY_DIR, MANIFEST_DIR,
-    canonical_row, clean, http_get, load_config
+    PROJECT_ROOT,
+    DISCOVERY_DIR,
+    MANIFEST_DIR,
+    canonical_row,
+    clean,
+    http_get,
+    load_config,
 )
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"

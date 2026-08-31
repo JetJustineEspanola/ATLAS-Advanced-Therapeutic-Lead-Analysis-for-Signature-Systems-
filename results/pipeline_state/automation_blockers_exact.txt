@@ -1,0 +1,17 @@
+========================================================================================
+ATLAS — EXACT AUTOMATION BLOCKER AUDIT
+========================================================================================
+Runner stages checked: 40
+Actual blockers found: 0
+
+BLOCKERS
+--------
+None
+
+IMPORTANT
+---------
+Network access, curated rules, or a missing main guard are not treated as blockers by themselves.
+A no-main-guard script is acceptable if it has deliberate top-level execution when invoked directly.
+
+CSV: /home/regulus/Documents/ATLAS/results/pipeline_state/automation_blockers_exact.csv
+TXT: /home/regulus/Documents/ATLAS/results/pipeline_state/automation_blockers_exact.txt

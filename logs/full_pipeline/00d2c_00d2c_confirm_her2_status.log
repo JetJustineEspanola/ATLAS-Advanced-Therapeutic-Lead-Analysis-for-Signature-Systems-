@@ -1,0 +1,4 @@
+Updated HER2 confirmation flags:
+   dataset_id  her2_positive_confirmed  direct_trastuzumab_resistance  resistant_sensitive_groups_defined  biological_replication phenotype_confidence
+GEO:GSE121105                     True                           True                                True                    True                 HIGH
+GEO:GSE123754                     True                           True                                True                   False             MODERATE

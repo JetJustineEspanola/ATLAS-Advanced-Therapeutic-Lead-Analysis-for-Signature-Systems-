@@ -1,0 +1,40 @@
+==============================================================================
+ATLAS — 00M TGF-BETA GENE-LEVEL AUDIT
+==============================================================================
+Hallmark term: TGF-beta Signaling
+TGF-beta genes in set: 54
+Genes present in all three: 49
+
+Direction-pattern counts:
+direction_pattern
+SAME_DIRECTION_ALL_THREE    27
+GSE121105_FLIP              13
+GSE237606_FLIP               6
+DISCOVERY_FLIP               3
+
+Top GSE121105 flip drivers:
+gene_symbol  discovery_log2FC  discovery_padj  GSE121105_log2FC  GSE121105_padj  GSE237606_log2FC  GSE237606_padj  flip_driver_score
+      FURIN          1.796828    3.027163e-22         -0.662516    1.456661e-01          2.389057   1.308202e-214         156.512157
+     FKBP1A         -0.549014    6.000281e-05          0.768841    2.731889e-09         -0.469953   7.924807e-175          87.827888
+      NCOR2          0.398733    2.127639e-02         -0.586082    1.632435e-01          0.552660    6.848756e-95          38.527014
+      TGFB1          1.106647    1.704503e-03         -0.550026    4.722888e-01          1.888973    1.921006e-58          33.447437
+      HDAC1          0.598444    2.487215e-05         -0.040316    8.166729e-01          1.062570    0.000000e+00          12.284029
+     TRIM33          0.932316    2.185030e-07         -0.050850    8.938726e-01          0.364086   5.384783e-111           5.948368
+     PPP1CA         -0.799345    1.745347e-07          0.114375    7.896003e-01         -0.116134    1.131286e-09           1.807939
+     CTNNB1          0.744656    4.617014e-07         -0.136017    3.514067e-01          0.114389    1.171034e-09           1.798339
+      SMAD1          0.912620    2.346886e-05         -0.046133    8.382104e-01          0.447713    5.607917e-33           1.704972
+      WWTR1         -0.182105    4.047865e-01          0.210864    3.204992e-01         -0.158233    1.373243e-03           0.593248
+      KLF10         -0.421806    6.526262e-02          0.285670    1.133332e-01         -0.129901    1.059250e-01           0.403471
+      SMAD6          0.031993    9.246863e-01         -0.171784    5.213636e-01          0.223046    1.129656e-07           0.232397
+     PMEPA1          0.292096    3.062314e-02         -0.093834    6.381815e-01          0.010876    8.641297e-01           0.019276
+
+Interpretation guide:
+- SAME_DIRECTION_ALL_THREE: consistent TGF-beta gene behavior.
+- GSE121105_FLIP: discovery + GSE237606 agree, GSE121105 reverses.
+- A large GSE121105_FLIP group supports context-dependent pathway direction.
+- A small flip group dominated by a few genes suggests pathway NES may be driver-sensitive.
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_gene_level_audit.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_gse121105_flip_drivers.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_gene_level_audit_summary.csv

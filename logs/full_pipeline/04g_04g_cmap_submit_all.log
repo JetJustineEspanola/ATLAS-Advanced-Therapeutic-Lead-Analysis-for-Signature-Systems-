@@ -1,0 +1,34 @@
+============================================================
+ATLAS — CMap Valid Multi-Signature Submission
+============================================================
+
+ATLAS_SIG_B_TOP150
+  Role: secondary robustness
+  UP Entrez genes:   149
+  DOWN Entrez genes: 150
+
+  Submitting...
+  HTTP status: 200
+  Job ID: 6a953bd20262700013c4e65a
+  Status: pending
+
+ATLAS_SIG_A_TOP150
+  Role: alternative robustness
+  UP Entrez genes:   150
+  DOWN Entrez genes: 150
+
+  Submitting...
+  HTTP status: 200
+  Job ID: 6a953bd30262700013c4e65c
+  Status: pending
+
+============================================================
+CMap MULTI-SIGNATURE SUBMISSION SUMMARY
+============================================================
+ATLAS_SIG_B_TOP150: submitted=True | HTTP=200 | status=pending | job_id=6a953bd20262700013c4e65a
+ATLAS_SIG_A_TOP150: submitted=True | HTTP=200 | status=pending | job_id=6a953bd30262700013c4e65c
+
+Saved job manifest:
+/home/regulus/Documents/ATLAS/results/cmap/jobs/cmap_job_manifest.json
+
+Stage 4G submission complete.

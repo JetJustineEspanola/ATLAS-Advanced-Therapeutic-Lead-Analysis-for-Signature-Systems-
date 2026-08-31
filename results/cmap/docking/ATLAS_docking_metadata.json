@@ -1,7 +1,7 @@
 {
   "stage": "04S",
   "implementation": "v3_rigid_receptor_pdbqt_fix",
-  "created_utc": "2026-08-31T04:11:08.017209+00:00",
+  "created_utc": "2026-08-31T09:06:41.580348+00:00",
   "input": "/home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_docking_shortlist.csv",
   "output": "/home/regulus/Documents/ATLAS/results/cmap/docking/ATLAS_docking_results.csv",
   "exhaustiveness": 16,

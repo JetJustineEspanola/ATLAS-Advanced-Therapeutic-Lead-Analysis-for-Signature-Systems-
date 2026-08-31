@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-08-31T09:23:59.234114+00:00",
+  "candidate_tables_scanned": [
+    "data/enriched/dataset_candidates_independence_scored.csv",
+    "data/enriched/transcriptomic_validation_candidates.csv"
+  ],
+  "candidate_metadata_rows_scanned": 262,
+  "unique_dataset_accessions_discovered": 168,
+  "unique_accessions_with_local_files": 5,
+  "local_data_directory": {
+    "bytes": 430227976,
+    "mb": 410.29737091064453,
+    "gb": 0.4006810262799263,
+    "human": "410.30 MB"
+  },
+  "comparison_downloads": {
+    "bytes": 50110384,
+    "mb": 47.78898620605469,
+    "gb": 0.04666893184185028,
+    "human": "47.79 MB"
+  },
+  "tracked_local_total": {
+    "bytes": 962713995,
+    "mb": 918.115611076355,
+    "gb": 0.8965972764417529,
+    "human": "918.12 MB"
+  },
+  "catalog_advertised_remote_size": {
+    "bytes": 0,
+    "mb": 0.0,
+    "gb": 0.0,
+    "human": null,
+    "source_columns": [],
+    "note": "Only populated when metadata contains explicit size columns. Metadata discovery does not mean the full remote dataset was downloaded."
+  }
+}

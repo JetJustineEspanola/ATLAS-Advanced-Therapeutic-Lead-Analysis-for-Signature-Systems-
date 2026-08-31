@@ -1,0 +1,32 @@
+==============================================================================
+ATLAS — 00D2 v3 FIELD-AWARE PHENOTYPE CLASSIFICATION
+==============================================================================
+
+Dataset proposals:
+   dataset_id  sample_n  resistant_n  sensitive_parental_n  ambiguous_n  unresolved_n  high_confidence_auto_n  groups_defined_by_proposal
+GEO:GSE237607        80           40                    40            0             0                      80                        True
+GEO:GSE237605        40           20                    20            0             0                      40                        True
+GEO:GSE237606        40           20                    20            0             0                      40                        True
+GEO:GSE107473         3            1                     1            0             1                       0                        True
+GEO:GSE123754         2            1                     1            0             0                       2                        True
+ GEO:GSE15043        10            8                     0            0             2                       8                       False
+GEO:GSE121105        21            6                     0            0            15                       0                       False
+GEO:GSE327983       287            0                     0            0           287                       0                       False
+GEO:GSE161743        34            0                     0            0            34                       0                       False
+GEO:GSE244537        20            0                     0            0            20                       0                       False
+GEO:GSE297715        20            0                     0            0            20                       0                       False
+GEO:GSE132055        15            0                     0            0            15                       0                       False
+GEO:GSE244535        14            0                     0            0            14                       0                       False
+GEO:GSE119397        13            0                     0            0            13                       0                       False
+GEO:GSE230326        12            0                     0            0            12                       0                       False
+GEO:GSE300749        12            0                     0           12             0                       0                       False
+GEO:GSE245486         8            0                     0            0             8                       0                       False
+GEO:GSE286038         8            0                     0            0             8                       0                       False
+GEO:GSE244533         6            0                     0            0             6                       0                       False
+GEO:GSE114575         5            0                     0            0             5                       0                       False
+
+Applied HIGH-confidence identity-field phenotype calls: 170
+
+Outputs:
+/home/regulus/Documents/ATLAS/data/enriched/phenotype_classification_proposals_v3.csv
+/home/regulus/Documents/ATLAS/data/enriched/phenotype_dataset_classification_summary_v3.csv

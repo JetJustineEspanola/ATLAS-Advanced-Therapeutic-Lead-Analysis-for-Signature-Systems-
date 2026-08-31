@@ -74,6 +74,12 @@ STAGES = [
     # Online discovery / metadata / validation study selection
     # ------------------------------------------------------------------
     Stage(
+        "00y", "00y_runtime_preflight.py", "preflight",
+        "Runtime, network, dependency, and credential preflight",
+        "results/pipeline_state/runtime_preflight.json",
+    ),
+
+    Stage(
         "00a", "00a_dataset_discovery.py", "acquisition",
         "Discover candidate datasets online",
         "data/catalog/dataset_candidates.csv",
@@ -120,11 +126,25 @@ STAGES = [
     # ------------------------------------------------------------------
     # Expression acquisition + primary external validation
     # ------------------------------------------------------------------
+    # ATLAS_SCIENTIFIC_GATE_STAGE_V1
+    Stage(
+        "00w", "00w_scientific_automation_gate.py", "phenotype",
+        "Scientific automation gate before expression validation",
+        "results/pipeline_state/scientific_automation_gate.json",
+    ),
+
     Stage(
         "00e", "00e_primary_validation_expression_fetch.py", "validation",
         "Download processed primary-validation expression matrices",
         "data/validation_expression/primary_expression_manifest.csv",
     ),
+    # ATLAS_DATA_VOLUME_STAGE_V1
+    Stage(
+        "00aa", "00aa_dataset_volume_metadata.py", "metadata",
+        "Record dataset counts and local/remote storage volume metadata",
+        "results/pipeline_state/dataset_volume_summary.json",
+    ),
+
     Stage(
         "00f", "00f_primary_validation_matrix_inspection.py", "validation",
         "Inspect and map expression matrices",
@@ -382,6 +402,29 @@ def run_cmap_poll(stage: Stage, poll_minutes: int, max_wait_hours: int):
         time.sleep(poll_minutes * 60)
 
 
+
+# ATLAS_DEPENDENCY_AWARE_RESUME_V2
+def stage_script_changed_since_success(stage: Stage, previous: dict) -> bool:
+    """True if this stage script changed after its last successful run."""
+    ended = previous.get("ended_utc")
+    if not ended:
+        return False
+
+    script_path = SCRIPTS / stage.script
+    if not script_path.exists():
+        return True
+
+    try:
+        ended_dt = datetime.fromisoformat(ended.replace("Z", "+00:00"))
+        script_dt = datetime.fromtimestamp(
+            script_path.stat().st_mtime,
+            tz=timezone.utc,
+        )
+        return script_dt > ended_dt
+    except Exception:
+        return False
+
+
 def select_stages(from_stage=None, to_stage=None):
     keys = [s.key for s in STAGES]
 
@@ -473,17 +516,29 @@ def main():
     print(f"Refresh:      {args.refresh_data}")
     print(f"Force:        {args.force}")
 
+    upstream_reran = False
+
     for stage in selected:
         previous = state["stages"].get(stage.key, {})
 
         should_skip = False
 
-        if not args.force:
-            if args.refresh_data and stage.group == "acquisition":
-                should_skip = False
-            elif previous.get("status") == "SUCCESS":
-                should_skip = True
-            elif checkpoint_exists(stage):
+        # Runtime preflight always runs when it is selected.
+        if stage.group == "preflight":
+            should_skip = False
+
+        elif not args.force and not args.refresh_data and not upstream_reran:
+            previous_success = previous.get("status") == "SUCCESS"
+            script_changed = stage_script_changed_since_success(stage, previous)
+
+            if previous_success and not script_changed:
+                if stage.checkpoint:
+                    should_skip = checkpoint_exists(stage)
+                else:
+                    should_skip = True
+
+            elif not previous_success and checkpoint_exists(stage):
+                # Backward-compatible resume from a legacy checkpoint.
                 should_skip = True
 
         if should_skip:
@@ -544,6 +599,11 @@ def main():
 
         rec["status"] = "SUCCESS"
         save_state(state)
+
+        # Executed data/scientific stages invalidate downstream results.
+        # Preflight itself does not dirty the scientific pipeline.
+        if stage.group != "preflight":
+            upstream_reran = True
 
         print(f"\nSUCCESS [{stage.key}] {stage.description}")
 

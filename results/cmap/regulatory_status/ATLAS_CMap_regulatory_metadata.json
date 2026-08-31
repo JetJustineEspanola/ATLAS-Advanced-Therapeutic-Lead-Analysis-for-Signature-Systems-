@@ -12,7 +12,7 @@
   "timeout_connect_seconds": 3.5,
   "timeout_read_seconds": 8.0,
   "retries": 1,
-  "elapsed_seconds": 2862.791,
+  "elapsed_seconds": 0.056,
   "sources": [
     "FDA Drugs@FDA via openFDA",
     "FDA drug labeling via openFDA",

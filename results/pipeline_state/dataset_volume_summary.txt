@@ -1,0 +1,33 @@
+========================================================================================
+ATLAS — DATASET VOLUME / STORAGE METADATA
+========================================================================================
+Candidate metadata rows scanned:   262
+Unique dataset accessions sifted:  168
+Accessions with local files:       5
+
+Local data/ size:                  410.30 MB
+Downloaded comparison data:        47.79 MB
+Tracked local data + result files: 918.12 MB
+
+Catalog-advertised remote size:     unavailable in current metadata
+
+Important:
+- 'Sifted' means metadata records ATLAS examined, not bytes downloaded.
+- Local byte totals are exact filesystem sizes.
+- Remote totals are reported only if the source metadata already includes explicit sizes.
+
+Largest local categories:
+- cmap_results: 485.01 MB across 272 files
+- other_data: 357.82 MB across 73 files
+- raw_data: 41.67 MB across 7 files
+- external_validation_results: 22.81 MB across 56 files
+- processed_data: 3.29 MB across 3 files
+- metadata_catalog: 3.26 MB across 1 files
+- validation_expression: 2.83 MB across 9 files
+- metadata_enriched: 1.43 MB across 24 files
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/pipeline_state/dataset_volume_summary.json
+/home/regulus/Documents/ATLAS/results/pipeline_state/dataset_volume_summary.csv
+/home/regulus/Documents/ATLAS/results/pipeline_state/dataset_volume_by_accession.csv
+/home/regulus/Documents/ATLAS/results/pipeline_state/dataset_volume_files.csv

@@ -1,0 +1,29 @@
+=== 00C COMPLETE ===
+eligibility_category
+EXCLUDE_OR_MANUAL_REVIEW    89
+EXPLORATORY                 79
+
+Top candidates:
+ eligibility_score eligibility_category source source_accession title  manual_review_required
+                55          EXPLORATORY    SRA      SRR33650052   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650053   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650054   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650055   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650056   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650057   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650058   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650059   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650060   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650061   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650062   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650063   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650064   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650065   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650066   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650067   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650068   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650069   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650070   NaN                    True
+                55          EXPLORATORY    SRA      SRR33650071   NaN                    True
+
+/home/regulus/Documents/ATLAS/data/discovery/dataset_candidates_scored.csv

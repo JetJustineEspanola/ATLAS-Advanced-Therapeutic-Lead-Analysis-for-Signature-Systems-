@@ -1,0 +1,17 @@
+==============================================================================
+ATLAS — 00R FINAL TGF-BETA EVIDENCE SYNTHESIS
+==============================================================================
+  dataset  hallmark_NES  hallmark_FDR  positive_module_mean_log2FC  positive_module_wilcoxon_p  negative_module_mean_log2FC  negative_module_wilcoxon_p  positive_module_sample_delta  positive_module_sample_p  negative_module_sample_delta  negative_module_sample_p
+discovery      1.786780      0.004974                     1.196432                    0.000031                    -0.597493                    0.015625                           NaN                       NaN                           NaN                       NaN
+GSE121105     -1.505308      0.036703                     0.206479                    0.129730                    -1.288645                    0.015625                      0.696006              9.523810e-02                     -1.901712              2.380952e-02
+GSE237606      1.623780      0.007823                     1.103153                    0.000031                    -0.309284                    0.156250                      1.772233              6.795615e-08                     -1.002491              9.126647e-07
+
+
+Defensible interpretation:
+Trastuzumab resistance is associated with reproducible TGF-beta pathway remodeling, not a universally monotonic increase in the entire Hallmark TGF-beta pathway.
+A 16-gene positive TGF-beta module is strongly activated in discovery and GSE237606 and trends upward in GSE121105, while a distinct 7-gene module is repressed across datasets.
+Therefore, report pathway-level context dependence alongside reproducible submodule-level dysregulation.
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_final_evidence_matrix.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_final_conclusion.txt

@@ -1,7 +1,7 @@
 {
   "stage": "04R",
   "implementation": "v2_validated_docking_target_mapping",
-  "created_utc": "2026-08-31T07:55:08.169112+00:00",
+  "created_utc": "2026-08-31T09:04:06.580707+00:00",
   "inputs": {
     "04M": "/home/regulus/Documents/ATLAS/results/cmap/drug_filter/ATLAS_CMap_drug_candidates.csv",
     "04N": "/home/regulus/Documents/ATLAS/results/cmap/regulatory_status/ATLAS_CMap_regulatory_annotations.csv",

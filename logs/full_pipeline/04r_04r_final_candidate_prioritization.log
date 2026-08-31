@@ -1,0 +1,57 @@
+
+==============================================================================
+ATLAS — Stage 04R Final Candidate Prioritization
+==============================================================================
+
+==============================================================================
+STAGE 04R SUMMARY
+==============================================================================
+          final_decision  compound_count  median_integrated_score  tier1_count
+                DOCK_NOW               4                   13.750            2
+           MANUAL_REVIEW              11                    9.250            0
+DEPRIORITIZE_WEAK_TARGET               2                    9.125            1
+       DOCK_WITH_CAUTION               1                    8.750            1
+HOLD_NETWORK_UNSUPPORTED               4                    5.875            1
+     DEPRIORITIZE_SAFETY               3                   -1.500            0
+
+==============================================================================
+TOP INTEGRATED CANDIDATES
+==============================================================================
+ final_rank  priority_rank         pert_iname cmap_label      safety_label target_label network_label regulatory_label  promiscuity_penalty  integrated_prioritization_score best_network_target    final_decision
+          1              5         clofibrate     STRONG PASS_LIMITED_DATA     MODERATE      MODERATE         MODERATE                 0.00                            14.25              CYP3A4          DOCK_NOW
+          2              6        sitagliptin     STRONG PASS_LIMITED_DATA     MODERATE      MODERATE CLINICAL_CONTEXT                 0.00                            13.75                DPP4          DOCK_NOW
+          3             61          tiotidine   MODERATE    PASS_GOOD_DATA       STRONG      MODERATE       NONE_FOUND                 0.00                            13.75              CYP2D6          DOCK_NOW
+          4             80           SIB-1893   MODERATE    PASS_GOOD_DATA       STRONG      MODERATE       NONE_FOUND                 0.00                            13.75                GRM5          DOCK_NOW
+          5              3  PKCbeta-inhibitor     STRONG           CAUTION       STRONG      MODERATE       NONE_FOUND                -3.00                             8.75               CASP1 DOCK_WITH_CAUTION
+          6             71        zolantidine   MODERATE           CAUTION       STRONG        STRONG       NONE_FOUND                 0.00                            12.00                TP53     MANUAL_REVIEW
+          7             47           GR-55562   MODERATE           CAUTION       STRONG      MODERATE       NONE_FOUND                 0.00                             9.50              CYP3A4     MANUAL_REVIEW
+          8             57         cinalukast   MODERATE           CAUTION       STRONG      MODERATE       NONE_FOUND                 0.00                             9.50              CYP3A4     MANUAL_REVIEW
+          9             66           L-701324   MODERATE           CAUTION       STRONG      MODERATE       NONE_FOUND                 0.00                             9.25              CYP2D6     MANUAL_REVIEW
+         10             75        rilmenidine   MODERATE           CAUTION       STRONG      MODERATE CLINICAL_CONTEXT                -0.75                             9.25              ADRA2A     MANUAL_REVIEW
+         11            102          BMY-45778   MODERATE           CAUTION       STRONG      MODERATE       NONE_FOUND                 0.00                             9.25              CYP2D6     MANUAL_REVIEW
+         12             78 GSK-3-inhibitor-II   MODERATE           CAUTION       STRONG      MODERATE CLINICAL_CONTEXT                -2.00                             8.00               CASP3     MANUAL_REVIEW
+         13             69           SR-27897   MODERATE           CAUTION       STRONG          WEAK       NONE_FOUND                 0.00                             7.90               CCKAR     MANUAL_REVIEW
+         14             85               YC-1   MODERATE           CAUTION       STRONG          WEAK       NONE_FOUND                 0.00                             7.90               FOLH1     MANUAL_REVIEW
+         15             82       palonosetron   MODERATE           CAUTION       STRONG      MODERATE CLINICAL_CONTEXT                -3.00                             7.00              SLC6A4     MANUAL_REVIEW
+
+==============================================================================
+04S DOCKING SHORTLIST
+==============================================================================
+ docking_rank  pert_iname best_network_target validated_target_symbol validated_uniprot_accession validated_uniprot_entry exact_target_chembl_id cmap_label      safety_label target_label network_label  integrated_prioritization_score final_decision
+            1  clofibrate              CYP3A4                  CYP3A4                      P08684             CP3A4_HUMAN                            STRONG PASS_LIMITED_DATA     MODERATE      MODERATE                            14.25       DOCK_NOW
+            2 sitagliptin                DPP4                    DPP4                      P27487              DPP4_HUMAN                            STRONG PASS_LIMITED_DATA     MODERATE      MODERATE                            13.75       DOCK_NOW
+            3   tiotidine              CYP2D6                  CYP2D6                      P10635             CP2D6_HUMAN                          MODERATE    PASS_GOOD_DATA       STRONG      MODERATE                            13.75       DOCK_NOW
+            4    SIB-1893                GRM5                    GRM5                      P41594              GRM5_HUMAN                          MODERATE    PASS_GOOD_DATA       STRONG      MODERATE                            13.75       DOCK_NOW
+
+==============================================================================
+STAGE 04R COMPLETE
+==============================================================================
+
+Outputs:
+  /home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_final_candidate_prioritization.csv
+  /home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_docking_shortlist.csv
+  /home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_deprioritized_candidates.csv
+  /home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_final_prioritization_summary.csv
+  /home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_final_prioritization_metadata.json
+
+Next: 04S — Target-supported molecular docking

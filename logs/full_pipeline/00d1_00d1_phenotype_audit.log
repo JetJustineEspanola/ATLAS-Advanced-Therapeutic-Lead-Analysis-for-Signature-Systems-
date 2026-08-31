@@ -1,0 +1,34 @@
+==============================================================================
+ATLAS — 00D1 v2 PHENOTYPE METADATA AUDIT
+==============================================================================
+Datasets audited: 52
+Samples audited: 690
+
+Audit summary:
+     dataset_id  sample_n  currently_resistant_n  currently_sensitive_parental_n  currently_unresolved_n resistance_hint_counts    control_hint_counts ambiguous_short_token_counts
+  GEO:GSE327983       287                      0                               0                     287                                                                           
+  GEO:GSE161743        34                      0                               0                      34                                                                           
+  GEO:GSE244537        20                      0                               0                      20                                                                           
+  GEO:GSE297715        20                      0                               0                      20                                                                           
+  GEO:GSE244535        14                      0                               0                      14                                                                           
+  GEO:GSE119397        13                      0                               0                      13                                                                           
+  GEO:GSE286038         8                      0                               0                       8                                    vehicle:16                             
+  GEO:GSE244533         6                      0                               0                       6                                                                           
+  GEO:GSE245486         8                      0                               4                       4                        parental:4 | control:4                             
+  GEO:GSE297774         3                      0                               0                       3                                                                           
+  GEO:GSE188513         2                      0                               0                       2                                                                           
+SRA:SRR26401907         1                      0                               0                       1                                                                           
+SRA:SRR26401908         1                      0                               0                       1                                                                           
+SRA:SRR26401909         1                      0                               0                       1                                                                           
+SRA:SRR26401910         1                      0                               0                       1                                                                           
+SRA:SRR33650052         1                      0                               0                       1                                                                           
+SRA:SRR33650053         1                      0                               0                       1                                                                           
+SRA:SRR33650054         1                      0                               0                       1                                                                           
+SRA:SRR33650055         1                      0                               0                       1                                                                           
+SRA:SRR33650056         1                      0                               0                       1                                                                           
+
+Outputs:
+/home/regulus/Documents/ATLAS/data/enriched/phenotype_audit_summary_v2.csv
+/home/regulus/Documents/ATLAS/data/enriched/phenotype_audit_samples_v2.csv
+/home/regulus/Documents/ATLAS/data/enriched/phenotype_distinct_labels.csv
+/home/regulus/Documents/ATLAS/data/enriched/phenotype_manual_mapping_template.csv
