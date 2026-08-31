@@ -1,0 +1,31 @@
+{
+  "stage": "04Q",
+  "created_utc": "2026-08-31T03:48:11.823789+00:00",
+  "input_target_pairs": "/home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_pairs.csv",
+  "input_target_annotations": "/home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_annotations.csv",
+  "discovery_deg": "/home/regulus/Documents/ATLAS/results/differential_expression/DEGs_resistant_vs_sensitive_annotated.csv",
+  "consensus_candidates_checked": [
+    "/home/regulus/Documents/ATLAS/results/consensus_signature/ATLAS_consensus_resistance_signature.csv",
+    "/home/regulus/Documents/ATLAS/results/consensus_signature/consensus_resistance_signature.csv"
+  ],
+  "max_drugs": 25,
+  "max_targets_per_drug": 10,
+  "max_resistance_genes": 200,
+  "deg_padj_cutoff": 0.05,
+  "deg_abs_fc_cutoff": 1.0,
+  "string_required_score": 700,
+  "species": "Homo sapiens",
+  "species_taxon": 9606,
+  "network_type": "functional",
+  "sources": [
+    "ATLAS Stage 04P target annotations",
+    "ATLAS discovery/consensus resistance genes",
+    "STRING functional association network"
+  ],
+  "guardrails": [
+    "STRING association does not necessarily represent direct physical binding.",
+    "Network proximity supports plausibility but does not prove resistance reversal.",
+    "Docking candidates should require convergent target/network evidence."
+  ],
+  "next_stage": "04R_final_candidate_prioritization"
+}

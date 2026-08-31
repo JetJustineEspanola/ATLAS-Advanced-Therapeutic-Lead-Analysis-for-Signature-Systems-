@@ -1,0 +1,8 @@
+AutoDock Vina Python API
+receptor=/home/regulus/Documents/ATLAS/results/cmap/docking/02_clofibrate_CYP3A4_3NXU/receptor.pdbqt
+ligand=/home/regulus/Documents/ATLAS/results/cmap/docking/02_clofibrate_CYP3A4_3NXU/candidate.pdbqt
+center=[36.68593999999999, -15.693620000000001, 29.690540000000002]
+box_size=[22.996000000000002, 25.012, 22.942]
+exhaustiveness=16
+num_modes=9
+energies=[[-6.481, -8.375, -0.682, 1.894, -0.682], [-6.205, -8.163, -0.538, 1.814, -0.682], [-6.12, -8.198, -0.393, 1.789, -0.682], [-6.051, -8.135, -0.367, 1.769, -0.682], [-6.017, -8.213, -0.246, 1.759, -0.682], [-5.952, -7.922, -0.452, 1.74, -0.682], [-5.888, -7.781, -0.51, 1.721, -0.682], [-5.819, -7.797, -0.405, 1.701, -0.682], [-5.773, -7.396, -0.746, 1.687, -0.682]]

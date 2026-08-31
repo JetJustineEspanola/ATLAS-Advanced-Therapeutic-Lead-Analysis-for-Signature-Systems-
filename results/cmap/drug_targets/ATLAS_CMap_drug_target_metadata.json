@@ -1,0 +1,22 @@
+{
+  "stage": "04P",
+  "created_utc": "2026-08-31T03:46:45.727659+00:00",
+  "input_source": "04O_PRIORITIZED",
+  "input_file": "/home/regulus/Documents/ATLAS/results/cmap/safety_screening/ATLAS_CMap_safety_prioritized.csv",
+  "candidate_count": 50,
+  "minimum_pchembl": 5.0,
+  "max_activity_records_per_drug": 500,
+  "workers": 6,
+  "sources": [
+    "PubChem BioAssay target fields propagated from 04O when available",
+    "ChEMBL molecule search",
+    "ChEMBL activity records",
+    "ChEMBL target annotations"
+  ],
+  "guardrails": [
+    "Target annotations are evidence, not proof of resistance mechanism.",
+    "ChEMBL activity does not establish efficacy in HER2-positive disease.",
+    "Only biologically supported drug-target pairs should proceed to docking."
+  ],
+  "next_stage": "04Q_PPI_and_pathway_network_integration"
+}

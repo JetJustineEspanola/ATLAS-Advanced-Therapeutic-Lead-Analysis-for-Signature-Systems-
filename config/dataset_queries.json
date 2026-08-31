@@ -1,0 +1,38 @@
+{
+  "project": "ATLAS",
+  "disease": "HER2-positive breast cancer",
+  "query_families": {
+    "trastuzumab_resistance": [
+      "(\"HER2\" OR ERBB2) AND breast cancer AND trastuzumab resistance",
+      "BT474 AND trastuzumab resistant",
+      "SKBR3 AND trastuzumab resistant",
+      "ERBB2 AND acquired resistance AND transcriptome"
+    ],
+    "tgfb_resistance": [
+      "HER2 breast cancer TGF-beta resistance",
+      "trastuzumab resistance TGFBR1 SMAD",
+      "HER2 TGFB1 SMAD transcriptome"
+    ],
+    "checkpoint_resistance": [
+      "HER2 breast cancer PD-L1 resistance",
+      "HER2 CD274 immune resistance",
+      "trastuzumab PD-L1 transcriptome",
+      "HER2 PDCD1 checkpoint resistance"
+    ]
+  },
+  "eligibility_weights": {
+    "direct_trastuzumab_resistance": 25,
+    "her2_positive_confirmed": 15,
+    "resistant_sensitive_groups_defined": 15,
+    "biological_replication": 15,
+    "raw_data_available": 10,
+    "complete_sample_metadata": 10,
+    "independent_model_or_cohort": 5,
+    "pd1_pdl1_or_tgfb_relevance": 5
+  },
+  "eligibility_thresholds": {
+    "PRIMARY_VALIDATION": 80,
+    "SUPPORTING_VALIDATION": 60,
+    "EXPLORATORY": 40
+  }
+}

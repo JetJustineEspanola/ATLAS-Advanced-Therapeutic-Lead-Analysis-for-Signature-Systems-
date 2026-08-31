@@ -1,0 +1,3 @@
+dataset,error
+GSE89216,RuntimeError('GSE89216: failed to retrieve platform annotation for GPL16686. Details: FTP annotation unavailable: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL16nnn/GPL16686/annot/GPL16686.annot.gz; GEOparse returned an empty platform table; SOFT platform table markers not found')
+GSE15043,"RuntimeError('GSE15043: failed to retrieve platform annotation for GPL570. Details: FTP annotation parser: Error tokenizing data. C error: Expected 1 fields in line 28, saw 21\n; GEOparse returned an empty platform table; SOFT platform table markers not found')"

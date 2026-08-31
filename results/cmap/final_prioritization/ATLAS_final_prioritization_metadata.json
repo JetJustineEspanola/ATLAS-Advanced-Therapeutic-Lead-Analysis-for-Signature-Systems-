@@ -1,0 +1,33 @@
+{
+  "stage": "04R",
+  "implementation": "v2_validated_docking_target_mapping",
+  "created_utc": "2026-08-31T03:52:24.297110+00:00",
+  "inputs": {
+    "04M": "/home/regulus/Documents/ATLAS/results/cmap/drug_filter/ATLAS_CMap_drug_candidates.csv",
+    "04N": "/home/regulus/Documents/ATLAS/results/cmap/regulatory_status/ATLAS_CMap_regulatory_annotations.csv",
+    "04O": "/home/regulus/Documents/ATLAS/results/cmap/safety_screening/ATLAS_CMap_safety_screening.csv",
+    "04P": "/home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_annotations.csv",
+    "04P_pairs": "/home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_pairs.csv",
+    "04Q": "/home/regulus/Documents/ATLAS/results/cmap/network_integration/ATLAS_drug_network_prioritized.csv"
+  },
+  "candidate_count_integrated": 25,
+  "docking_shortlist_count": 3,
+  "top_docking_limit": 5,
+  "allow_caution_in_shortlist": false,
+  "scoring": {
+    "CMap": "0–6.5",
+    "Safety": "+2 to -12, with hard veto",
+    "Target": "0–5",
+    "Network": "0–6",
+    "Regulatory": "0 to +1.5 only; no negative penalty for absence",
+    "Promiscuity": "0 to approximately -6"
+  },
+  "guardrails": [
+    "Integrated score is a transparent prioritization score, not a probability.",
+    "High-risk safety evidence can veto a candidate.",
+    "No regulatory database hit is not treated as negative evidence.",
+    "Docking is only recommended for target-supported, network-supported pairs.",
+    "Docking score will not be interpreted as proof of binding or efficacy."
+  ],
+  "next_stage": "04S_target_supported_molecular_docking"
+}

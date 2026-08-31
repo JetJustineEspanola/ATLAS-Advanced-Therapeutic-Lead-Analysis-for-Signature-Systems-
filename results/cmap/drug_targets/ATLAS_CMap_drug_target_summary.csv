@@ -1,0 +1,5 @@
+target_support_category,compound_count,tier1_count,median_chembl_target_n,median_target_strength_score
+MODERATE_TARGET_SUPPORT,21,4,6.0,2.0
+STRONG_TARGET_SUPPORT,19,1,5.0,4.0
+WEAK_TARGET_SUPPORT,6,1,1.0,1.0
+NO_TARGET_SUPPORT_FOUND,4,0,0.0,0.0

@@ -1,0 +1,5 @@
+safety_screening_recommendation,compound_count,tier1_count,tier2_count,median_safety_risk_score
+CAUTION_MANUAL_REVIEW,37,2,35,3.0
+HIGH_RISK_DEPRIORITIZE,35,1,34,8.0
+PASS_PRELIMINARY_SCREEN,26,4,22,0.0
+INSUFFICIENT_SAFETY_DATA,9,0,9,0.0
