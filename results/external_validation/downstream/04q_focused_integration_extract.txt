@@ -1,0 +1,587 @@
+==========================================================================================
+ATLAS — 00T1 FOCUSED 04Q INTEGRATION EXTRACT
+==========================================================================================
+
+SCRIPT: scripts/04q_network_integration.py
+------------------------------------------------------------------------------------------
+
+[lines 7-36]
+   7: -------
+   8: Connect drug targets from Stage 04P to the ATLAS resistance biology discovered
+   9: in Stages 02/03.
+  10: 
+  11: Primary inputs
+  12: --------------
+  13: results/cmap/drug_targets/ATLAS_CMap_drug_target_pairs.csv
+  14: results/cmap/drug_targets/ATLAS_CMap_drug_target_annotations.csv
+  15: results/differential_expression/DEGs_resistant_vs_sensitive_annotated.csv
+  16: 
+  17: Optional inputs
+  18: ---------------
+  19: results/consensus_signature/ATLAS_consensus_resistance_signature.csv
+  20: results/pathway_analysis/... (if present)
+  21: 
+  22: Network source
+  23: --------------
+  24: STRING API
+  25: 
+  26: Outputs
+  27: -------
+  28: results/cmap/network_integration/
+  29:     ATLAS_drug_target_network_edges.csv
+  30:     ATLAS_target_resistance_gene_links.csv
+  31:     ATLAS_target_network_scores.csv
+  32:     ATLAS_drug_network_prioritized.csv
+  33:     ATLAS_network_summary.csv
+  34:     ATLAS_network_metadata.json
+  35:     cache/
+  36: 
+
+[lines 76-114]
+  76:     / "drug_targets"
+  77:     / "ATLAS_CMap_drug_target_pairs.csv"
+  78: )
+  79: 
+  80: INPUT_ANNOT = (
+  81:     PROJECT_ROOT
+  82:     / "results"
+  83:     / "cmap"
+  84:     / "drug_targets"
+  85:     / "ATLAS_CMap_drug_target_annotations.csv"
+  86: )
+  87: 
+  88: DISCOVERY_DEG = (
+  89:     PROJECT_ROOT
+  90:     / "results"
+  91:     / "differential_expression"
+  92:     / "DEGs_resistant_vs_sensitive_annotated.csv"
+  93: )
+  94: 
+  95: CONSENSUS_CANDIDATES = [
+  96:     PROJECT_ROOT / "results" / "consensus_signature" / "ATLAS_consensus_resistance_signature.csv",
+  97:     PROJECT_ROOT / "results" / "consensus_signature" / "consensus_resistance_signature.csv",
+  98: ]
+  99: 
+ 100: OUT_DIR = (
+ 101:     PROJECT_ROOT
+ 102:     / "results"
+ 103:     / "cmap"
+ 104:     / "network_integration"
+ 105: )
+ 106: CACHE_DIR = OUT_DIR / "cache"
+ 107: 
+ 108: OUT_DIR.mkdir(parents=True, exist_ok=True)
+ 109: CACHE_DIR.mkdir(parents=True, exist_ok=True)
+ 110: 
+ 111: OUT_EDGES = OUT_DIR / "ATLAS_drug_target_network_edges.csv"
+ 112: OUT_LINKS = OUT_DIR / "ATLAS_target_resistance_gene_links.csv"
+ 113: OUT_TARGET_SCORES = OUT_DIR / "ATLAS_target_network_scores.csv"
+ 114: OUT_DRUG_PRIORITY = OUT_DIR / "ATLAS_drug_network_prioritized.csv"
+
+[lines 274-357]
+ 274: 
+ 275: def split_pipe(value: Any) -> list[str]:
+ 276:     text = clean_text(value)
+ 277:     if not text:
+ 278:         return []
+ 279:     return [x.strip() for x in text.split("|") if x.strip()]
+ 280: 
+ 281: 
+ 282: # ---------------------------------------------------------------------
+ 283: # Resistance-gene set
+ 284: # ---------------------------------------------------------------------
+ 285: 
+ 286: def load_resistance_genes(
+ 287:     max_genes: int,
+ 288:     padj_cutoff: float,
+ 289:     abs_fc_cutoff: float,
+ 290: ) -> pd.DataFrame:
+ 291:     # Prefer a finished 03C consensus signature if available.
+ 292:     for path in CONSENSUS_CANDIDATES:
+ 293:         if not path.exists():
+ 294:             continue
+ 295: 
+ 296:         try:
+ 297:             df = pd.read_csv(path)
+ 298:         except Exception:
+ 299:             continue
+ 300: 
+ 301:         symbol_col = find_symbol_column(df)
+ 302:         if symbol_col is None:
+ 303:             continue
+ 304: 
+ 305:         out = pd.DataFrame({
+ 306:             "gene_symbol": df[symbol_col].map(clean_text),
+ 307:         })
+ 308: 
+ 309:         # Try to carry consensus labels / effect sizes when present.
+ 310:         for col in [
+ 311:             "consensus_category",
+ 312:             "atlas_log2FC",
+ 313:             "log2FoldChange",
+ 314:             "atlas_padj",
+ 315:             "padj",
+ 316:         ]:
+ 317:             if col in df.columns:
+ 318:                 out[col] = df[col]
+ 319: 
+ 320:         out = out[out["gene_symbol"].ne("")].drop_duplicates("gene_symbol")
+ 321: 
+ 322:         # Prefer HIGH/MODERATE consensus if the column exists.
+ 323:         if "consensus_category" in out.columns:
+ 324:             selected = out[
+ 325:                 out["consensus_category"].astype(str).isin(
+ 326:                     ["HIGH", "MODERATE"]
+ 327:                 )
+ 328:             ].copy()
+ 329:             if not selected.empty:
+ 330:                 out = selected
+ 331: 
+ 332:         return out.head(max_genes).reset_index(drop=True)
+ 333: 
+ 334:     # Fallback: discovery DEG set.
+ 335:     if not DISCOVERY_DEG.exists():
+ 336:         raise FileNotFoundError(
+ 337:             f"Discovery DEG file not found: {DISCOVERY_DEG}"
+ 338:         )
+ 339: 
+ 340:     df = pd.read_csv(DISCOVERY_DEG)
+ 341:     symbol_col = find_symbol_column(df)
+ 342:     if symbol_col is None:
+ 343:         raise ValueError(
+ 344:             "Could not identify gene-symbol column in discovery DEG file."
+ 345:         )
+ 346: 
+ 347:     if "log2FoldChange" not in df.columns or "padj" not in df.columns:
+ 348:         raise ValueError(
+ 349:             "Discovery DEG file must contain log2FoldChange and padj."
+ 350:         )
+ 351: 
+ 352:     out = pd.DataFrame({
+ 353:         "gene_symbol": df[symbol_col].map(clean_text),
+ 354:         "log2FoldChange": pd.to_numeric(
+ 355:             df["log2FoldChange"],
+ 356:             errors="coerce",
+ 357:         ),
+
+[lines 631-660]
+ 631:     target_name: str,
+ 632:     resistance_gene: str,
+ 633:     resistance_set: set[str],
+ 634: ) -> str:
+ 635:     if target_name == resistance_gene and target_name in resistance_set:
+ 636:         return "DIRECT_TARGET_IS_RESISTANCE_GENE"
+ 637:     return "STRING_NETWORK_LINK"
+ 638: 
+ 639: 
+ 640: def build_network_links(
+ 641:     network: pd.DataFrame,
+ 642:     target_names: set[str],
+ 643:     resistance_genes: set[str],
+ 644: ) -> pd.DataFrame:
+ 645:     if network.empty:
+ 646:         return pd.DataFrame()
+ 647: 
+ 648:     # STRING network TSV commonly contains preferredName_A/B.
+ 649:     a_col = None
+ 650:     b_col = None
+ 651: 
+ 652:     for candidate in [
+ 653:         "preferredName_A",
+ 654:         "preferred_name_A",
+ 655:     ]:
+ 656:         if candidate in network.columns:
+ 657:             a_col = candidate
+ 658:             break
+ 659: 
+ 660:     for candidate in [
+
+[lines 677-722]
+ 677:     rows = []
+ 678: 
+ 679:     for _, r in network.iterrows():
+ 680:         a = clean_text(r[a_col])
+ 681:         b = clean_text(r[b_col])
+ 682: 
+ 683:         score = (
+ 684:             pd.to_numeric(pd.Series([r.get(score_col)]), errors="coerce").iloc[0]
+ 685:             if score_col
+ 686:             else np.nan
+ 687:         )
+ 688: 
+ 689:         if a in target_names and b in resistance_genes:
+ 690:             rows.append({
+ 691:                 "target_symbol": a,
+ 692:                 "resistance_gene": b,
+ 693:                 "string_score": score,
+ 694:                 "network_link_type": classify_link(
+ 695:                     a, b, resistance_genes
+ 696:                 ),
+ 697:             })
+ 698: 
+ 699:         if b in target_names and a in resistance_genes:
+ 700:             rows.append({
+ 701:                 "target_symbol": b,
+ 702:                 "resistance_gene": a,
+ 703:                 "string_score": score,
+ 704:                 "network_link_type": classify_link(
+ 705:                     b, a, resistance_genes
+ 706:                 ),
+ 707:             })
+ 708: 
+ 709:     if not rows:
+ 710:         return pd.DataFrame()
+ 711: 
+ 712:     return (
+ 713:         pd.DataFrame(rows)
+ 714:         .drop_duplicates(
+ 715:             ["target_symbol", "resistance_gene"],
+ 716:             keep="first",
+ 717:         )
+ 718:         .reset_index(drop=True)
+ 719:     )
+ 720: 
+ 721: 
+ 722: # ---------------------------------------------------------------------
+
+[lines 782-811]
+ 782:         category = "WEAK_NETWORK_SUPPORT"
+ 783:     else:
+ 784:         category = "NO_NETWORK_SUPPORT"
+ 785: 
+ 786:     return {
+ 787:         "target_symbol": target_symbol,
+ 788:         "target_is_resistance_gene": bool(direct),
+ 789:         "linked_resistance_gene_n": int(linked_n),
+ 790:         "mean_string_score_to_resistance": mean_score,
+ 791:         "max_string_score_to_resistance": max_score,
+ 792:         "network_support_score": int(score),
+ 793:         "network_support_category": category,
+ 794:         "linked_resistance_genes": (
+ 795:             " | ".join(
+ 796:                 sorted(
+ 797:                     set(
+ 798:                         target_links["resistance_gene"]
+ 799:                         .dropna()
+ 800:                         .astype(str)
+ 801:                     )
+ 802:                 )
+ 803:             )
+ 804:             if linked_n
+ 805:             else ""
+ 806:         ),
+ 807:     }
+ 808: 
+ 809: 
+ 810: # ---------------------------------------------------------------------
+ 811: # CLI
+
+[lines 849-878]
+ 849:         help="STRING required_score 0-1000. Default: 700 (high confidence).",
+ 850:     )
+ 851:     p.add_argument(
+ 852:         "--workers",
+ 853:         type=int,
+ 854:         default=6,
+ 855:     )
+ 856: 
+ 857:     args = p.parse_args()
+ 858: 
+ 859:     args.max_drugs = max(0, args.max_drugs)
+ 860:     args.max_targets_per_drug = max(1, args.max_targets_per_drug)
+ 861:     args.max_resistance_genes = max(20, args.max_resistance_genes)
+ 862:     args.string_score = min(max(args.string_score, 0), 1000)
+ 863:     args.workers = max(1, min(args.workers, 12))
+ 864: 
+ 865:     return args
+ 866: 
+ 867: 
+ 868: # ---------------------------------------------------------------------
+ 869: # Main
+ 870: # ---------------------------------------------------------------------
+ 871: 
+ 872: def main() -> int:
+ 873:     args = parse_args()
+ 874: 
+ 875:     header("ATLAS — Stage 04Q PPI + Pathway / Network Integration")
+ 876: 
+ 877:     if not INPUT_PAIRS.exists():
+ 878:         print(
+
+[lines 922-984]
+ 922:         ]
+ 923:     ].copy()
+ 924: 
+ 925:     print(
+ 926:         f"\nSelected drugs: {len(selected_drugs):,}",
+ 927:         flush=True,
+ 928:     )
+ 929:     print(
+ 930:         f"04P target-pair rows: {len(pairs):,}",
+ 931:         flush=True,
+ 932:     )
+ 933: 
+ 934:     resistance = load_resistance_genes(
+ 935:         max_genes=args.max_resistance_genes,
+ 936:         padj_cutoff=args.deg_padj,
+ 937:         abs_fc_cutoff=args.deg_abs_fc,
+ 938:     )
+ 939: 
+ 940:     resistance_genes = sorted(
+ 941:         set(resistance["gene_symbol"].dropna().astype(str))
+ 942:     )
+ 943:     resistance_set = set(resistance_genes)
+ 944: 
+ 945:     print(
+ 946:         f"Resistance genes selected: {len(resistance_genes):,}",
+ 947:         flush=True,
+ 948:     )
+ 949: 
+ 950:     target_queries = collect_candidate_targets(
+ 951:         pairs,
+ 952:         max_targets_per_drug=args.max_targets_per_drug,
+ 953:     )
+ 954: 
+ 955:     if target_queries.empty:
+ 956:         print(
+ 957:             "ERROR: No target identifiers available from 04P.",
+ 958:             flush=True,
+ 959:         )
+ 960:         return 1
+ 961: 
+ 962:     identifiers_to_map = (
+ 963:         target_queries["target_query_identifier"]
+ 964:         .dropna()
+ 965:         .astype(str)
+ 966:         .tolist()
+ 967:         + resistance_genes
+ 968:     )
+ 969: 
+ 970:     id_map = map_identifiers(
+ 971:         identifiers_to_map,
+ 972:         workers=args.workers,
+ 973:     )
+ 974: 
+ 975:     # Attach mapped target symbols.
+ 976:     target_queries["string_mapped"] = target_queries[
+ 977:         "target_query_identifier"
+ 978:     ].map(
+ 979:         lambda x: bool(
+ 980:             id_map.get(clean_text(x), {}).get(
+ 981:                 "string_mapped", False
+ 982:             )
+ 983:         )
+ 984:     )
+
+[lines 1003-1108]
+1003:         )
+1004:     )
+1005: 
+1006:     mapped_targets = target_queries[
+1007:         target_queries["string_mapped"]
+1008:         & target_queries["target_symbol"].ne("")
+1009:     ].copy()
+1010: 
+1011:     target_symbols = sorted(
+1012:         set(mapped_targets["target_symbol"].astype(str))
+1013:     )
+1014: 
+1015:     mapped_resistance = []
+1016:     for gene in resistance_genes:
+1017:         rec = id_map.get(gene, {})
+1018:         preferred = clean_text(rec.get("string_preferred_name"))
+1019:         if rec.get("string_mapped") and preferred:
+1020:             mapped_resistance.append(preferred)
+1021: 
+1022:     mapped_resistance = sorted(set(mapped_resistance))
+1023: 
+1024:     print(
+1025:         f"Mapped targets: {len(target_symbols):,}",
+1026:         flush=True,
+1027:     )
+1028:     print(
+1029:         f"Mapped resistance genes: {len(mapped_resistance):,}",
+1030:         flush=True,
+1031:     )
+1032: 
+1033:     network_identifiers = sorted(
+1034:         set(target_symbols) | set(mapped_resistance)
+1035:     )
+1036: 
+1037:     print(
+1038:         f"STRING network nodes submitted: {len(network_identifiers):,}",
+1039:         flush=True,
+1040:     )
+1041: 
+1042:     network = fetch_string_network(
+1043:         network_identifiers,
+1044:         required_score=args.string_score,
+1045:     )
+1046: 
+1047:     if network.empty:
+1048:         print(
+1049:             "WARNING: STRING returned no network edges.",
+1050:             flush=True,
+1051:         )
+1052: 
+1053:     atomic_csv(network, OUT_EDGES)
+1054: 
+1055:     links = build_network_links(
+1056:         network,
+1057:         target_names=set(target_symbols),
+1058:         resistance_genes=set(mapped_resistance),
+1059:     )
+1060: 
+1061:     if links.empty:
+1062:         links = pd.DataFrame(columns=[
+1063:             "target_symbol",
+1064:             "resistance_gene",
+1065:             "string_score",
+1066:             "network_link_type",
+1067:         ])
+1068: 
+1069:     atomic_csv(links, OUT_LINKS)
+1070: 
+1071:     target_score_rows = [
+1072:         score_target_network(
+1073:             target_symbol,
+1074:             links,
+1075:             set(mapped_resistance),
+1076:         )
+1077:         for target_symbol in target_symbols
+1078:     ]
+1079: 
+1080:     target_scores = pd.DataFrame(target_score_rows)
+1081: 
+1082:     if target_scores.empty:
+1083:         target_scores = pd.DataFrame(columns=[
+1084:             "target_symbol",
+1085:             "target_is_resistance_gene",
+1086:             "linked_resistance_gene_n",
+1087:             "mean_string_score_to_resistance",
+1088:             "max_string_score_to_resistance",
+1089:             "network_support_score",
+1090:             "network_support_category",
+1091:             "linked_resistance_genes",
+1092:         ])
+1093: 
+1094:     atomic_csv(target_scores, OUT_TARGET_SCORES)
+1095: 
+1096:     # Drug-level aggregation.
+1097:     tq = mapped_targets.merge(
+1098:         target_scores,
+1099:         on="target_symbol",
+1100:         how="left",
+1101:     )
+1102: 
+1103:     drug_rows = []
+1104: 
+1105:     for (pert_id, pert_iname), g in tq.groupby(
+1106:         ["pert_id", "pert_iname"],
+1107:         dropna=False,
+1108:     ):
+
+[lines 1133-1163]
+1133:                 else np.nan
+1134:             ),
+1135:             "best_network_support_category": clean_text(
+1136:                 best.get("network_support_category")
+1137:             ),
+1138:             "best_target_linked_resistance_gene_n": int(
+1139:                 best.get("linked_resistance_gene_n", 0)
+1140:                 if pd.notna(
+1141:                     best.get("linked_resistance_gene_n", 0)
+1142:                 )
+1143:                 else 0
+1144:             ),
+1145:             "best_target_linked_resistance_genes": clean_text(
+1146:                 best.get("linked_resistance_genes")
+1147:             ),
+1148:             "all_network_targets": " | ".join(
+1149:                 sorted(
+1150:                     set(
+1151:                         g["target_symbol"]
+1152:                         .dropna()
+1153:                         .astype(str)
+1154:                     )
+1155:                 )
+1156:             ),
+1157:         })
+1158: 
+1159:     drug_network = pd.DataFrame(drug_rows)
+1160: 
+1161:     prioritized = selected_drugs.merge(
+1162:         drug_network,
+1163:         on=["pert_id", "pert_iname"],
+
+[lines 1188-1257]
+1188:         ],
+1189:         ascending=[False, False, True],
+1190:         na_position="last",
+1191:     ).reset_index(drop=True)
+1192: 
+1193:     atomic_csv(prioritized, OUT_DRUG_PRIORITY)
+1194: 
+1195:     summary = pd.DataFrame([
+1196:         {
+1197:             "selected_drugs": len(selected_drugs),
+1198:             "target_query_rows": len(target_queries),
+1199:             "mapped_target_symbols": len(target_symbols),
+1200:             "resistance_genes_requested": len(resistance_genes),
+1201:             "mapped_resistance_genes": len(mapped_resistance),
+1202:             "string_network_edges": len(network),
+1203:             "target_resistance_links": len(links),
+1204:             "targets_with_network_support": int(
+1205:                 (
+1206:                     pd.to_numeric(
+1207:                         target_scores.get(
+1208:                             "network_support_score",
+1209:                             pd.Series(dtype=float),
+1210:                         ),
+1211:                         errors="coerce",
+1212:                     ) > 0
+1213:                 ).sum()
+1214:             ),
+1215:         }
+1216:     ])
+1217: 
+1218:     atomic_csv(summary, OUT_SUMMARY)
+1219: 
+1220:     metadata = {
+1221:         "stage": "04Q",
+1222:         "created_utc": datetime.now(timezone.utc).isoformat(),
+1223:         "input_target_pairs": str(INPUT_PAIRS),
+1224:         "input_target_annotations": str(INPUT_ANNOT),
+1225:         "discovery_deg": str(DISCOVERY_DEG),
+1226:         "consensus_candidates_checked": [
+1227:             str(x) for x in CONSENSUS_CANDIDATES
+1228:         ],
+1229:         "max_drugs": args.max_drugs,
+1230:         "max_targets_per_drug": args.max_targets_per_drug,
+1231:         "max_resistance_genes": args.max_resistance_genes,
+1232:         "deg_padj_cutoff": args.deg_padj,
+1233:         "deg_abs_fc_cutoff": args.deg_abs_fc,
+1234:         "string_required_score": args.string_score,
+1235:         "species": "Homo sapiens",
+1236:         "species_taxon": STRING_SPECIES,
+1237:         "network_type": "functional",
+1238:         "sources": [
+1239:             "ATLAS Stage 04P target annotations",
+1240:             "ATLAS discovery/consensus resistance genes",
+1241:             "STRING functional association network",
+1242:         ],
+1243:         "guardrails": [
+1244:             "STRING association does not necessarily represent direct physical binding.",
+1245:             "Network proximity supports plausibility but does not prove resistance reversal.",
+1246:             "Docking candidates should require convergent target/network evidence.",
+1247:         ],
+1248:         "next_stage": "04R_final_candidate_prioritization",
+1249:     }
+1250: 
+1251:     atomic_json(metadata, OUT_META)
+1252: 
+1253:     header("STAGE 04Q SUMMARY")
+1254:     print(summary.to_string(index=False), flush=True)
+1255: 
+1256:     header("TOP NETWORK-SUPPORTED DRUGS")
+1257: 

@@ -1,0 +1,1 @@
+OPENBABEL_PYTHON: converted receptor to PDBQT; removed ROOT/BRANCH/TORSDOF torsion-tree records for rigid-receptor compatibility.

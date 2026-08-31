@@ -92,6 +92,15 @@ DISCOVERY_DEG = (
     / "DEGs_resistant_vs_sensitive_annotated.csv"
 )
 
+# ATLAS_04Q_VALIDATED_RESISTANCE_PATCH_V1
+VALIDATED_RESISTANCE = (
+    PROJECT_ROOT
+    / "results"
+    / "external_validation"
+    / "downstream"
+    / "validated_resistance_gene_evidence.csv"
+)
+
 CONSENSUS_CANDIDATES = [
     PROJECT_ROOT / "results" / "consensus_signature" / "ATLAS_consensus_resistance_signature.csv",
     PROJECT_ROOT / "results" / "consensus_signature" / "consensus_resistance_signature.csv",
@@ -288,6 +297,70 @@ def load_resistance_genes(
     padj_cutoff: float,
     abs_fc_cutoff: float,
 ) -> pd.DataFrame:
+    # Prefer the externally validated three-dataset strict core.
+    # Older 03C/discovery inputs remain fallback only.
+    if VALIDATED_RESISTANCE.exists():
+        try:
+            validated = pd.read_csv(VALIDATED_RESISTANCE)
+
+            if "gene_symbol" not in validated.columns:
+                raise ValueError(
+                    "Validated resistance file is missing gene_symbol."
+                )
+
+            keep_cols = [
+                c for c in [
+                    "gene_symbol",
+                    "evidence_class",
+                    "resistance_direction",
+                    "validated_evidence_strength",
+                    "external_consensus_rank",
+                    "minimum_abs_log2FC_across_three",
+                    "tgfb_module_role",
+                ]
+                if c in validated.columns
+            ]
+
+            out = validated[keep_cols].copy()
+            out["gene_symbol"] = out["gene_symbol"].map(clean_text)
+            out = out[out["gene_symbol"].ne("")].drop_duplicates("gene_symbol")
+
+            if "external_consensus_rank" in out.columns:
+                out["external_consensus_rank"] = pd.to_numeric(
+                    out["external_consensus_rank"],
+                    errors="coerce",
+                )
+                out = out.sort_values(
+                    "external_consensus_rank",
+                    ascending=True,
+                    na_position="last",
+                )
+
+            out["resistance_gene_source"] = "THREE_DATASET_STRICT_CORE"
+
+            if len(out) > max_genes:
+                print(
+                    f"WARNING: validated resistance core contains {len(out):,} genes "
+                    f"but --max-resistance-genes={max_genes:,}; truncating by rank.",
+                    flush=True,
+                )
+
+            if not out.empty:
+                print(
+                    f"Using validated three-dataset resistance core: "
+                    f"{min(len(out), max_genes):,}/{len(out):,} genes",
+                    flush=True,
+                )
+                return out.head(max_genes).reset_index(drop=True)
+
+        except Exception as exc:
+            print(
+                f"WARNING: could not use validated resistance file "
+                f"{VALIDATED_RESISTANCE}: {exc}. "
+                f"Falling back to legacy 03C/discovery logic.",
+                flush=True,
+            )
+
     # Prefer a finished 03C consensus signature if available.
     for path in CONSENSUS_CANDIDATES:
         if not path.exists():
@@ -1222,7 +1295,8 @@ def main() -> int:
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "input_target_pairs": str(INPUT_PAIRS),
         "input_target_annotations": str(INPUT_ANNOT),
-        "discovery_deg": str(DISCOVERY_DEG),
+        "validated_resistance_genes": str(VALIDATED_RESISTANCE),
+        "discovery_deg_fallback": str(DISCOVERY_DEG),
         "consensus_candidates_checked": [
             str(x) for x in CONSENSUS_CANDIDATES
         ],
@@ -1237,7 +1311,7 @@ def main() -> int:
         "network_type": "functional",
         "sources": [
             "ATLAS Stage 04P target annotations",
-            "ATLAS discovery/consensus resistance genes",
+            "ATLAS three-dataset validated resistance genes (legacy consensus/discovery fallback retained)",
             "STRING functional association network",
         ],
         "guardrails": [

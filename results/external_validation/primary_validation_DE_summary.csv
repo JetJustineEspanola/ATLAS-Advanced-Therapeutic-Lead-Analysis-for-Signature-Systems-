@@ -1,0 +1,3 @@
+accession,samples,genes_tested,fdr05_genes,up_fdr05,down_fdr05,design,output
+GSE121105,9,22622,4781,2448,2333,~ phenotype,/home/regulus/Documents/ATLAS/results/external_validation/GSE121105_DE.csv
+GSE237606,40,28293,18534,8572,9962,~ stratum + phenotype,/home/regulus/Documents/ATLAS/results/external_validation/GSE237606_DE.csv

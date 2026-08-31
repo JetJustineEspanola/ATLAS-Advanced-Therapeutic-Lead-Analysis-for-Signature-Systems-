@@ -1,0 +1,2 @@
+shared_genes,same_direction_genes,direction_agreement_fraction,significant_both_fdr05,replicated_same_direction_fdr05_both,replicated_up,replicated_down,spearman_rho_all_shared,spearman_p_all_shared,spearman_rho_significant_either,spearman_p_significant_either
+14598,7876,0.539525962460611,3381,2066,1028,1038,0.15504225099768965,3.230037745469444e-79,0.16877729261248547,2.560180097635455e-81

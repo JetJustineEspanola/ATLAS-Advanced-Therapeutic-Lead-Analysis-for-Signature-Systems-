@@ -1,0 +1,37 @@
+dataset_id,sample_id,title,source_name,proposed_status,phenotype_confidence,primary_contrast_included,mapping_reason
+GEO:GSE114575,GSM3145240,10705X1 (SKBr3),SKBr3,SENSITIVE_OR_PARENTAL,HIGH,True,Curated GSE114575 rule: parental SKBr3
+GEO:GSE114575,GSM3145241,10705X2 (Her/trastuz resist),Her/trastuz resist,RESISTANT,HIGH,True,Curated GSE114575 rule: explicitly trastuzumab-resistant sample
+GEO:GSE114575,GSM3145242,10705X3 (Lap/lapatinib resist),Lap/lapatinib resist,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE114575 rule: lapatinib or sequential multidrug resistance excluded from trastuzumab-only contrast
+GEO:GSE114575,GSM3145243,10705X4 (Her/Lap resist - sequential),Her/Lap resist - sequential,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE114575 rule: lapatinib or sequential multidrug resistance excluded from trastuzumab-only contrast
+GEO:GSE114575,GSM3145244,10705X5 (Lap/Her resist - sequential),Lap/Her resist - sequential,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE114575 rule: lapatinib or sequential multidrug resistance excluded from trastuzumab-only contrast
+GEO:GSE121105,GSM3426212,BT474_replicate1,BT474,SENSITIVE_OR_PARENTAL,HIGH,True,Curated GSE121105 rule: untreated parental BT474
+GEO:GSE121105,GSM3426213,BT474_replicate2,BT474,SENSITIVE_OR_PARENTAL,HIGH,True,Curated GSE121105 rule: untreated parental BT474
+GEO:GSE121105,GSM3426214,BT474_replicate3,BT474,SENSITIVE_OR_PARENTAL,HIGH,True,Curated GSE121105 rule: untreated parental BT474
+GEO:GSE121105,GSM3426215,BT474+trastuzumab_replicate1,BT474+trastuzumab,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426216,BT474+trastuzumab_replicate2,BT474+trastuzumab,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426217,BT474+trastuzumab_replicate3,BT474+trastuzumab,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426218,BT474+trastuzumab+pertuzumab_replicate1,BT474+trastuzumab+pertuzumab,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426219,BT474+trastuzumab+pertuzumab_replicate2,BT474+trastuzumab+pertuzumab,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426220,BT474+trastuzumab+pertuzumab_replicate3,BT474+trastuzumab+pertuzumab,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426221,BT-TR1_replicate1,BT-TR1,RESISTANT,HIGH,True,Curated GSE121105 rule: BT-TR1/BT-TR2 trastuzumab-resistant clone
+GEO:GSE121105,GSM3426222,BT-TR1_replicate2,BT-TR1,RESISTANT,HIGH,True,Curated GSE121105 rule: BT-TR1/BT-TR2 trastuzumab-resistant clone
+GEO:GSE121105,GSM3426223,BT-TR1_replicate3,BT-TR1,RESISTANT,HIGH,True,Curated GSE121105 rule: BT-TR1/BT-TR2 trastuzumab-resistant clone
+GEO:GSE121105,GSM3426224,BT-TR2_replicate1,BT-TR2,RESISTANT,HIGH,True,Curated GSE121105 rule: BT-TR1/BT-TR2 trastuzumab-resistant clone
+GEO:GSE121105,GSM3426225,BT-TR2_replicate2,BT-TR2,RESISTANT,HIGH,True,Curated GSE121105 rule: BT-TR1/BT-TR2 trastuzumab-resistant clone
+GEO:GSE121105,GSM3426226,BT-TR2_replicate3,BT-TR2,RESISTANT,HIGH,True,Curated GSE121105 rule: BT-TR1/BT-TR2 trastuzumab-resistant clone
+GEO:GSE121105,GSM3426227,BT-TPR1_replicate1,BT-TPR1,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426228,BT-TPR1_replicate2,BT-TPR1,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426229,BT-TPR1_replicate3,BT-TPR1,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426230,BT-TPR2_replicate1,BT-TPR2,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426231,BT-TPR2_replicate2,BT-TPR2,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE121105,GSM3426232,BT-TPR2_replicate3,BT-TPR2,EXCLUDE_FROM_PRIMARY_CONTRAST,HIGH,False,Curated GSE121105 rule: acute-treatment or dual-resistance group excluded from clean trastuzumab-resistance contrast
+GEO:GSE123754,GSM3510887,Trastuzumab-sensitive model (SK),HER2-positive breast cancer,SENSITIVE_OR_PARENTAL,HIGH,True,Curated GSE123754 rule: explicitly trastuzumab-sensitive SK model
+GEO:GSE123754,GSM3510888,Trastuzumab-resistant model (SKTR),HER2-positive breast cancer,RESISTANT,HIGH,True,Curated GSE123754 rule: explicitly trastuzumab-resistant SKTR model
+GEO:GSE245486,GSM7843744,BT474T_1,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically
+GEO:GSE245486,GSM7843745,BT474T_2,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically
+GEO:GSE245486,GSM7843746,HR6_1,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically
+GEO:GSE245486,GSM7843747,HR6_2,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically
+GEO:GSE245486,GSM7843748,HR6_Z8KO1_1,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically
+GEO:GSE245486,GSM7843749,HR6_Z8KO1_2,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically
+GEO:GSE245486,GSM7843750,HR6_Z8KO2_1,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically
+GEO:GSE245486,GSM7843751,HR6_Z8KO2_2,BT474 cells,MANUAL_REVIEW_REQUIRED,LOW,False,HR6 identity is not explicitly defined as trastuzumab-resistant in the current sample metadata; do not infer automatically

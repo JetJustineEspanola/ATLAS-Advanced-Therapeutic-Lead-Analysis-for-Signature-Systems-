@@ -1,2 +1,2 @@
 selected_drugs,target_query_rows,mapped_target_symbols,resistance_genes_requested,mapped_resistance_genes,string_network_edges,target_resistance_links,targets_with_network_support
-25,136,66,200,192,204,61,26
+25,136,66,242,235,179,62,32

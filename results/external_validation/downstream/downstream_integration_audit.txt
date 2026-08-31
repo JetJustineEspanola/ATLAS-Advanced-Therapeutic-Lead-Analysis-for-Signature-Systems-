@@ -1,0 +1,1877 @@
+==========================================================================================
+ATLAS — 00T DOWNSTREAM INTEGRATION AUDIT
+==========================================================================================
+
+------------------------------------------------------------------------------------------
+SCRIPT: scripts/04q_network_integration.py
+------------------------------------------------------------------------------------------
+
+[context around line 4]
+      2: """
+      3: ATLAS — Stage 04Q
+>>    4: PPI + Pathway / Network Integration
+      5: 
+      6: Purpose
+
+[context around line 15]
+     13: results/cmap/drug_targets/ATLAS_CMap_drug_target_pairs.csv
+     14: results/cmap/drug_targets/ATLAS_CMap_drug_target_annotations.csv
+>>   15: results/differential_expression/DEGs_resistant_vs_sensitive_annotated.csv
+     16: 
+     17: Optional inputs
+
+[context around line 19]
+     17: Optional inputs
+     18: ---------------
+>>   19: results/consensus_signature/ATLAS_consensus_resistance_signature.csv
+     20: results/pathway_analysis/... (if present)
+     21: 
+
+[context around line 22]
+     20: results/pathway_analysis/... (if present)
+     21: 
+>>   22: Network source
+     23: --------------
+     24: STRING API
+
+[context around line 28]
+     26: Outputs
+     27: -------
+>>   28: results/cmap/network_integration/
+     29:     ATLAS_drug_target_network_edges.csv
+     30:     ATLAS_target_resistance_gene_links.csv
+
+[context around line 29]
+     27: -------
+     28: results/cmap/network_integration/
+>>   29:     ATLAS_drug_target_network_edges.csv
+     30:     ATLAS_target_resistance_gene_links.csv
+     31:     ATLAS_target_network_scores.csv
+
+[context around line 30]
+     28: results/cmap/network_integration/
+     29:     ATLAS_drug_target_network_edges.csv
+>>   30:     ATLAS_target_resistance_gene_links.csv
+     31:     ATLAS_target_network_scores.csv
+     32:     ATLAS_drug_network_prioritized.csv
+
+[context around line 31]
+     29:     ATLAS_drug_target_network_edges.csv
+     30:     ATLAS_target_resistance_gene_links.csv
+>>   31:     ATLAS_target_network_scores.csv
+     32:     ATLAS_drug_network_prioritized.csv
+     33:     ATLAS_network_summary.csv
+
+[context around line 32]
+     30:     ATLAS_target_resistance_gene_links.csv
+     31:     ATLAS_target_network_scores.csv
+>>   32:     ATLAS_drug_network_prioritized.csv
+     33:     ATLAS_network_summary.csv
+     34:     ATLAS_network_metadata.json
+
+[context around line 33]
+     31:     ATLAS_target_network_scores.csv
+     32:     ATLAS_drug_network_prioritized.csv
+>>   33:     ATLAS_network_summary.csv
+     34:     ATLAS_network_metadata.json
+     35:     cache/
+
+[context around line 34]
+     32:     ATLAS_drug_network_prioritized.csv
+     33:     ATLAS_network_summary.csv
+>>   34:     ATLAS_network_metadata.json
+     35:     cache/
+     36: 
+
+[context around line 40]
+     38: --------------------
+     39: - STRING edges are association evidence, not necessarily direct physical binding.
+>>   40: - Network proximity supports biological plausibility; it does not establish that
+     41:   a compound reverses trastuzumab resistance.
+     42: - Docking should only follow for drug-target pairs with convergent CMap, safety,
+
+[context around line 43]
+     41:   a compound reverses trastuzumab resistance.
+     42: - Docking should only follow for drug-target pairs with convergent CMap, safety,
+>>   43:   target, and network/pathway support.
+     44: """
+     45: 
+
+[context around line 91]
+     89:     PROJECT_ROOT
+     90:     / "results"
+>>   91:     / "differential_expression"
+     92:     / "DEGs_resistant_vs_sensitive_annotated.csv"
+     93: )
+
+[context around line 92]
+     90:     / "results"
+     91:     / "differential_expression"
+>>   92:     / "DEGs_resistant_vs_sensitive_annotated.csv"
+     93: )
+     94: 
+
+[context around line 95]
+     93: )
+     94: 
+>>   95: CONSENSUS_CANDIDATES = [
+     96:     PROJECT_ROOT / "results" / "consensus_signature" / "ATLAS_consensus_resistance_signature.csv",
+     97:     PROJECT_ROOT / "results" / "consensus_signature" / "consensus_resistance_signature.csv",
+
+[context around line 96]
+     94: 
+     95: CONSENSUS_CANDIDATES = [
+>>   96:     PROJECT_ROOT / "results" / "consensus_signature" / "ATLAS_consensus_resistance_signature.csv",
+     97:     PROJECT_ROOT / "results" / "consensus_signature" / "consensus_resistance_signature.csv",
+     98: ]
+
+[context around line 97]
+     95: CONSENSUS_CANDIDATES = [
+     96:     PROJECT_ROOT / "results" / "consensus_signature" / "ATLAS_consensus_resistance_signature.csv",
+>>   97:     PROJECT_ROOT / "results" / "consensus_signature" / "consensus_resistance_signature.csv",
+     98: ]
+     99: 
+
+[context around line 104]
+    102:     / "results"
+    103:     / "cmap"
+>>  104:     / "network_integration"
+    105: )
+    106: CACHE_DIR = OUT_DIR / "cache"
+
+[context around line 111]
+    109: CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    110: 
+>>  111: OUT_EDGES = OUT_DIR / "ATLAS_drug_target_network_edges.csv"
+    112: OUT_LINKS = OUT_DIR / "ATLAS_target_resistance_gene_links.csv"
+    113: OUT_TARGET_SCORES = OUT_DIR / "ATLAS_target_network_scores.csv"
+
+[context around line 112]
+    110: 
+    111: OUT_EDGES = OUT_DIR / "ATLAS_drug_target_network_edges.csv"
+>>  112: OUT_LINKS = OUT_DIR / "ATLAS_target_resistance_gene_links.csv"
+    113: OUT_TARGET_SCORES = OUT_DIR / "ATLAS_target_network_scores.csv"
+    114: OUT_DRUG_PRIORITY = OUT_DIR / "ATLAS_drug_network_prioritized.csv"
+
+[context around line 113]
+    111: OUT_EDGES = OUT_DIR / "ATLAS_drug_target_network_edges.csv"
+    112: OUT_LINKS = OUT_DIR / "ATLAS_target_resistance_gene_links.csv"
+>>  113: OUT_TARGET_SCORES = OUT_DIR / "ATLAS_target_network_scores.csv"
+    114: OUT_DRUG_PRIORITY = OUT_DIR / "ATLAS_drug_network_prioritized.csv"
+    115: OUT_SUMMARY = OUT_DIR / "ATLAS_network_summary.csv"
+
+[context around line 114]
+    112: OUT_LINKS = OUT_DIR / "ATLAS_target_resistance_gene_links.csv"
+    113: OUT_TARGET_SCORES = OUT_DIR / "ATLAS_target_network_scores.csv"
+>>  114: OUT_DRUG_PRIORITY = OUT_DIR / "ATLAS_drug_network_prioritized.csv"
+    115: OUT_SUMMARY = OUT_DIR / "ATLAS_network_summary.csv"
+    116: OUT_META = OUT_DIR / "ATLAS_network_metadata.json"
+
+[context around line 115]
+    113: OUT_TARGET_SCORES = OUT_DIR / "ATLAS_target_network_scores.csv"
+    114: OUT_DRUG_PRIORITY = OUT_DIR / "ATLAS_drug_network_prioritized.csv"
+>>  115: OUT_SUMMARY = OUT_DIR / "ATLAS_network_summary.csv"
+    116: OUT_META = OUT_DIR / "ATLAS_network_metadata.json"
+    117: 
+
+[context around line 116]
+    114: OUT_DRUG_PRIORITY = OUT_DIR / "ATLAS_drug_network_prioritized.csv"
+    115: OUT_SUMMARY = OUT_DIR / "ATLAS_network_summary.csv"
+>>  116: OUT_META = OUT_DIR / "ATLAS_network_metadata.json"
+    117: 
+    118: STRING_ID_CACHE = CACHE_DIR / "string_identifier_cache.jsonl"
+
+[context around line 119]
+    117: 
+    118: STRING_ID_CACHE = CACHE_DIR / "string_identifier_cache.jsonl"
+>>  119: STRING_NETWORK_CACHE = CACHE_DIR / "string_network_cache.jsonl"
+    120: 
+    121: 
+
+[context around line 128]
+    126: STRING_BASE = "https://string-db.org/api"
+    127: STRING_SPECIES = 9606
+>>  128: USER_AGENT = "ATLAS-Network-Integration/1.0"
+    129: 
+    130: _thread_local = threading.local()
+
+[context around line 263]
+    261: def find_symbol_column(df: pd.DataFrame) -> str | None:
+    262:     candidates = [
+>>  263:         "Gene name",
+    264:         "gene_symbol",
+    265:         "Gene Symbol",
+
+[context around line 264]
+    262:     candidates = [
+    263:         "Gene name",
+>>  264:         "gene_symbol",
+    265:         "Gene Symbol",
+    266:         "symbol",
+
+[context around line 265]
+    263:         "Gene name",
+    264:         "gene_symbol",
+>>  265:         "Gene Symbol",
+    266:         "symbol",
+    267:         "SYMBOL",
+
+[context around line 283]
+    281: 
+    282: # ---------------------------------------------------------------------
+>>  283: # Resistance-gene set
+    284: # ---------------------------------------------------------------------
+    285: 
+
+[context around line 286]
+    284: # ---------------------------------------------------------------------
+    285: 
+>>  286: def load_resistance_genes(
+    287:     max_genes: int,
+    288:     padj_cutoff: float,
+
+[context around line 287]
+    285: 
+    286: def load_resistance_genes(
+>>  287:     max_genes: int,
+    288:     padj_cutoff: float,
+    289:     abs_fc_cutoff: float,
+
+[context around line 291]
+    289:     abs_fc_cutoff: float,
+    290: ) -> pd.DataFrame:
+>>  291:     # Prefer a finished 03C consensus signature if available.
+    292:     for path in CONSENSUS_CANDIDATES:
+    293:         if not path.exists():
+
+[context around line 292]
+    290: ) -> pd.DataFrame:
+    291:     # Prefer a finished 03C consensus signature if available.
+>>  292:     for path in CONSENSUS_CANDIDATES:
+    293:         if not path.exists():
+    294:             continue
+
+[context around line 306]
+    304: 
+    305:         out = pd.DataFrame({
+>>  306:             "gene_symbol": df[symbol_col].map(clean_text),
+    307:         })
+    308: 
+
+[context around line 309]
+    307:         })
+    308: 
+>>  309:         # Try to carry consensus labels / effect sizes when present.
+    310:         for col in [
+    311:             "consensus_category",
+
+[context around line 311]
+    309:         # Try to carry consensus labels / effect sizes when present.
+    310:         for col in [
+>>  311:             "consensus_category",
+    312:             "atlas_log2FC",
+    313:             "log2FoldChange",
+
+[context around line 320]
+    318:                 out[col] = df[col]
+    319: 
+>>  320:         out = out[out["gene_symbol"].ne("")].drop_duplicates("gene_symbol")
+    321: 
+    322:         # Prefer HIGH/MODERATE consensus if the column exists.
+
+[context around line 322]
+    320:         out = out[out["gene_symbol"].ne("")].drop_duplicates("gene_symbol")
+    321: 
+>>  322:         # Prefer HIGH/MODERATE consensus if the column exists.
+    323:         if "consensus_category" in out.columns:
+    324:             selected = out[
+
+[context around line 323]
+    321: 
+    322:         # Prefer HIGH/MODERATE consensus if the column exists.
+>>  323:         if "consensus_category" in out.columns:
+    324:             selected = out[
+    325:                 out["consensus_category"].astype(str).isin(
+
+[context around line 325]
+    323:         if "consensus_category" in out.columns:
+    324:             selected = out[
+>>  325:                 out["consensus_category"].astype(str).isin(
+    326:                     ["HIGH", "MODERATE"]
+    327:                 )
+
+[context around line 332]
+    330:                 out = selected
+    331: 
+>>  332:         return out.head(max_genes).reset_index(drop=True)
+    333: 
+    334:     # Fallback: discovery DEG set.
+
+[context around line 334]
+    332:         return out.head(max_genes).reset_index(drop=True)
+    333: 
+>>  334:     # Fallback: discovery DEG set.
+    335:     if not DISCOVERY_DEG.exists():
+    336:         raise FileNotFoundError(
+
+[context around line 344]
+    342:     if symbol_col is None:
+    343:         raise ValueError(
+>>  344:             "Could not identify gene-symbol column in discovery DEG file."
+    345:         )
+    346: 
+
+[context around line 353]
+    351: 
+    352:     out = pd.DataFrame({
+>>  353:         "gene_symbol": df[symbol_col].map(clean_text),
+    354:         "log2FoldChange": pd.to_numeric(
+    355:             df["log2FoldChange"],
+
+[context around line 365]
+    363: 
+    364:     out = out[
+>>  365:         out["gene_symbol"].ne("")
+    366:         & out["log2FoldChange"].notna()
+    367:         & out["padj"].notna()
+
+[context around line 381]
+    379:             ascending=[True, False],
+    380:         )
+>>  381:         .drop_duplicates("gene_symbol")
+    382:         .head(max_genes)
+    383:         .drop(columns=["abs_fc"])
+
+[context around line 382]
+    380:         )
+    381:         .drop_duplicates("gene_symbol")
+>>  382:         .head(max_genes)
+    383:         .drop(columns=["abs_fc"])
+    384:         .reset_index(drop=True)
+
+[context around line 566]
+    564: 
+    565: # ---------------------------------------------------------------------
+>>  566: # STRING network query
+    567: # ---------------------------------------------------------------------
+    568: 
+
+[context around line 569]
+    567: # ---------------------------------------------------------------------
+    568: 
+>>  569: def fetch_string_network(
+    570:     identifiers: list[str],
+    571:     required_score: int,
+
+[context around line 581]
+    579: 
+    580:     cache = load_jsonl_by_key(
+>>  581:         STRING_NETWORK_CACHE,
+    582:         "cache_key",
+    583:     )
+
+[context around line 588]
+    586:         return pd.DataFrame(rows)
+    587: 
+>>  588:     url = f"{STRING_BASE}/tsv/network"
+    589:     params = {
+    590:         "identifiers": "%0d".join(identifiers),
+
+[context around line 593]
+    591:         "species": STRING_SPECIES,
+    592:         "required_score": required_score,
+>>  593:         "network_type": "functional",
+    594:         "caller_identity": "ATLAS",
+    595:     }
+
+[context around line 616]
+    614: 
+    615:     append_jsonl(
+>>  616:         STRING_NETWORK_CACHE,
+    617:         {
+    618:             "cache_key": cache_key,
+
+[context around line 627]
+    625: 
+    626: # ---------------------------------------------------------------------
+>>  627: # Network integration
+    628: # ---------------------------------------------------------------------
+    629: 
+
+[context around line 632]
+    630: def classify_link(
+    631:     target_name: str,
+>>  632:     resistance_gene: str,
+    633:     resistance_set: set[str],
+    634: ) -> str:
+
+[context around line 635]
+    633:     resistance_set: set[str],
+    634: ) -> str:
+>>  635:     if target_name == resistance_gene and target_name in resistance_set:
+    636:         return "DIRECT_TARGET_IS_RESISTANCE_GENE"
+    637:     return "STRING_NETWORK_LINK"
+
+[context around line 636]
+    634: ) -> str:
+    635:     if target_name == resistance_gene and target_name in resistance_set:
+>>  636:         return "DIRECT_TARGET_IS_RESISTANCE_GENE"
+    637:     return "STRING_NETWORK_LINK"
+    638: 
+
+[context around line 637]
+    635:     if target_name == resistance_gene and target_name in resistance_set:
+    636:         return "DIRECT_TARGET_IS_RESISTANCE_GENE"
+>>  637:     return "STRING_NETWORK_LINK"
+    638: 
+    639: 
+
+[context around line 640]
+    638: 
+    639: 
+>>  640: def build_network_links(
+    641:     network: pd.DataFrame,
+    642:     target_names: set[str],
+
+[context around line 641]
+    639: 
+    640: def build_network_links(
+>>  641:     network: pd.DataFrame,
+    642:     target_names: set[str],
+    643:     resistance_genes: set[str],
+
+[context around line 643]
+    641:     network: pd.DataFrame,
+    642:     target_names: set[str],
+>>  643:     resistance_genes: set[str],
+    644: ) -> pd.DataFrame:
+    645:     if network.empty:
+
+[context around line 645]
+    643:     resistance_genes: set[str],
+    644: ) -> pd.DataFrame:
+>>  645:     if network.empty:
+    646:         return pd.DataFrame()
+    647: 
+
+[context around line 648]
+    646:         return pd.DataFrame()
+    647: 
+>>  648:     # STRING network TSV commonly contains preferredName_A/B.
+    649:     a_col = None
+    650:     b_col = None
+
+[context around line 656]
+    654:         "preferred_name_A",
+    655:     ]:
+>>  656:         if candidate in network.columns:
+    657:             a_col = candidate
+    658:             break
+
+[context around line 664]
+    662:         "preferred_name_B",
+    663:     ]:
+>>  664:         if candidate in network.columns:
+    665:             b_col = candidate
+    666:             break
+
+[context around line 673]
+    671:     score_col = None
+    672:     for candidate in ["score", "combined_score"]:
+>>  673:         if candidate in network.columns:
+    674:             score_col = candidate
+    675:             break
+
+[context around line 679]
+    677:     rows = []
+    678: 
+>>  679:     for _, r in network.iterrows():
+    680:         a = clean_text(r[a_col])
+    681:         b = clean_text(r[b_col])
+
+[context around line 689]
+    687:         )
+    688: 
+>>  689:         if a in target_names and b in resistance_genes:
+    690:             rows.append({
+    691:                 "target_symbol": a,
+
+[context around line 692]
+    690:             rows.append({
+    691:                 "target_symbol": a,
+>>  692:                 "resistance_gene": b,
+    693:                 "string_score": score,
+    694:                 "network_link_type": classify_link(
+
+[context around line 694]
+    692:                 "resistance_gene": b,
+    693:                 "string_score": score,
+>>  694:                 "network_link_type": classify_link(
+    695:                     a, b, resistance_genes
+    696:                 ),
+
+[context around line 695]
+    693:                 "string_score": score,
+    694:                 "network_link_type": classify_link(
+>>  695:                     a, b, resistance_genes
+    696:                 ),
+    697:             })
+
+[context around line 699]
+    697:             })
+    698: 
+>>  699:         if b in target_names and a in resistance_genes:
+    700:             rows.append({
+    701:                 "target_symbol": b,
+
+[context around line 702]
+    700:             rows.append({
+    701:                 "target_symbol": b,
+>>  702:                 "resistance_gene": a,
+    703:                 "string_score": score,
+    704:                 "network_link_type": classify_link(
+
+[context around line 704]
+    702:                 "resistance_gene": a,
+    703:                 "string_score": score,
+>>  704:                 "network_link_type": classify_link(
+    705:                     b, a, resistance_genes
+    706:                 ),
+
+[context around line 705]
+    703:                 "string_score": score,
+    704:                 "network_link_type": classify_link(
+>>  705:                     b, a, resistance_genes
+    706:                 ),
+    707:             })
+
+[context around line 715]
+    713:         pd.DataFrame(rows)
+    714:         .drop_duplicates(
+>>  715:             ["target_symbol", "resistance_gene"],
+    716:             keep="first",
+    717:         )
+
+[context around line 726]
+    724: # ---------------------------------------------------------------------
+    725: 
+>>  726: def score_target_network(
+    727:     target_symbol: str,
+    728:     links: pd.DataFrame,
+
+[context around line 778]
+    776: 
+    777:     if score >= 6:
+>>  778:         category = "STRONG_NETWORK_SUPPORT"
+    779:     elif score >= 3:
+    780:         category = "MODERATE_NETWORK_SUPPORT"
+
+[context around line 780]
+    778:         category = "STRONG_NETWORK_SUPPORT"
+    779:     elif score >= 3:
+>>  780:         category = "MODERATE_NETWORK_SUPPORT"
+    781:     elif score >= 1:
+    782:         category = "WEAK_NETWORK_SUPPORT"
+
+[context around line 782]
+    780:         category = "MODERATE_NETWORK_SUPPORT"
+    781:     elif score >= 1:
+>>  782:         category = "WEAK_NETWORK_SUPPORT"
+    783:     else:
+    784:         category = "NO_NETWORK_SUPPORT"
+
+[context around line 784]
+    782:         category = "WEAK_NETWORK_SUPPORT"
+    783:     else:
+>>  784:         category = "NO_NETWORK_SUPPORT"
+    785: 
+    786:     return {
+
+[context around line 788]
+    786:     return {
+    787:         "target_symbol": target_symbol,
+>>  788:         "target_is_resistance_gene": bool(direct),
+    789:         "linked_resistance_gene_n": int(linked_n),
+    790:         "mean_string_score_to_resistance": mean_score,
+
+[context around line 789]
+    787:         "target_symbol": target_symbol,
+    788:         "target_is_resistance_gene": bool(direct),
+>>  789:         "linked_resistance_gene_n": int(linked_n),
+    790:         "mean_string_score_to_resistance": mean_score,
+    791:         "max_string_score_to_resistance": max_score,
+
+[context around line 792]
+    790:         "mean_string_score_to_resistance": mean_score,
+    791:         "max_string_score_to_resistance": max_score,
+>>  792:         "network_support_score": int(score),
+    793:         "network_support_category": category,
+    794:         "linked_resistance_genes": (
+
+[context around line 793]
+    791:         "max_string_score_to_resistance": max_score,
+    792:         "network_support_score": int(score),
+>>  793:         "network_support_category": category,
+    794:         "linked_resistance_genes": (
+    795:             " | ".join(
+
+[context around line 794]
+    792:         "network_support_score": int(score),
+    793:         "network_support_category": category,
+>>  794:         "linked_resistance_genes": (
+    795:             " | ".join(
+    796:                 sorted(
+
+[context around line 798]
+    796:                 sorted(
+    797:                     set(
+>>  798:                         target_links["resistance_gene"]
+    799:                         .dropna()
+    800:                         .astype(str)
+
+[context around line 830]
+    828:     )
+    829:     p.add_argument(
+>>  830:         "--max-resistance-genes",
+    831:         type=int,
+    832:         default=200,
+
+[context around line 833]
+    831:         type=int,
+    832:         default=200,
+>>  833:         help="Maximum ATLAS resistance genes in STRING network. Default: 200",
+    834:     )
+    835:     p.add_argument(
+
+[context around line 861]
+    859:     args.max_drugs = max(0, args.max_drugs)
+    860:     args.max_targets_per_drug = max(1, args.max_targets_per_drug)
+>>  861:     args.max_resistance_genes = max(20, args.max_resistance_genes)
+    862:     args.string_score = min(max(args.string_score, 0), 1000)
+    863:     args.workers = max(1, min(args.workers, 12))
+
+[context around line 875]
+    873:     args = parse_args()
+    874: 
+>>  875:     header("ATLAS — Stage 04Q PPI + Pathway / Network Integration")
+    876: 
+    877:     if not INPUT_PAIRS.exists():
+
+[context around line 934]
+    932:     )
+    933: 
+>>  934:     resistance = load_resistance_genes(
+    935:         max_genes=args.max_resistance_genes,
+    936:         padj_cutoff=args.deg_padj,
+
+[context around line 935]
+    933: 
+    934:     resistance = load_resistance_genes(
+>>  935:         max_genes=args.max_resistance_genes,
+    936:         padj_cutoff=args.deg_padj,
+    937:         abs_fc_cutoff=args.deg_abs_fc,
+
+[context around line 940]
+    938:     )
+    939: 
+>>  940:     resistance_genes = sorted(
+    941:         set(resistance["gene_symbol"].dropna().astype(str))
+    942:     )
+
+[context around line 941]
+    939: 
+    940:     resistance_genes = sorted(
+>>  941:         set(resistance["gene_symbol"].dropna().astype(str))
+    942:     )
+    943:     resistance_set = set(resistance_genes)
+
+[context around line 943]
+    941:         set(resistance["gene_symbol"].dropna().astype(str))
+    942:     )
+>>  943:     resistance_set = set(resistance_genes)
+    944: 
+    945:     print(
+
+[context around line 946]
+    944: 
+    945:     print(
+>>  946:         f"Resistance genes selected: {len(resistance_genes):,}",
+    947:         flush=True,
+    948:     )
+
+[context around line 967]
+    965:         .astype(str)
+    966:         .tolist()
+>>  967:         + resistance_genes
+    968:     )
+    969: 
+
+[context around line 1016]
+   1014: 
+   1015:     mapped_resistance = []
+>> 1016:     for gene in resistance_genes:
+   1017:         rec = id_map.get(gene, {})
+   1018:         preferred = clean_text(rec.get("string_preferred_name"))
+
+[context around line 1017]
+   1015:     mapped_resistance = []
+   1016:     for gene in resistance_genes:
+>> 1017:         rec = id_map.get(gene, {})
+   1018:         preferred = clean_text(rec.get("string_preferred_name"))
+   1019:         if rec.get("string_mapped") and preferred:
+
+[context around line 1029]
+   1027:     )
+   1028:     print(
+>> 1029:         f"Mapped resistance genes: {len(mapped_resistance):,}",
+   1030:         flush=True,
+   1031:     )
+
+[context around line 1033]
+   1031:     )
+   1032: 
+>> 1033:     network_identifiers = sorted(
+   1034:         set(target_symbols) | set(mapped_resistance)
+   1035:     )
+
+[context around line 1038]
+   1036: 
+   1037:     print(
+>> 1038:         f"STRING network nodes submitted: {len(network_identifiers):,}",
+   1039:         flush=True,
+   1040:     )
+
+[context around line 1042]
+   1040:     )
+   1041: 
+>> 1042:     network = fetch_string_network(
+   1043:         network_identifiers,
+   1044:         required_score=args.string_score,
+
+[context around line 1043]
+   1041: 
+   1042:     network = fetch_string_network(
+>> 1043:         network_identifiers,
+   1044:         required_score=args.string_score,
+   1045:     )
+
+[context around line 1047]
+   1045:     )
+   1046: 
+>> 1047:     if network.empty:
+   1048:         print(
+   1049:             "WARNING: STRING returned no network edges.",
+
+[context around line 1049]
+   1047:     if network.empty:
+   1048:         print(
+>> 1049:             "WARNING: STRING returned no network edges.",
+   1050:             flush=True,
+   1051:         )
+
+[context around line 1053]
+   1051:         )
+   1052: 
+>> 1053:     atomic_csv(network, OUT_EDGES)
+   1054: 
+   1055:     links = build_network_links(
+
+[context around line 1055]
+   1053:     atomic_csv(network, OUT_EDGES)
+   1054: 
+>> 1055:     links = build_network_links(
+   1056:         network,
+   1057:         target_names=set(target_symbols),
+
+[context around line 1056]
+   1054: 
+   1055:     links = build_network_links(
+>> 1056:         network,
+   1057:         target_names=set(target_symbols),
+   1058:         resistance_genes=set(mapped_resistance),
+
+[context around line 1058]
+   1056:         network,
+   1057:         target_names=set(target_symbols),
+>> 1058:         resistance_genes=set(mapped_resistance),
+   1059:     )
+   1060: 
+
+[context around line 1064]
+   1062:         links = pd.DataFrame(columns=[
+   1063:             "target_symbol",
+>> 1064:             "resistance_gene",
+   1065:             "string_score",
+   1066:             "network_link_type",
+
+[context around line 1066]
+   1064:             "resistance_gene",
+   1065:             "string_score",
+>> 1066:             "network_link_type",
+   1067:         ])
+   1068: 
+
+[context around line 1072]
+   1070: 
+   1071:     target_score_rows = [
+>> 1072:         score_target_network(
+   1073:             target_symbol,
+   1074:             links,
+
+[context around line 1085]
+   1083:         target_scores = pd.DataFrame(columns=[
+   1084:             "target_symbol",
+>> 1085:             "target_is_resistance_gene",
+   1086:             "linked_resistance_gene_n",
+   1087:             "mean_string_score_to_resistance",
+
+[context around line 1086]
+   1084:             "target_symbol",
+   1085:             "target_is_resistance_gene",
+>> 1086:             "linked_resistance_gene_n",
+   1087:             "mean_string_score_to_resistance",
+   1088:             "max_string_score_to_resistance",
+
+[context around line 1089]
+   1087:             "mean_string_score_to_resistance",
+   1088:             "max_string_score_to_resistance",
+>> 1089:             "network_support_score",
+   1090:             "network_support_category",
+   1091:             "linked_resistance_genes",
+
+[context around line 1090]
+   1088:             "max_string_score_to_resistance",
+   1089:             "network_support_score",
+>> 1090:             "network_support_category",
+   1091:             "linked_resistance_genes",
+   1092:         ])
+
+[context around line 1091]
+   1089:             "network_support_score",
+   1090:             "network_support_category",
+>> 1091:             "linked_resistance_genes",
+   1092:         ])
+   1093: 
+
+[context around line 1110]
+   1108:     ):
+   1109:         scores = pd.to_numeric(
+>> 1110:             g["network_support_score"],
+   1111:             errors="coerce",
+   1112:         )
+
+[context around line 1124]
+   1122:             "pert_id": pert_id,
+   1123:             "pert_iname": pert_iname,
+>> 1124:             "network_target_n": int(
+   1125:                 g["target_symbol"].nunique()
+   1126:             ),
+
+[context around line 1127]
+   1125:                 g["target_symbol"].nunique()
+   1126:             ),
+>> 1127:             "best_network_target": clean_text(
+   1128:                 best.get("target_symbol")
+   1129:             ),
+
+[context around line 1130]
+   1128:                 best.get("target_symbol")
+   1129:             ),
+>> 1130:             "best_network_support_score": (
+   1131:                 float(best.get("network_support_score"))
+   1132:                 if pd.notna(best.get("network_support_score"))
+
+[context around line 1131]
+   1129:             ),
+   1130:             "best_network_support_score": (
+>> 1131:                 float(best.get("network_support_score"))
+   1132:                 if pd.notna(best.get("network_support_score"))
+   1133:                 else np.nan
+
+[context around line 1132]
+   1130:             "best_network_support_score": (
+   1131:                 float(best.get("network_support_score"))
+>> 1132:                 if pd.notna(best.get("network_support_score"))
+   1133:                 else np.nan
+   1134:             ),
+
+[context around line 1135]
+   1133:                 else np.nan
+   1134:             ),
+>> 1135:             "best_network_support_category": clean_text(
+   1136:                 best.get("network_support_category")
+   1137:             ),
+
+[context around line 1136]
+   1134:             ),
+   1135:             "best_network_support_category": clean_text(
+>> 1136:                 best.get("network_support_category")
+   1137:             ),
+   1138:             "best_target_linked_resistance_gene_n": int(
+
+[context around line 1138]
+   1136:                 best.get("network_support_category")
+   1137:             ),
+>> 1138:             "best_target_linked_resistance_gene_n": int(
+   1139:                 best.get("linked_resistance_gene_n", 0)
+   1140:                 if pd.notna(
+
+[context around line 1139]
+   1137:             ),
+   1138:             "best_target_linked_resistance_gene_n": int(
+>> 1139:                 best.get("linked_resistance_gene_n", 0)
+   1140:                 if pd.notna(
+   1141:                     best.get("linked_resistance_gene_n", 0)
+
+[context around line 1141]
+   1139:                 best.get("linked_resistance_gene_n", 0)
+   1140:                 if pd.notna(
+>> 1141:                     best.get("linked_resistance_gene_n", 0)
+   1142:                 )
+   1143:                 else 0
+
+[context around line 1145]
+   1143:                 else 0
+   1144:             ),
+>> 1145:             "best_target_linked_resistance_genes": clean_text(
+   1146:                 best.get("linked_resistance_genes")
+   1147:             ),
+
+[context around line 1146]
+   1144:             ),
+   1145:             "best_target_linked_resistance_genes": clean_text(
+>> 1146:                 best.get("linked_resistance_genes")
+   1147:             ),
+   1148:             "all_network_targets": " | ".join(
+
+[context around line 1148]
+   1146:                 best.get("linked_resistance_genes")
+   1147:             ),
+>> 1148:             "all_network_targets": " | ".join(
+   1149:                 sorted(
+   1150:                     set(
+
+[context around line 1159]
+   1157:         })
+   1158: 
+>> 1159:     drug_network = pd.DataFrame(drug_rows)
+   1160: 
+   1161:     prioritized = selected_drugs.merge(
+
+[context around line 1162]
+   1160: 
+   1161:     prioritized = selected_drugs.merge(
+>> 1162:         drug_network,
+   1163:         on=["pert_id", "pert_iname"],
+   1164:         how="left",
+
+[context around line 1167]
+   1165:     )
+   1166: 
+>> 1167:     prioritized["best_network_support_score"] = pd.to_numeric(
+   1168:         prioritized["best_network_support_score"],
+   1169:         errors="coerce",
+
+[context around line 1168]
+   1166: 
+   1167:     prioritized["best_network_support_score"] = pd.to_numeric(
+>> 1168:         prioritized["best_network_support_score"],
+   1169:         errors="coerce",
+   1170:     ).fillna(0)
+
+[context around line 1178]
+   1176:     ).fillna(0)
+   1177: 
+>> 1178:     prioritized["integrated_target_network_score"] = (
+   1179:         prioritized["target_evidence_strength_score"]
+   1180:         + prioritized["best_network_support_score"]
+
+[context around line 1180]
+   1178:     prioritized["integrated_target_network_score"] = (
+   1179:         prioritized["target_evidence_strength_score"]
+>> 1180:         + prioritized["best_network_support_score"]
+   1181:     )
+   1182: 
+
+[context around line 1185]
+   1183:     prioritized = prioritized.sort_values(
+   1184:         [
+>> 1185:             "integrated_target_network_score",
+   1186:             "target_evidence_strength_score",
+   1187:             "priority_rank",
+
+[context around line 1200]
+   1198:             "target_query_rows": len(target_queries),
+   1199:             "mapped_target_symbols": len(target_symbols),
+>> 1200:             "resistance_genes_requested": len(resistance_genes),
+   1201:             "mapped_resistance_genes": len(mapped_resistance),
+   1202:             "string_network_edges": len(network),
+
+[context around line 1201]
+   1199:             "mapped_target_symbols": len(target_symbols),
+   1200:             "resistance_genes_requested": len(resistance_genes),
+>> 1201:             "mapped_resistance_genes": len(mapped_resistance),
+   1202:             "string_network_edges": len(network),
+   1203:             "target_resistance_links": len(links),
+
+[context around line 1202]
+   1200:             "resistance_genes_requested": len(resistance_genes),
+   1201:             "mapped_resistance_genes": len(mapped_resistance),
+>> 1202:             "string_network_edges": len(network),
+   1203:             "target_resistance_links": len(links),
+   1204:             "targets_with_network_support": int(
+
+[context around line 1204]
+   1202:             "string_network_edges": len(network),
+   1203:             "target_resistance_links": len(links),
+>> 1204:             "targets_with_network_support": int(
+   1205:                 (
+   1206:                     pd.to_numeric(
+
+[context around line 1208]
+   1206:                     pd.to_numeric(
+   1207:                         target_scores.get(
+>> 1208:                             "network_support_score",
+   1209:                             pd.Series(dtype=float),
+   1210:                         ),
+
+[context around line 1226]
+   1224:         "input_target_annotations": str(INPUT_ANNOT),
+   1225:         "discovery_deg": str(DISCOVERY_DEG),
+>> 1226:         "consensus_candidates_checked": [
+   1227:             str(x) for x in CONSENSUS_CANDIDATES
+   1228:         ],
+
+[context around line 1227]
+   1225:         "discovery_deg": str(DISCOVERY_DEG),
+   1226:         "consensus_candidates_checked": [
+>> 1227:             str(x) for x in CONSENSUS_CANDIDATES
+   1228:         ],
+   1229:         "max_drugs": args.max_drugs,
+
+[context around line 1231]
+   1229:         "max_drugs": args.max_drugs,
+   1230:         "max_targets_per_drug": args.max_targets_per_drug,
+>> 1231:         "max_resistance_genes": args.max_resistance_genes,
+   1232:         "deg_padj_cutoff": args.deg_padj,
+   1233:         "deg_abs_fc_cutoff": args.deg_abs_fc,
+
+[context around line 1237]
+   1235:         "species": "Homo sapiens",
+   1236:         "species_taxon": STRING_SPECIES,
+>> 1237:         "network_type": "functional",
+   1238:         "sources": [
+   1239:             "ATLAS Stage 04P target annotations",
+
+[context around line 1240]
+   1238:         "sources": [
+   1239:             "ATLAS Stage 04P target annotations",
+>> 1240:             "ATLAS discovery/consensus resistance genes",
+   1241:             "STRING functional association network",
+   1242:         ],
+
+[context around line 1241]
+   1239:             "ATLAS Stage 04P target annotations",
+   1240:             "ATLAS discovery/consensus resistance genes",
+>> 1241:             "STRING functional association network",
+   1242:         ],
+   1243:         "guardrails": [
+
+[context around line 1245]
+   1243:         "guardrails": [
+   1244:             "STRING association does not necessarily represent direct physical binding.",
+>> 1245:             "Network proximity supports plausibility but does not prove resistance reversal.",
+   1246:             "Docking candidates should require convergent target/network evidence.",
+   1247:         ],
+
+[context around line 1246]
+   1244:             "STRING association does not necessarily represent direct physical binding.",
+   1245:             "Network proximity supports plausibility but does not prove resistance reversal.",
+>> 1246:             "Docking candidates should require convergent target/network evidence.",
+   1247:         ],
+   1248:         "next_stage": "04R_final_candidate_prioritization",
+
+[context around line 1256]
+   1254:     print(summary.to_string(index=False), flush=True)
+   1255: 
+>> 1256:     header("TOP NETWORK-SUPPORTED DRUGS")
+   1257: 
+   1258:     display_cols = [
+
+[context around line 1264]
+   1262:             "target_support_category",
+   1263:             "target_evidence_strength_score",
+>> 1264:             "best_network_target",
+   1265:             "best_network_support_category",
+   1266:             "best_network_support_score",
+
+[context around line 1265]
+   1263:             "target_evidence_strength_score",
+   1264:             "best_network_target",
+>> 1265:             "best_network_support_category",
+   1266:             "best_network_support_score",
+   1267:             "best_target_linked_resistance_gene_n",
+
+[context around line 1266]
+   1264:             "best_network_target",
+   1265:             "best_network_support_category",
+>> 1266:             "best_network_support_score",
+   1267:             "best_target_linked_resistance_gene_n",
+   1268:             "integrated_target_network_score",
+
+[context around line 1267]
+   1265:             "best_network_support_category",
+   1266:             "best_network_support_score",
+>> 1267:             "best_target_linked_resistance_gene_n",
+   1268:             "integrated_target_network_score",
+   1269:         ]
+
+[context around line 1268]
+   1266:             "best_network_support_score",
+   1267:             "best_target_linked_resistance_gene_n",
+>> 1268:             "integrated_target_network_score",
+   1269:         ]
+   1270:         if c in prioritized.columns
+
+------------------------------------------------------------------------------------------
+SCRIPT: scripts/04r_final_candidate_prioritization.py
+------------------------------------------------------------------------------------------
+
+[context around line 17]
+     15: 04O        Safety / cytotoxicity / promiscuity / PAINS
+     16: 04P        Drug-target annotation
+>>   17: 04Q        Resistance-network support
+     18: 
+     19: Primary outputs
+
+[context around line 104]
+    102:     / "results"
+    103:     / "cmap"
+>>  104:     / "network_integration"
+    105:     / "ATLAS_drug_network_prioritized.csv"
+    106: )
+
+[context around line 105]
+    103:     / "cmap"
+    104:     / "network_integration"
+>>  105:     / "ATLAS_drug_network_prioritized.csv"
+    106: )
+    107: 
+
+[context around line 306]
+    304: 
+    305: 
+>>  306: def score_network(row: pd.Series) -> tuple[float, str]:
+    307:     """
+    308:     0–6 points from 04Q network support.
+
+[context around line 308]
+    306: def score_network(row: pd.Series) -> tuple[float, str]:
+    307:     """
+>>  308:     0–6 points from 04Q network support.
+    309:     """
+    310:     category = clean_text(
+
+[context around line 311]
+    309:     """
+    310:     category = clean_text(
+>>  311:         row.get("best_network_support_category")
+    312:     )
+    313: 
+
+[context around line 315]
+    313: 
+    314:     raw_score = pd.to_numeric(
+>>  315:         pd.Series([row.get("best_network_support_score")]),
+    316:         errors="coerce",
+    317:     ).iloc[0]
+
+[context around line 322]
+    320:         raw_score = 0.0
+    321: 
+>>  322:     if category == "STRONG_NETWORK_SUPPORT":
+    323:         return min(6.0, 4.0 + raw_score / 4.0), "STRONG"
+    324:     if category == "MODERATE_NETWORK_SUPPORT":
+
+[context around line 324]
+    322:     if category == "STRONG_NETWORK_SUPPORT":
+    323:         return min(6.0, 4.0 + raw_score / 4.0), "STRONG"
+>>  324:     if category == "MODERATE_NETWORK_SUPPORT":
+    325:         return min(4.0, 2.0 + raw_score / 4.0), "MODERATE"
+    326:     if category == "WEAK_NETWORK_SUPPORT":
+
+[context around line 326]
+    324:     if category == "MODERATE_NETWORK_SUPPORT":
+    325:         return min(4.0, 2.0 + raw_score / 4.0), "MODERATE"
+>>  326:     if category == "WEAK_NETWORK_SUPPORT":
+    327:         return min(2.0, 1.0 + raw_score / 5.0), "WEAK"
+    328: 
+
+[context around line 408]
+    406:     safety = clean_text(row.get("safety_label"))
+    407:     target = clean_text(row.get("target_label"))
+>>  408:     network = clean_text(row.get("network_label"))
+    409:     cmap = clean_text(row.get("cmap_label"))
+    410:     best_target = clean_text(row.get("best_network_target"))
+
+[context around line 410]
+    408:     network = clean_text(row.get("network_label"))
+    409:     cmap = clean_text(row.get("cmap_label"))
+>>  410:     best_target = clean_text(row.get("best_network_target"))
+    411: 
+    412:     if not best_target:
+
+[context around line 415]
+    413:         return (
+    414:             "DEPRIORITIZE_WEAK_TARGET",
+>>  415:             "No specific network-supported protein target is available for docking.",
+    416:         )
+    417: 
+
+[context around line 424]
+    422:         )
+    423: 
+>>  424:     if network == "NONE":
+    425:         return (
+    426:             "HOLD_NETWORK_UNSUPPORTED",
+
+[context around line 426]
+    424:     if network == "NONE":
+    425:         return (
+>>  426:             "HOLD_NETWORK_UNSUPPORTED",
+    427:             "Target evidence exists but the target lacks resistance-network support.",
+    428:         )
+
+[context around line 427]
+    425:         return (
+    426:             "HOLD_NETWORK_UNSUPPORTED",
+>>  427:             "Target evidence exists but the target lacks resistance-network support.",
+    428:         )
+    429: 
+
+[context around line 438]
+    436:     if safety == "CAUTION":
+    437:         # Allow only strong multi-layer evidence through as a review candidate.
+>>  438:         if cmap == "STRONG" and target in {"STRONG", "MODERATE"} and network in {"STRONG", "MODERATE"}:
+    439:             return (
+    440:                 "DOCK_WITH_CAUTION",
+
+[context around line 452]
+    450:         and cmap in {"STRONG", "MODERATE"}
+    451:         and target in {"STRONG", "MODERATE"}
+>>  452:         and network in {"STRONG", "MODERATE"}
+    453:     ):
+    454:         return (
+
+[context around line 456]
+    454:         return (
+    455:             "DOCK_NOW",
+>>  456:             "CMap, preliminary safety, target evidence, and resistance-network support converge.",
+    457:         )
+    458: 
+
+[context around line 462]
+    460:         safety.startswith("PASS")
+    461:         and target in {"STRONG", "MODERATE", "WEAK"}
+>>  462:         and network in {"STRONG", "MODERATE", "WEAK"}
+    463:     ):
+    464:         return (
+
+[context around line 479]
+    477: # ---------------------------------------------------------------------
+    478: 
+>>  479: def resolve_uniprot_gene(symbol: str) -> dict[str, Any]:
+    480:     """
+    481:     Resolve an exact human gene symbol to a reviewed UniProt accession.
+
+[context around line 481]
+    479: def resolve_uniprot_gene(symbol: str) -> dict[str, Any]:
+    480:     """
+>>  481:     Resolve an exact human gene symbol to a reviewed UniProt accession.
+    482: 
+    483:     This is used to validate the 04Q best-network target before docking.
+
+[context around line 483]
+    481:     Resolve an exact human gene symbol to a reviewed UniProt accession.
+    482: 
+>>  483:     This is used to validate the 04Q best-network target before docking.
+    484:     We intentionally do NOT fall back to an unrelated first ChEMBL target row.
+    485:     """
+
+[context around line 489]
+    487: 
+    488:     empty = {
+>>  489:         "validated_target_symbol": symbol,
+    490:         "validated_uniprot_accession": "",
+    491:         "validated_uniprot_entry": "",
+
+[context around line 490]
+    488:     empty = {
+    489:         "validated_target_symbol": symbol,
+>>  490:         "validated_uniprot_accession": "",
+    491:         "validated_uniprot_entry": "",
+    492:         "validated_protein_name": "",
+
+[context around line 491]
+    489:         "validated_target_symbol": symbol,
+    490:         "validated_uniprot_accession": "",
+>>  491:         "validated_uniprot_entry": "",
+    492:         "validated_protein_name": "",
+    493:         "target_mapping_status": "UNRESOLVED",
+
+[context around line 492]
+    490:         "validated_uniprot_accession": "",
+    491:         "validated_uniprot_entry": "",
+>>  492:         "validated_protein_name": "",
+    493:         "target_mapping_status": "UNRESOLVED",
+    494:     }
+
+[context around line 501]
+    499:     url = "https://rest.uniprot.org/uniprotkb/search"
+    500:     params = {
+>>  501:         "query": f"(gene_exact:{symbol}) AND (organism_id:9606) AND (reviewed:true)",
+    502:         "format": "json",
+    503:         "fields": "accession,id,gene_names,protein_name",
+
+[context around line 503]
+    501:         "query": f"(gene_exact:{symbol}) AND (organism_id:9606) AND (reviewed:true)",
+    502:         "format": "json",
+>>  503:         "fields": "accession,id,gene_names,protein_name",
+    504:         "size": 5,
+    505:     }
+
+[context around line 524]
+    522:         return empty
+    523: 
+>>  524:     # Require the requested symbol to be present among returned gene names.
+    525:     for rec in results:
+    526:         genes = rec.get("genes", []) or []
+
+[context around line 526]
+    524:     # Require the requested symbol to be present among returned gene names.
+    525:     for rec in results:
+>>  526:         genes = rec.get("genes", []) or []
+    527:         gene_names = set()
+    528: 
+
+[context around line 527]
+    525:     for rec in results:
+    526:         genes = rec.get("genes", []) or []
+>>  527:         gene_names = set()
+    528: 
+    529:         for g in genes:
+
+[context around line 529]
+    527:         gene_names = set()
+    528: 
+>>  529:         for g in genes:
+    530:             primary = g.get("geneName", {}) or {}
+    531:             if primary.get("value"):
+
+[context around line 530]
+    528: 
+    529:         for g in genes:
+>>  530:             primary = g.get("geneName", {}) or {}
+    531:             if primary.get("value"):
+    532:                 gene_names.add(str(primary["value"]).upper())
+
+[context around line 532]
+    530:             primary = g.get("geneName", {}) or {}
+    531:             if primary.get("value"):
+>>  532:                 gene_names.add(str(primary["value"]).upper())
+    533: 
+    534:             for syn in g.get("synonyms", []) or []:
+
+[context around line 536]
+    534:             for syn in g.get("synonyms", []) or []:
+    535:                 if syn.get("value"):
+>>  536:                     gene_names.add(str(syn["value"]).upper())
+    537: 
+    538:         if symbol.upper() not in gene_names:
+
+[context around line 538]
+    536:                     gene_names.add(str(syn["value"]).upper())
+    537: 
+>>  538:         if symbol.upper() not in gene_names:
+    539:             continue
+    540: 
+
+[context around line 546]
+    544: 
+    545:         return {
+>>  546:             "validated_target_symbol": symbol,
+    547:             "validated_uniprot_accession": clean_text(
+    548:                 rec.get("primaryAccession")
+
+[context around line 547]
+    545:         return {
+    546:             "validated_target_symbol": symbol,
+>>  547:             "validated_uniprot_accession": clean_text(
+    548:                 rec.get("primaryAccession")
+    549:             ),
+
+[context around line 550]
+    548:                 rec.get("primaryAccession")
+    549:             ),
+>>  550:             "validated_uniprot_entry": clean_text(
+    551:                 rec.get("uniProtkbId")
+    552:             ),
+
+[context around line 553]
+    551:                 rec.get("uniProtkbId")
+    552:             ),
+>>  553:             "validated_protein_name": clean_text(
+    554:                 full_name.get("value")
+    555:             ),
+
+[context around line 556]
+    554:                 full_name.get("value")
+    555:             ),
+>>  556:             "target_mapping_status": "VALIDATED_UNIPROT_HUMAN_REVIEWED",
+    557:         }
+    558: 
+
+[context around line 567]
+    565: ) -> pd.DataFrame:
+    566:     """
+>>  567:     Validate the best-network target for docking.
+    568: 
+    569:     Important correction:
+
+[context around line 571]
+    569:     Important correction:
+    570:     The previous implementation fell back to the first ChEMBL target row when
+>>  571:     the network target could not be matched. That could attach the wrong
+    572:     accession to the selected network target. This version never does that.
+    573: 
+
+[context around line 572]
+    570:     The previous implementation fell back to the first ChEMBL target row when
+    571:     the network target could not be matched. That could attach the wrong
+>>  572:     accession to the selected network target. This version never does that.
+    573: 
+    574:     It resolves the actual best-network gene symbol against reviewed human
+
+[context around line 574]
+    572:     accession to the selected network target. This version never does that.
+    573: 
+>>  574:     It resolves the actual best-network gene symbol against reviewed human
+    575:     UniProt instead.
+    576:     """
+
+[context around line 583]
+    581: 
+    582:     for _, row in out.iterrows():
+>>  583:         symbol = clean_text(row.get("best_network_target"))
+    584: 
+    585:         if symbol not in cache:
+
+[context around line 586]
+    584: 
+    585:         if symbol not in cache:
+>>  586:             cache[symbol] = resolve_uniprot_gene(symbol)
+    587: 
+    588:         records.append(cache[symbol])
+
+[context around line 596]
+    594: 
+    595:     # Preserve traceable 04P ChEMBL context only when an exact preferred-name
+>>  596:     # match exists. No arbitrary fallback is allowed.
+    597:     exact_chembl_ids = []
+    598:     exact_chembl_accessions = []
+
+[context around line 603]
+    601:         pert_id = clean_text(row.get("pert_id"))
+    602:         pert_iname = clean_text(row.get("pert_iname"))
+>>  603:         symbol = clean_text(row.get("best_network_target"))
+    604: 
+    605:         if pairs.empty or not symbol:
+
+[context around line 714]
+    712:     safety = normalize_keys(read_csv(INPUT_04O))
+    713:     targets = normalize_keys(read_csv(INPUT_04P))
+>>  714:     network = normalize_keys(read_csv(INPUT_04Q))
+    715:     pairs = normalize_keys(read_csv(INPUT_04P_PAIRS))
+    716: 
+
+[context around line 718]
+    716: 
+    717:     # Restrict to candidates that actually reached 04Q, since docking requires
+>>  718:     # a network-supported target context.
+    719:     if not network.empty:
+    720:         network_keys = set(
+
+[context around line 719]
+    717:     # Restrict to candidates that actually reached 04Q, since docking requires
+    718:     # a network-supported target context.
+>>  719:     if not network.empty:
+    720:         network_keys = set(
+    721:             zip(
+
+[context around line 720]
+    718:     # a network-supported target context.
+    719:     if not network.empty:
+>>  720:         network_keys = set(
+    721:             zip(
+    722:                 network["pert_id"].astype(str),
+
+[context around line 722]
+    720:         network_keys = set(
+    721:             zip(
+>>  722:                 network["pert_id"].astype(str),
+    723:                 network["pert_iname"].astype(str),
+    724:             )
+
+[context around line 723]
+    721:             zip(
+    722:                 network["pert_id"].astype(str),
+>>  723:                 network["pert_iname"].astype(str),
+    724:             )
+    725:         )
+
+[context around line 728]
+    726:         base = base[
+    727:             [
+>>  728:                 (str(r["pert_id"]), str(r["pert_iname"])) in network_keys
+    729:                 for _, r in base.iterrows()
+    730:             ]
+
+[context around line 737]
+    735:     merged = merge_layer(merged, safety)
+    736:     merged = merge_layer(merged, targets)
+>>  737:     merged = merge_layer(merged, network)
+    738: 
+    739:     if merged.empty:
+
+[context around line 759]
+    757:     merged["target_label"] = [x[1] for x in target_parts]
+    758: 
+>>  759:     network_parts = merged.apply(score_network, axis=1)
+    760:     merged["network_score"] = [x[0] for x in network_parts]
+    761:     merged["network_label"] = [x[1] for x in network_parts]
+
+[context around line 760]
+    758: 
+    759:     network_parts = merged.apply(score_network, axis=1)
+>>  760:     merged["network_score"] = [x[0] for x in network_parts]
+    761:     merged["network_label"] = [x[1] for x in network_parts]
+    762: 
+
+[context around line 761]
+    759:     network_parts = merged.apply(score_network, axis=1)
+    760:     merged["network_score"] = [x[0] for x in network_parts]
+>>  761:     merged["network_label"] = [x[1] for x in network_parts]
+    762: 
+    763:     regulatory_parts = merged.apply(score_regulatory, axis=1)
+
+[context around line 778]
+    776:         + merged["safety_score"]
+    777:         + merged["target_score"]
+>>  778:         + merged["network_score"]
+    779:         + merged["regulatory_score"]
+    780:         + merged["promiscuity_penalty"]
+
+[context around line 793]
+    791:         "KEEP_FOR_REVIEW": 2,
+    792:         "MANUAL_REVIEW": 3,
+>>  793:         "HOLD_NETWORK_UNSUPPORTED": 4,
+    794:         "HOLD_INSUFFICIENT_EVIDENCE": 5,
+    795:         "DEPRIORITIZE_WEAK_TARGET": 6,
+
+[context around line 837]
+    835:     # Require a concrete target name.
+    836:     docking = docking[
+>>  837:         docking["best_network_target"]
+    838:         .fillna("")
+    839:         .astype(str)
+
+[context around line 844]
+    842:     ].copy()
+    843: 
+>>  844:     # Docking requires a validated human protein accession.
+    845:     docking = docking[
+    846:         docking["target_mapping_status"]
+
+[context around line 847]
+    845:     docking = docking[
+    846:         docking["target_mapping_status"]
+>>  847:         .eq("VALIDATED_UNIPROT_HUMAN_REVIEWED")
+    848:         & docking["validated_uniprot_accession"]
+    849:         .fillna("")
+
+[context around line 848]
+    846:         docking["target_mapping_status"]
+    847:         .eq("VALIDATED_UNIPROT_HUMAN_REVIEWED")
+>>  848:         & docking["validated_uniprot_accession"]
+    849:         .fillna("")
+    850:         .astype(str)
+
+[context around line 897]
+    895:     metadata = {
+    896:         "stage": "04R",
+>>  897:         "implementation": "v2_validated_docking_target_mapping",
+    898:         "created_utc": datetime.now(timezone.utc).isoformat(),
+    899:         "inputs": {
+
+[context around line 915]
+    913:             "Safety": "+2 to -12, with hard veto",
+    914:             "Target": "0–5",
+>>  915:             "Network": "0–6",
+    916:             "Regulatory": "0 to +1.5 only; no negative penalty for absence",
+    917:             "Promiscuity": "0 to approximately -6",
+
+[context around line 923]
+    921:             "High-risk safety evidence can veto a candidate.",
+    922:             "No regulatory database hit is not treated as negative evidence.",
+>>  923:             "Docking is only recommended for target-supported, network-supported pairs.",
+    924:             "Docking score will not be interpreted as proof of binding or efficacy.",
+    925:         ],
+
+[context around line 947]
+    945:             "safety_label",
+    946:             "target_label",
+>>  947:             "network_label",
+    948:             "regulatory_label",
+    949:             "promiscuity_penalty",
+
+[context around line 951]
+    949:             "promiscuity_penalty",
+    950:             "integrated_prioritization_score",
+>>  951:             "best_network_target",
+    952:             "final_decision",
+    953:         ]
+
+[context around line 980]
+    978:                 "docking_rank",
+    979:                 "pert_iname",
+>>  980:                 "best_network_target",
+    981:                 "validated_target_symbol",
+    982:                 "validated_uniprot_accession",
+
+[context around line 981]
+    979:                 "pert_iname",
+    980:                 "best_network_target",
+>>  981:                 "validated_target_symbol",
+    982:                 "validated_uniprot_accession",
+    983:                 "validated_uniprot_entry",
+
+[context around line 982]
+    980:                 "best_network_target",
+    981:                 "validated_target_symbol",
+>>  982:                 "validated_uniprot_accession",
+    983:                 "validated_uniprot_entry",
+    984:                 "exact_target_chembl_id",
+
+[context around line 983]
+    981:                 "validated_target_symbol",
+    982:                 "validated_uniprot_accession",
+>>  983:                 "validated_uniprot_entry",
+    984:                 "exact_target_chembl_id",
+    985:                 "cmap_label",
+
+[context around line 988]
+    986:                 "safety_label",
+    987:                 "target_label",
+>>  988:                 "network_label",
+    989:                 "integrated_prioritization_score",
+    990:                 "final_decision",
+
+------------------------------------------------------------------------------------------
+SCRIPT: scripts/04u_integrated_evidence_matrix.py
+------------------------------------------------------------------------------------------
+
+[context around line 16]
+     14: 04T ADMET / structural assessment
+     15: 04S docking
+>>   16: 04Q network integration
+     17: 04P target annotations
+     18: 04O safety screening
+
+[context around line 23]
+     21: Outputs
+     22: -------
+>>   23: results/cmap/integrated_evidence/
+     24:     ATLAS_integrated_evidence_matrix.csv
+     25:     ATLAS_experimental_validation_shortlist.csv
+
+[context around line 24]
+     22: -------
+     23: results/cmap/integrated_evidence/
+>>   24:     ATLAS_integrated_evidence_matrix.csv
+     25:     ATLAS_experimental_validation_shortlist.csv
+     26:     ATLAS_integrated_evidence_summary.csv
+
+[context around line 26]
+     24:     ATLAS_integrated_evidence_matrix.csv
+     25:     ATLAS_experimental_validation_shortlist.csv
+>>   26:     ATLAS_integrated_evidence_summary.csv
+     27:     ATLAS_integrated_evidence_metadata.json
+     28: 
+
+[context around line 27]
+     25:     ATLAS_experimental_validation_shortlist.csv
+     26:     ATLAS_integrated_evidence_summary.csv
+>>   27:     ATLAS_integrated_evidence_metadata.json
+     28: 
+     29: Principles
+
+[context around line 70]
+     68: 
+     69: INPUT_04Q = (
+>>   70:     PROJECT_ROOT / "results" / "cmap" / "network_integration"
+     71:     / "ATLAS_drug_network_prioritized.csv"
+     72: )
+
+[context around line 71]
+     69: INPUT_04Q = (
+     70:     PROJECT_ROOT / "results" / "cmap" / "network_integration"
+>>   71:     / "ATLAS_drug_network_prioritized.csv"
+     72: )
+     73: 
+
+[context around line 90]
+     88: 
+     89: OUT_DIR = (
+>>   90:     PROJECT_ROOT / "results" / "cmap" / "integrated_evidence"
+     91: )
+     92: OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+[context around line 94]
+     92: OUT_DIR.mkdir(parents=True, exist_ok=True)
+     93: 
+>>   94: OUT_MATRIX = OUT_DIR / "ATLAS_integrated_evidence_matrix.csv"
+     95: OUT_SHORTLIST = OUT_DIR / "ATLAS_experimental_validation_shortlist.csv"
+     96: OUT_SUMMARY = OUT_DIR / "ATLAS_integrated_evidence_summary.csv"
+
+[context around line 96]
+     94: OUT_MATRIX = OUT_DIR / "ATLAS_integrated_evidence_matrix.csv"
+     95: OUT_SHORTLIST = OUT_DIR / "ATLAS_experimental_validation_shortlist.csv"
+>>   96: OUT_SUMMARY = OUT_DIR / "ATLAS_integrated_evidence_summary.csv"
+     97: OUT_META = OUT_DIR / "ATLAS_integrated_evidence_metadata.json"
+     98: 
+
+[context around line 97]
+     95: OUT_SHORTLIST = OUT_DIR / "ATLAS_experimental_validation_shortlist.csv"
+     96: OUT_SUMMARY = OUT_DIR / "ATLAS_integrated_evidence_summary.csv"
+>>   97: OUT_META = OUT_DIR / "ATLAS_integrated_evidence_metadata.json"
+     98: 
+     99: 
+
+[context around line 189]
+    187:     safety = clean_text(row.get("safety_label"))
+    188:     target = clean_text(row.get("target_label"))
+>>  189:     network = clean_text(row.get("network_label"))
+    190:     regulatory = clean_text(row.get("regulatory_label"))
+    191:     developability = clean_text(
+
+[context around line 230]
+    228:         missing_layers += 1
+    229: 
+>>  230:     # Network
+    231:     if network == "STRONG":
+    232:         strong_layers += 1
+
+[context around line 231]
+    229: 
+    230:     # Network
+>>  231:     if network == "STRONG":
+    232:         strong_layers += 1
+    233:     elif network == "MODERATE":
+
+[context around line 233]
+    231:     if network == "STRONG":
+    232:         strong_layers += 1
+>>  233:     elif network == "MODERATE":
+    234:         supportive_layers += 1
+    235:     elif network == "WEAK":
+
+[context around line 235]
+    233:     elif network == "MODERATE":
+    234:         supportive_layers += 1
+>>  235:     elif network == "WEAK":
+    236:         caution_layers += 1
+    237:     else:
+
+[context around line 329]
+    327:     # Highest-confidence gate:
+    328:     # - candidate passed the strict 04R docking gate,
+>>  329:     # - 04T advanced it with validated docking,
+    330:     # - no meaningful safety caution,
+    331:     # - and several independent layers converge.
+
+[context around line 336]
+    334:     # intentionally distinguishes strength without treating MODERATE support
+    335:     # as absence. Requiring 4 STRONG layers alone was too restrictive and
+>>  336:     # incorrectly demoted candidates such as validated sitagliptin->DPP4.
+    337:     if (
+    338:         r_decision == "DOCK_NOW"
+
+[context around line 346]
+    344:         return (
+    345:             "PRIORITY_EXPERIMENTAL_VALIDATION",
+>>  346:             "Validated docking and multiple convergent strong/supportive evidence layers justify top experimental priority.",
+    347:         )
+    348: 
+
+[context around line 515]
+    513:     )
+    514: 
+>>  515:     merged["network_evidence_badge"] = merged.get(
+    516:         "network_label",
+    517:         pd.Series("", index=merged.index),
+
+[context around line 516]
+    514: 
+    515:     merged["network_evidence_badge"] = merged.get(
+>>  516:         "network_label",
+    517:         pd.Series("", index=merged.index),
+    518:     )
+
+[context around line 533]
+    531:         .astype(str)
+    532:         .eq("PASS_RMSD_LE_2A"),
+>>  533:         "VALIDATED_DOCKING",
+    534:         np.where(
+    535:             merged.get(
+
+[context around line 543]
+    541:             .eq("COMPLETED"),
+    542:             "DOCKING_WITH_CAUTION",
+>>  543:             "NO_VALIDATED_DOCKING",
+    544:         ),
+    545:     )
+
+[context around line 647]
+    645:         "experimental_shortlist_count": int(len(shortlist)),
+    646:         "guardrails": [
+>>  647:             "No efficacy probability is generated.",
+    648:             "Negative CMap tau is transcriptomic opposition, not proof of resistance reversal.",
+    649:             "Safety high-risk evidence can veto a candidate.",
+
+[context around line 691]
+    689:             "safety_evidence_badge",
+    690:             "target_evidence_badge",
+>>  691:             "network_evidence_badge",
+    692:             "developability_evidence_badge",
+    693:             "docking_evidence_badge",
+
+[context around line 722]
+    720:                 "experimental_shortlist_rank",
+    721:                 "pert_iname",
+>>  722:                 "best_network_target",
+    723:                 "validated_uniprot_accession",
+    724:                 "best_affinity_kcal_mol",
+
+[context around line 723]
+    721:                 "pert_iname",
+    722:                 "best_network_target",
+>>  723:                 "validated_uniprot_accession",
+    724:                 "best_affinity_kcal_mol",
+    725:                 "protocol_validation",
+
+==========================================================================================
+NEW VALIDATED EVIDENCE FILES
+==========================================================================================
+results/external_validation/downstream/validated_resistance_gene_evidence.csv
+results/external_validation/downstream/validated_tgfb_module_evidence.csv
+results/external_validation/downstream/validated_evidence_summary.csv
