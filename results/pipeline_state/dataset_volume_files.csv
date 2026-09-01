@@ -4,7 +4,7 @@ data/discovery/dataset_candidates_scored.csv,other_data,,231759,0.22102260589599
 data/discovery/dataset_candidates.parquet,other_data,,39889,0.038041114807128906,3.714952617883682e-05,.parquet
 data/discovery/dataset_candidates.csv,other_data,,217420,0.20734786987304688,0.00020248815417289734,.csv
 data/discovery/ebi_cross_reference_map.csv,other_data,,1576,0.00150299072265625,1.4677643775939941e-06,.csv
-data/discovery/dataset_candidates_scored.parquet,other_data,,72398,0.06904411315917969,6.742589175701141e-05,.parquet
+data/discovery/dataset_candidates_scored.parquet,other_data,,72427,0.06907176971435547,6.745290011167526e-05,.parquet
 data/discovery/ebi_external_candidates.csv,other_data,,11526,0.010992050170898438,1.0734423995018005e-05,.csv
 data/discovery/dataset_candidates_pre_ebi.csv,other_data,,212633,0.20278263092041016,0.00019802991300821304,.csv
 data/validation_expression/matrix_inspection_summary.csv,validation_expression,,334,0.0003185272216796875,3.110617399215698e-07,.csv

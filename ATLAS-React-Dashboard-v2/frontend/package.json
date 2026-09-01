@@ -1,7 +1,7 @@
 {
   "name": "atlas-react-dashboard",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,8 @@
     "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.2",

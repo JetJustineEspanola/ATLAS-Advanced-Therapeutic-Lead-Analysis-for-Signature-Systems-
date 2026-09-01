@@ -110,9 +110,9 @@ class AtlasReader:
         out = pd.DataFrame(index=df.index)
         for dest, src in mapping.items():
             out[dest] = df[src] if src else None
-        return {"rows": frame_records(out, 5000), "columns": list(out.columns), "source_file": str(p)}
+        return {"rows": frame_records(out, 10000), "columns": list(out.columns), "source_file": str(p)}
 
-    def generic_rows(self, p: Path | None, limit: int = 1000):
+    def generic_rows(self, p: Path | None, limit: int = 10000):
         if not p:
             return {"rows": [], "columns": [], "source_file": None}
         df = self.read_csv(p)
