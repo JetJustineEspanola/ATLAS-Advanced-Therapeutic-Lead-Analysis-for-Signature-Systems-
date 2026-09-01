@@ -1,0 +1,30 @@
+{
+  "stage": "04N",
+  "implementation": "optimized_concurrent_resumable_v2",
+  "run_complete": true,
+  "input_file": "/home/regulus/Documents/ATLAS/results/cmap/drug_filter/ATLAS_CMap_drug_candidates.csv",
+  "selected_candidates": 1090,
+  "candidates_processed": 1090,
+  "verification_date_utc": "2026-08-31",
+  "mode": "full",
+  "priority_tier2_top_n": 100,
+  "workers": 8,
+  "timeout_connect_seconds": 3.5,
+  "timeout_read_seconds": 8.0,
+  "retries": 1,
+  "elapsed_seconds": 0.055,
+  "sources": [
+    "FDA Drugs@FDA via openFDA",
+    "FDA drug labeling via openFDA",
+    "ClinicalTrials.gov API v2"
+  ],
+  "fda_application_records_found": 45,
+  "fda_label_records_found": 31,
+  "clinical_trial_records_found": 642,
+  "manual_regulatory_review_required": 1080,
+  "checkpoint_file": "/home/regulus/Documents/ATLAS/results/cmap/regulatory_status/ATLAS_CMap_regulatory_checkpoint.jsonl",
+  "partial_file": "/home/regulus/Documents/ATLAS/results/cmap/regulatory_status/ATLAS_CMap_regulatory_partial.csv",
+  "http_cache_file": "/home/regulus/Documents/ATLAS/results/cmap/regulatory_status/ATLAS_CMap_regulatory_http_cache.jsonl",
+  "important_note": "Automated records are evidence only. No compound is automatically declared FDA-approved for HER2-positive breast cancer or trastuzumab resistance.",
+  "next_stage": "04O_cytotoxicity_promiscuity_pains_safety_screening"
+}

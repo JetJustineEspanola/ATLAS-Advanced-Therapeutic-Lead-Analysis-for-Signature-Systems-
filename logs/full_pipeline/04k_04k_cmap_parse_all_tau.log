@@ -1,0 +1,100 @@
+
+============================================================
+Parsing: ATLAS_SIG_B_TOP100
+Job ID: 6a92e7670262700013c4e5e9
+File: /home/regulus/Documents/ATLAS/results/cmap/raw/job_6a92e7670262700013c4e5e9/my_analysis.sig_gutc_tool.6a92e7670262700013c4e5e9/matrices/gutc/ps_pert_summary.gctx
+Matrix shape: (1, 8798)
+Perturbagens: 8798
+Queries: 1
+Missing tau: 1
+Tau range: -99.5 to 98.6225
+Compound perturbagens: 2,837
+
+============================================================
+Parsing: ATLAS_SIG_B_TOP150
+Job ID: 6a92f7a00262700013c4e5f1
+File: /home/regulus/Documents/ATLAS/results/cmap/raw/job_6a92f7a00262700013c4e5f1/my_analysis.sig_gutc_tool.6a92f7a00262700013c4e5f1/matrices/gutc/ps_pert_summary.gctx
+Matrix shape: (1, 8798)
+Perturbagens: 8798
+Queries: 1
+Missing tau: 0
+Tau range: -99.57895 to 99.57895
+Compound perturbagens: 2,837
+
+============================================================
+Parsing: ATLAS_SIG_A_TOP150
+Job ID: 6a92f7a109168d001496ada7
+File: /home/regulus/Documents/ATLAS/results/cmap/raw/job_6a92f7a109168d001496ada7/my_analysis.sig_gutc_tool.6a92f7a109168d001496ada7/matrices/gutc/ps_pert_summary.gctx
+Matrix shape: (1, 8798)
+Perturbagens: 8798
+Queries: 1
+Missing tau: 5
+Tau range: -98.84259 to 94.20889
+Compound perturbagens: 2,837
+
+============================================================
+COMBINED CMap RESULTS
+============================================================
+Total perturbagen rows: 26,394
+Total compound rows: 8,511
+
+Saved all tau results:
+/home/regulus/Documents/ATLAS/results/cmap/parsed/ATLAS_CMap_all_tau_long.csv
+Saved compound tau results:
+/home/regulus/Documents/ATLAS/results/cmap/parsed/ATLAS_CMap_compound_tau_long.csv
+
+Saved cross-signature tau matrix:
+/home/regulus/Documents/ATLAS/results/cmap/parsed/ATLAS_CMap_cross_signature_tau.csv
+
+Preliminary consensus candidates: 1,241
+Saved:
+/home/regulus/Documents/ATLAS/results/cmap/parsed/ATLAS_CMap_consensus_candidates.csv
+
+Candidates with strong negative tau in >=2 signatures: 7
+Saved:
+/home/regulus/Documents/ATLAS/results/cmap/parsed/ATLAS_CMap_strong_consensus.csv
+
+============================================================
+TOP 30 CROSS-SIGNATURE CMap CANDIDATES
+============================================================
+ consensus_rank       pert_id        pert_iname  ATLAS_SIG_B_TOP100  ATLAS_SIG_B_TOP150  ATLAS_SIG_A_TOP150  n_signatures  n_negative  n_strong_negative   mean_tau  median_tau  minimum_tau
+              1 BRD-K99447003       enalaprilat          -94.186317          -95.636978           -2.249479             3           3                  2 -64.024261  -94.186317   -95.636978
+              2 BRD-A81541225      oligomycin-a          -93.997200          -97.533478          -31.808538             3           3                  2 -74.446404  -93.997200   -97.533478
+              3 BRD-K89687904 PKCbeta-inhibitor          -90.709641          -97.772629          -24.450300             3           3                  2 -70.977524  -90.709641   -97.772629
+              4 BRD-K33483813           actarit          -98.731499          -94.041336            0.000000             3           2                  2 -64.257607  -94.041336   -98.731499
+              5 BRD-K45252063        clofibrate          -95.066948          -93.316582            0.000000             3           2                  2 -62.794510  -93.316582   -95.066948
+              6 BRD-K19416115       sitagliptin          -95.046021          -92.978722            0.000000             3           2                  2 -62.674915  -92.978722   -95.046021
+              7 BRD-K01976263           emetine          -96.723045          -91.633949            0.000000             3           2                  2 -62.785664  -91.633949   -96.723045
+              8 BRD-K98372770            L-2167          -95.151428          -85.649376           -4.334038             3           3                  1 -61.711620  -85.649376   -95.151428
+              9 BRD-K13356952     methazolamide          -95.771667          -85.611694          -19.686787             3           3                  1 -67.023384  -85.611694   -95.771667
+             10 BRD-K22096725       ALW-II-49-7          -90.098976          -84.463036          -30.964382             3           3                  1 -68.508797  -84.463036   -90.098976
+             11 BRD-K09859624     methantheline          -93.909653          -83.348442           -5.637197             3           3                  1 -60.965092  -83.348442   -93.909653
+             12 BRD-K55420858             mirin          -91.832397          -80.718857          -17.979301             3           3                  1 -63.510181  -80.718857   -91.832397
+             13 BRD-K74236984          UNC-0321          -78.778687          -91.155312          -16.522942             3           3                  1 -62.152313  -78.778687   -91.155312
+             14 BRD-A48237631       mitomycin-c          -14.945600          -90.274841          -68.170517             3           3                  1 -57.796986  -68.170517   -90.274841
+             15 BRD-A30977374        nifedipine          -63.485985          -92.370224           -7.082452             3           3                  1 -54.312885  -63.485985   -92.370224
+             16 BRD-U73238814          QL-XI-92          -90.411026          -59.894768           -1.173027             3           3                  1 -50.492939  -59.894768   -90.411026
+             17 BRD-A82238138        budesonide          -51.701839          -93.930908           -2.043693             3           3                  1 -49.225479  -51.701839   -93.930908
+             18 BRD-K55930204         phenytoin          -91.621536          -43.434792          -37.665825             3           3                  1 -57.574055  -43.434792   -91.621536
+             19 BRD-A06352508         SB-218078          -33.465538          -92.218643           -2.396054             3           3                  1 -42.693409  -33.465538   -92.218643
+             20 BRD-K87426499     BRD-K87426499          -98.714668          -89.502975            0.000000             3           2                  1 -62.739216  -89.502975   -98.714668
+             21 BRD-A50454580        PD-0325901          -92.347717          -88.828583            0.000000             3           2                  1 -60.392101  -88.828583   -92.347717
+             22 BRD-K90885812     propantheline          -84.949341          -92.488113            0.000000             3           2                  1 -59.145817  -84.949341   -92.488113
+             23 BRD-K39187410     BRD-K39187410          -76.645271          -95.223022            0.739958             3           2                  1 -57.042774  -76.645271   -95.223022
+             24 BRD-K55462201            AM-404          -92.548882          -70.693314            0.000000             3           2                  1 -54.414062  -70.693314   -92.548882
+             25 BRD-K86873305      piperacillin          -90.123634          -70.280159            0.000000             3           2                  1 -53.467930  -70.280159   -90.123634
+             26 BRD-K88742110         PCI-34051          -90.833801          -49.909546            0.000000             3           2                  1 -46.914448  -49.909546   -90.833801
+             27 BRD-A37959677           estrone          -91.267944          -45.062786            0.000000             3           2                  1 -45.443577  -45.062786   -91.267944
+             28 BRD-K75478907          GS-39783          -90.204460          -31.642422            1.374207             3           2                  1 -40.157558  -31.642422   -90.204460
+             29 BRD-K78373679           Ro-3306           -4.016913          -93.164406            0.000000             3           2                  1 -32.393772   -4.016913   -93.164406
+             30 BRD-K93188295           ARC-239          -86.813782          -89.505760           -3.623069             3           3                  0 -59.980869  -86.813782   -89.505760
+
+============================================================
+STAGE 4K CMap CROSS-SIGNATURE PARSING COMPLETE
+============================================================
+
+Primary output:
+/home/regulus/Documents/ATLAS/results/cmap/parsed/ATLAS_CMap_cross_signature_tau.csv
+
+Consensus output:
+/home/regulus/Documents/ATLAS/results/cmap/parsed/ATLAS_CMap_consensus_candidates.csv

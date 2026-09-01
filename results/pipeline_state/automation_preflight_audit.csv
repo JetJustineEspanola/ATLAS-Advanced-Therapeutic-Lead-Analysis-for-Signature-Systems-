@@ -1,0 +1,68 @@
+script,exists,has_main_guard,cli_args,required_cli_detected,network_dependency,manual_or_curated_logic,interactive_input,external_tool_refs,imports,default_noninteractive_candidate,notes
+00a_dataset_discovery.py,True,True,--query-family --retmax --sources,False,True,False,False,,__future__ argparse atlas_data json pandas pathlib re sys xml,True,NETWORK_DEPENDENCY
+00b_metadata_catalog.py,True,True,--input,False,False,True,False,,__future__ argparse atlas_data duckdb pandas pathlib sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT
+00c_dataset_eligibility.py,True,True,--catalog,False,False,True,False,,__future__ argparse atlas_data duckdb pandas pathlib sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT
+00d_metadata_enrichment.py,True,True,--accessions --max-datasets --min-score --sources --workers,False,True,True,False,,__future__ argparse concurrent csv duckdb gzip io json pandas pathlib re requests sys time typing,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+00d1_phenotype_audit.py,True,True,,False,False,True,False,,__future__ collections pandas pathlib re sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT
+00d2_conservative_phenotype_classifier.py,True,True,--dry-run,False,False,False,False,,__future__ argparse collections duckdb pandas pathlib re sys,True,
+00d2b_curated_study_phenotype_mapping.py,True,True,--accessions --dry-run,False,True,True,False,,__future__ argparse duckdb pandas pathlib re sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+00d2c_confirm_her2_status.py,True,False,,False,True,False,False,,duckdb pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD
+00d3_dataset_relationship_audit.py,True,True,,False,True,False,False,,__future__ itertools pandas pathlib sys,True,NETWORK_DEPENDENCY
+00c4_independence_modality_scoring.py,True,True,,False,False,True,False,,__future__ duckdb json pandas pathlib sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT
+00e_primary_validation_expression_fetch.py,True,True,--accessions,False,True,True,False,,__future__ argparse hashlib html pandas pathlib re requests shutil sys tarfile urllib,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+00f_primary_validation_matrix_inspection.py,True,True,,False,True,False,False,,pandas pathlib re,True,NETWORK_DEPENDENCY
+00f1_primary_validation_design_audit.py,True,True,,False,True,True,False,,duckdb pandas pathlib re,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+00g_primary_validation_differential_expression.py,True,True,,False,True,True,False,,numpy pandas pathlib pydeseq2 sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+00h_cross_study_deg_concordance.py,True,True,,False,False,False,False,,numpy pandas pathlib re scipy,True,
+00i_consensus_resistance_signature.py,True,True,,False,True,False,False,,numpy pandas pathlib,True,NETWORK_DEPENDENCY
+00j_discovery_consensus_validation.py,True,True,,False,False,False,False,,numpy pandas pathlib,True,
+00k_strict_core_pathway_validation.py,True,True,,False,False,False,False,,gseapy pandas pathlib,True,
+00l_tgfb_ranked_validation.py,True,True,,False,False,False,False,,gseapy pandas pathlib re,True,
+00m_tgfb_gene_level_audit.py,True,True,,False,False,False,False,,__future__ gseapy math numpy pandas pathlib,True,
+00n_tgfb_leading_edge_comparison.py,True,True,,False,False,False,False,,__future__ gseapy math numpy pandas pathlib,True,
+00o_tgfb_reproducible_module_validation.py,True,True,,False,False,False,False,,numpy pandas pathlib,True,
+00p_tgfb_module_score_validation.py,True,True,,False,False,False,False,,numpy pandas pathlib scipy,True,
+00q_tgfb_dual_module_cross_dataset_audit.py,True,True,,False,False,False,False,,numpy pandas pathlib scipy,True,
+00r_tgfb_final_evidence_synthesis.py,True,True,,False,False,False,False,,numpy pandas pathlib,True,
+00s_validated_resistance_evidence_export.py,True,True,,False,False,False,False,,numpy pandas pathlib,True,
+04g_cmap_submit_all.py,True,False,,False,True,False,False,,dotenv json os pathlib requests,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD
+04h_cmap_check_all_jobs.py,True,False,,False,True,False,False,,dotenv json os pathlib requests,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD
+04j_cmap_download_all.py,True,False,,False,True,False,False,,dotenv json os pathlib requests tarfile time,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD
+04k_cmap_parse_all_tau.py,True,False,,False,True,False,False,,h5py numpy pandas pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD
+04l_cmap_prioritize.py,True,True,,False,True,False,False,,pandas pathlib sys,True,NETWORK_DEPENDENCY
+04m_cmap_drug_filter.py,True,True,,False,True,True,False,,__future__ json pandas pathlib re requests sys time typing,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+04n_regulatory_status.py,True,True,--connect-timeout --mode --read-timeout --reset --retries --snapshot-every --tier2-top --workers,False,True,True,False,,__future__ argparse concurrent copy datetime json math os pandas pathlib re requests sys threading time typing,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+04o_safety_screening.py,True,True,--batch-size --hazard-workers --mode --skip-assays --skip-hazards --tier2-top,False,True,True,False,,__future__ argparse concurrent datetime io json math os pandas pathlib rdkit re requests threading time typing,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+04p_drug_target_annotation.py,True,True,--max-activity-records --max-candidates --min-pchembl --workers,False,True,True,True,,__future__ argparse concurrent datetime json math numpy os pandas pathlib re requests threading time typing,False,USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+04q_network_integration.py,True,True,--deg-abs-fc --deg-padj --max-drugs --max-resistance-genes --max-targets-per-drug --string-score --workers,False,True,False,False,,__future__ argparse concurrent datetime json math numpy os pandas pathlib re requests threading time typing,True,NETWORK_DEPENDENCY
+04r_final_candidate_prioritization.py,True,True,--allow-caution --top-docking,False,True,True,False,,__future__ argparse datetime json math numpy os pandas pathlib requests typing,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+04s_target_supported_docking.py,True,True,--exhaustiveness --max-candidates --num-modes --skip-redocking,False,True,True,False,obabel | openbabel | vina,__future__ argparse csv datetime json math numpy openbabel os pandas pathlib rdkit re requests shutil subprocess sys typing vina,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | EXTERNAL_TOOL_REFERENCE
+04t_admet_structural_assessment.py,True,True,--max-candidates,False,True,True,False,,__future__ argparse datetime json math numpy os pandas pathlib rdkit typing,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+04u_integrated_evidence_matrix.py,True,True,--experimental-top --max-candidates,False,True,True,False,,__future__ argparse datetime json numpy os pandas pathlib typing,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+00c2_rescore_after_enrichment.py,True,True,,False,False,True,False,,__future__ duckdb json pandas pathlib sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NOT_REFERENCED_BY_FULL_RUNNER
+00c3_rescore_phenotype_gated.py,True,True,,False,False,True,False,,__future__ duckdb json pandas pathlib sys,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NOT_REFERENCED_BY_FULL_RUNNER
+00c4_debug_primary_gate.py,True,False,,False,True,False,False,,duckdb pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+00d2a_inspect_dataset_labels.py,True,True,--accessions,True,True,True,False,,__future__ argparse pandas pathlib sys,False,REQUIRED_CLI_ARG | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+00j1_discovery_id_diagnostic.py,True,True,,False,False,False,False,,pandas pathlib,True,NOT_REFERENCED_BY_FULL_RUNNER
+00t1_focused_04q_integration_extract.py,True,True,,False,False,False,False,,pathlib re,True,NOT_REFERENCED_BY_FULL_RUNNER
+00t2_patch_04q_validated_resistance.py,True,True,,False,False,False,False,,__future__ datetime pathlib re shutil,True,NOT_REFERENCED_BY_FULL_RUNNER
+00t_downstream_integration_audit.py,True,True,,False,False,False,False,,pathlib re,True,NOT_REFERENCED_BY_FULL_RUNNER
+00u_automation_preflight_audit.py,True,True,,False,True,True,True,Rscript | curl | docker | git  | java | obabel | openbabel | vina | wget,__future__ ast csv pathlib re,False,USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | EXTERNAL_TOOL_REFERENCE | NOT_REFERENCED_BY_FULL_RUNNER
+01_validation.py,True,False,,False,False,False,False,,gzip matplotlib numpy pandas pathlib sklearn,False,NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+02_differential_expression.py,True,False,,False,False,False,False,,matplotlib numpy pandas pathlib pydeseq2,False,NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+03_pathway_analysis.py,True,False,,False,False,False,False,,gseapy numpy pandas pathlib,False,NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+03b_external_validation.py,True,True,--analyze-only --download-only,False,True,True,False,,GEOparse __future__ argparse datetime gzip io json math numpy pandas pathlib re requests scipy sys time typing xlrd,True,MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+03c_consensus_resistance_signature.py,True,True,,False,True,False,False,,__future__ datetime json numpy pandas pathlib sys,True,NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+04_cmap_analysis.py,True,False,,False,True,False,False,,dotenv mygene pandas pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04b_cmap_submit_test.py,True,False,,False,True,False,False,,dotenv json os pathlib requests,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04c_cmap_job_status.py,True,False,,False,True,False,False,,dotenv json os pathlib requests,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04d_cmap_download_results.py,True,False,,False,True,False,False,,dotenv json os pathlib requests tarfile,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04e_cmap_parse_results.py,True,False,,False,True,False,False,,h5py numpy pandas pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04f_cmap_compound_filter.py,True,False,,False,True,False,False,,pandas pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04f_cmap_parse_tau.py,True,False,,False,True,False,False,,h5py numpy pandas pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04f_inspect_tau.py,True,False,,False,True,False,False,,h5py numpy pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04g_cmap_compound_ranking.py,True,False,,False,True,False,False,,pandas pathlib,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04i_cmap_job_errors.py,True,False,,False,True,False,False,,dotenv json os pathlib requests,False,NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+04q_network_integration_pre_validated_resistance_20260831_154512.py,True,True,--deg-abs-fc --deg-padj --max-drugs --max-resistance-genes --max-targets-per-drug --string-score --workers,False,True,False,False,,__future__ argparse concurrent datetime json math numpy os pandas pathlib re requests threading time typing,True,NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+run_atlas_pipeline.py,True,True,--force --from --to --ui,False,True,False,False,,__future__ argparse datetime json os pathlib subprocess sys,True,NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+run_data_acquisition_phase1.py,True,True,--query-family --retmax --sources,False,True,False,False,,__future__ argparse pathlib subprocess sys,True,NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER

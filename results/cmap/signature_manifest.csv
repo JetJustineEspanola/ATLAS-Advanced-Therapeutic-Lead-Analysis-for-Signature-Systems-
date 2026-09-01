@@ -1,0 +1,6 @@
+signature,up_count,down_count,up_file,down_file
+ATLAS_SIG_A_STRICT,1405,1215,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_A_STRICT_up.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_A_STRICT_dn.gmt
+ATLAS_SIG_B_TOP100,100,100,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP100_up.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP100_dn.gmt
+ATLAS_SIG_B_TOP150,150,150,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP150_up.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_B_TOP150_dn.gmt
+ATLAS_SIG_A_TOP150,150,150,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_A_TOP150_up.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_A_TOP150_dn.gmt
+ATLAS_SIG_C_TGFB,8,1,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_C_TGFB_up.gmt,/home/regulus/Documents/ATLAS/results/cmap/ATLAS_SIG_C_TGFB_dn.gmt

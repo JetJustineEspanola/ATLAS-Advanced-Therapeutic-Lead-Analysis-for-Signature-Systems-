@@ -1,0 +1,13 @@
+==============================================================================
+ATLAS — 00Q TGF-BETA DUAL-MODULE CROSS-DATASET AUDIT
+==============================================================================
+discovery  POSITIVE_TGFB_16   mean=1.196 median=0.941 up=16 down=0 FDR<0.05=16 Wilcoxon p=3.052e-05
+discovery  NEGATIVE_TGFB_7    mean=-0.597 median=-0.482 up=0 down=7 FDR<0.05=4 Wilcoxon p=0.01562
+GSE121105  POSITIVE_TGFB_16   mean=0.206 median=0.184 up=11 down=5 FDR<0.05=2 Wilcoxon p=0.1297
+GSE121105  NEGATIVE_TGFB_7    mean=-1.289 median=-0.977 up=0 down=7 FDR<0.05=7 Wilcoxon p=0.01562
+GSE237606  POSITIVE_TGFB_16   mean=1.103 median=0.834 up=16 down=0 FDR<0.05=16 Wilcoxon p=3.052e-05
+GSE237606  NEGATIVE_TGFB_7    mean=-0.309 median=-0.293 up=2 down=5 FDR<0.05=6 Wilcoxon p=0.1562
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_dual_module_gene_effects.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_dual_module_cross_dataset_summary.csv

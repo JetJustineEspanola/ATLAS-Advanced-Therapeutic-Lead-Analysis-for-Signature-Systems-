@@ -1,0 +1,45 @@
+==============================================================================
+ATLAS — 00H CROSS-STUDY DEG CONCORDANCE
+==============================================================================
+
+Shared harmonized genes: 14598
+Same-direction genes: 7876 (54.0%)
+FDR<0.05 in both studies: 3381
+Replicated (same direction + FDR<0.05 in both): 2066
+  Up in resistant: 1028
+  Down in resistant: 1038
+Spearman rho, all shared log2FC: 0.155 (p=3.23e-79)
+Spearman rho, significant in either: 0.169 (p=2.56e-81)
+
+Top replicated genes:
+gene_symbol  GSE121105_log2FC  GSE121105_padj  GSE237606_log2FC  GSE237606_padj replication_direction  consensus_score
+    PPP1R1B          3.651143    6.914615e-52          8.944664    0.000000e+00       UP_IN_RESISTANT      2006.789351
+     CXCL17          3.539296   1.347220e-158          3.818336    0.000000e+00       UP_IN_RESISTANT      1683.209741
+      HAR1A          4.233776    1.782188e-03          6.349320    0.000000e+00       UP_IN_RESISTANT      1569.677191
+      CRIP1         -2.685503    1.698102e-03         -7.606852    0.000000e+00     DOWN_IN_RESISTANT      1368.447721
+    SCGB2A2          6.951569   1.167036e-226          2.240011   1.046179e-113       UP_IN_RESISTANT      1337.380839
+     P2RY10         -3.590983    3.971834e-33         -5.258162   5.068100e-275     DOWN_IN_RESISTANT      1332.698697
+      FSTL1         -2.165214    1.798536e-42         -6.783564    0.000000e+00     DOWN_IN_RESISTANT      1309.729609
+     MUC5AC          3.838806    6.817337e-19          5.309473   4.927339e-268       UP_IN_RESISTANT      1288.813299
+      ITGAL          3.452659    3.924680e-05          5.794418   6.281871e-284       UP_IN_RESISTANT      1286.420176
+      S100P          4.182662    1.905755e-45          2.959454   2.886475e-295       UP_IN_RESISTANT      1193.615046
+      ELMO1          2.295473    2.024285e-02          6.452212    0.000000e+00       UP_IN_RESISTANT      1161.065442
+      NPY1R         -2.306428    3.886160e-62         -4.402777    0.000000e+00     DOWN_IN_RESISTANT      1151.685867
+      ABCA4         -1.834828    4.122432e-17         -6.724604    0.000000e+00     DOWN_IN_RESISTANT      1111.339544
+      MRAP2          2.300545    2.387411e-02          5.845736    0.000000e+00       UP_IN_RESISTANT      1106.109471
+      DAPK1          2.704869    2.181122e-25          4.206389    0.000000e+00       UP_IN_RESISTANT      1095.111632
+      NCAM2         -2.301245    8.296200e-57         -3.968471    0.000000e+00     DOWN_IN_RESISTANT      1076.073583
+       DLK1          3.266995    2.047229e-02          8.006280   3.405688e-208       UP_IN_RESISTANT      1069.698082
+        LOX          2.261396    3.332252e-18          4.997902    0.000000e+00       UP_IN_RESISTANT      1067.320466
+      AZGP1          3.997579    2.178336e-62          3.759883   1.154134e-213       UP_IN_RESISTANT      1064.597946
+       APOD          3.049875    3.158165e-05          7.389299   4.847759e-210       UP_IN_RESISTANT      1015.034592
+      GFRA1         -3.827062    5.737694e-73         -5.203779   3.507603e-150     DOWN_IN_RESISTANT       989.351213
+      CPNE4          3.935491    1.756796e-17          3.263222   5.099849e-259       UP_IN_RESISTANT       985.668453
+       AMBP          2.892137    1.857485e-11          3.448815    0.000000e+00       UP_IN_RESISTANT       981.361665
+     IGFBP5         -2.826599    1.658013e-47         -2.498467    0.000000e+00     DOWN_IN_RESISTANT       921.559595
+       SDC2         -2.152152    6.914615e-52         -2.889772    0.000000e+00     DOWN_IN_RESISTANT       875.736667
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/cross_study_concordance.csv
+/home/regulus/Documents/ATLAS/results/external_validation/replicated_primary_DEGs.csv
+/home/regulus/Documents/ATLAS/results/external_validation/cross_study_concordance_summary.csv

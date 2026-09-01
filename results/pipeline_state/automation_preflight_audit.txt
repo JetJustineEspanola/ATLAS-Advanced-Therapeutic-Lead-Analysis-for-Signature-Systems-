@@ -1,0 +1,107 @@
+========================================================================================
+ATLAS — FULL AUTOMATION PREFLIGHT AUDIT
+========================================================================================
+Runner: /home/regulus/Documents/ATLAS/scripts/run_atlas_full_auto.py
+Runner-referenced stages: 40
+Scripts scanned: 67
+
+Missing runner scripts: 0
+Scripts using input(): 2
+Scripts with detected required CLI args: 1
+Scripts with manual/curated logic: 22
+Scripts with network dependencies: 42
+Scripts not referenced by full runner: 27
+
+MISSING
+-------
+None
+
+INTERACTIVE
+-----------
+- 04p_drug_target_annotation.py: USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00u_automation_preflight_audit.py: USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | EXTERNAL_TOOL_REFERENCE | NOT_REFERENCED_BY_FULL_RUNNER
+
+REQUIRED CLI
+------------
+- 00d2a_inspect_dataset_labels.py: REQUIRED_CLI_ARG | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+
+MANUAL / CURATED
+----------------
+- 00b_metadata_catalog.py: MANUAL_OR_CURATED_LOGIC_PRESENT
+- 00c_dataset_eligibility.py: MANUAL_OR_CURATED_LOGIC_PRESENT
+- 00d_metadata_enrichment.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00d1_phenotype_audit.py: MANUAL_OR_CURATED_LOGIC_PRESENT
+- 00d2b_curated_study_phenotype_mapping.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00c4_independence_modality_scoring.py: MANUAL_OR_CURATED_LOGIC_PRESENT
+- 00e_primary_validation_expression_fetch.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00f1_primary_validation_design_audit.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00g_primary_validation_differential_expression.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04m_cmap_drug_filter.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04n_regulatory_status.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04o_safety_screening.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04p_drug_target_annotation.py: USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04r_final_candidate_prioritization.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04s_target_supported_docking.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | EXTERNAL_TOOL_REFERENCE
+- 04t_admet_structural_assessment.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04u_integrated_evidence_matrix.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00c2_rescore_after_enrichment.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NOT_REFERENCED_BY_FULL_RUNNER
+- 00c3_rescore_phenotype_gated.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NOT_REFERENCED_BY_FULL_RUNNER
+- 00d2a_inspect_dataset_labels.py: REQUIRED_CLI_ARG | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+- 00u_automation_preflight_audit.py: USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | EXTERNAL_TOOL_REFERENCE | NOT_REFERENCED_BY_FULL_RUNNER
+- 03b_external_validation.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+
+NETWORK-DEPENDENT
+-----------------
+- 00a_dataset_discovery.py: NETWORK_DEPENDENCY
+- 00d_metadata_enrichment.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00d2b_curated_study_phenotype_mapping.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00d2c_confirm_her2_status.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD
+- 00d3_dataset_relationship_audit.py: NETWORK_DEPENDENCY
+- 00e_primary_validation_expression_fetch.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00f_primary_validation_matrix_inspection.py: NETWORK_DEPENDENCY
+- 00f1_primary_validation_design_audit.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00g_primary_validation_differential_expression.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00i_consensus_resistance_signature.py: NETWORK_DEPENDENCY
+- 04g_cmap_submit_all.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD
+- 04h_cmap_check_all_jobs.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD
+- 04j_cmap_download_all.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD
+- 04k_cmap_parse_all_tau.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD
+- 04l_cmap_prioritize.py: NETWORK_DEPENDENCY
+- 04m_cmap_drug_filter.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04n_regulatory_status.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04o_safety_screening.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04p_drug_target_annotation.py: USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04q_network_integration.py: NETWORK_DEPENDENCY
+- 04r_final_candidate_prioritization.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04s_target_supported_docking.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | EXTERNAL_TOOL_REFERENCE
+- 04t_admet_structural_assessment.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 04u_integrated_evidence_matrix.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY
+- 00c4_debug_primary_gate.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 00d2a_inspect_dataset_labels.py: REQUIRED_CLI_ARG | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+- 00u_automation_preflight_audit.py: USES_INPUT | MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | EXTERNAL_TOOL_REFERENCE | NOT_REFERENCED_BY_FULL_RUNNER
+- 03b_external_validation.py: MANUAL_OR_CURATED_LOGIC_PRESENT | NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+- 03c_consensus_resistance_signature.py: NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+- 04_cmap_analysis.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04b_cmap_submit_test.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04c_cmap_job_status.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04d_cmap_download_results.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04e_cmap_parse_results.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04f_cmap_compound_filter.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04f_cmap_parse_tau.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04f_inspect_tau.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04g_cmap_compound_ranking.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04i_cmap_job_errors.py: NETWORK_DEPENDENCY | NO_MAIN_GUARD | NOT_REFERENCED_BY_FULL_RUNNER
+- 04q_network_integration_pre_validated_resistance_20260831_154512.py: NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+- run_atlas_pipeline.py: NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+- run_data_acquisition_phase1.py: NETWORK_DEPENDENCY | NOT_REFERENCED_BY_FULL_RUNNER
+
+AUTOMATION RULE
+---------------
+A stage should only be considered fully automatable when it:
+1. has no input() prompt,
+2. has no unresolved required CLI argument,
+3. fails with a nonzero exit code on unsafe/missing inputs,
+4. writes a deterministic checkpoint/output,
+5. exposes manual-review cases as explicit status rather than silently guessing.
+
+CSV: /home/regulus/Documents/ATLAS/results/pipeline_state/automation_preflight_audit.csv

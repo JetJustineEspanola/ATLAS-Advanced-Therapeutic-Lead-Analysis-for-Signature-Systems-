@@ -1,0 +1,28 @@
+{
+  "stage": "04T",
+  "implementation": "v2_corrected_esol_coefficient",
+  "created_utc": "2026-08-31T09:06:42.111002+00:00",
+  "inputs": {
+    "04R": "/home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_final_candidate_prioritization.csv",
+    "04S": "/home/regulus/Documents/ATLAS/results/cmap/docking/ATLAS_docking_results.csv",
+    "04O": "/home/regulus/Documents/ATLAS/results/cmap/safety_screening/ATLAS_CMap_safety_screening.csv",
+    "04N": "/home/regulus/Documents/ATLAS/results/cmap/regulatory_status/ATLAS_CMap_regulatory_annotations.csv"
+  },
+  "candidate_count": 25,
+  "methods": {
+    "molecular_descriptors": "RDKit",
+    "drug_likeness": "Lipinski/Veber-style heuristic checks",
+    "qed": "RDKit QED",
+    "solubility": "ESOL-like logS estimate",
+    "structural_alerts": "RDKit PAINS + Brenk catalogs"
+  },
+  "guardrails": [
+    "This stage is a computational developability screen, not measured ADMET.",
+    "ESOL logS is an estimate, not experimental solubility.",
+    "Lipinski and Veber rules are heuristics, not hard efficacy criteria.",
+    "PAINS/Brenk alerts are screening flags, not proof of toxicity.",
+    "CYP3A4 docking is interaction context, not proof of metabolic inhibition or induction.",
+    "Docking score is not proof of binding or efficacy."
+  ],
+  "next_stage": "04U_integrated_evidence_matrix"
+}

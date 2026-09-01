@@ -1,0 +1,69 @@
+==============================================================================
+ATLAS — SCIENTIFIC AUTOMATION GATE v3
+==============================================================================
+Authoritative category: independence_aware_category
+Candidate rows: 94
+Usable primary datasets: 2
+Selected: GSE121105, GSE237606
+Required minimum: 2
+GATE: PASS
+
+Primary/near-primary rows:
+gate_accession independence_aware_category  scientific_gate_pass                                                               scientific_gate_fail_reasons
+     GSE121105          PRIMARY_VALIDATION                  True                                                                                           
+     GSE237607                 EXPLORATORY                 False                                           primary_validation_00c4 | not_umbrella_duplicate
+     GSE237606          PRIMARY_VALIDATION                  True                                                                                           
+     GSE107473                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+   SRR33662216                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+   SRR33662215                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE132055                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE161743                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+   SRR33662217                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE114575                 EXPLORATORY                 False                          primary_validation_00c4 | her2_confirmed | biological_replication
+     GSE244537                 EXPLORATORY                 False primary_validation_00c4 | not_umbrella_duplicate | groups_defined | biological_replication
+     GSE262860                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+      GSE55005                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE230326                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE230327                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE244533                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+       GSE6746                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+      GSE83608                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE297774                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+     GSE300749                 EXPLORATORY                 False                          primary_validation_00c4 | groups_defined | biological_replication
+   SRR26401910                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR26401911                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR26401907                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR26401908                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997165                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR26401909                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR26401914                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7176870                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR26401912                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR26401913                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997170                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997169                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997171                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997172                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997175                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997176                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997173                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997174                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997178                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997177                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997179                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997166                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997167                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997168                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7176871                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7176872                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997181                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7997180                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7176874                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+    SRR7176873                 EXPLORATORY                 False         primary_validation_00c4 | her2_confirmed | groups_defined | biological_replication
+   SRR30498890                 EXPLORATORY                 False      primary_validation_00c4 | direct_resistance | groups_defined | biological_replication
+    SRR9172028                 EXPLORATORY                 False      primary_validation_00c4 | direct_resistance | groups_defined | biological_replication
+   SRR30498889                 EXPLORATORY                 False      primary_validation_00c4 | direct_resistance | groups_defined | biological_replication
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/pipeline_state/scientific_automation_gate.csv
+/home/regulus/Documents/ATLAS/results/pipeline_state/scientific_automation_gate.json

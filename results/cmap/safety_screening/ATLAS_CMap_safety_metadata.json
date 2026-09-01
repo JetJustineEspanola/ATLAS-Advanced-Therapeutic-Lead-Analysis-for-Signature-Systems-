@@ -1,0 +1,25 @@
+{
+  "stage": "04O",
+  "implementation": "conservative_safety_interpretation_v2",
+  "generated_utc": "2026-08-31T10:04:47.342681+00:00",
+  "input_04m": "/home/regulus/Documents/ATLAS/results/cmap/drug_filter/ATLAS_CMap_drug_candidates.csv",
+  "optional_04n": "/home/regulus/Documents/ATLAS/results/cmap/regulatory_status/ATLAS_CMap_regulatory_annotations.csv",
+  "04n_merged": true,
+  "mode": "priority",
+  "tier2_top": 100,
+  "candidate_count": 107,
+  "pubchem_cid_count": 107,
+  "rdkit_pains_available": true,
+  "sources": [
+    "PubChem PUG REST assay summary",
+    "PubChem PUG REST compound properties",
+    "PubChem PUG-View Safety and Hazards",
+    "RDKit PAINS FilterCatalog when available"
+  ],
+  "guardrails": [
+    "Active PubChem assays are screening evidence, not clinical toxicity proof.",
+    "PAINS flags assay-interference liability, not toxicity.",
+    "Absence of PubChem hazard annotations does not establish safety."
+  ],
+  "next_stage": "04P_drug_target_annotation"
+}

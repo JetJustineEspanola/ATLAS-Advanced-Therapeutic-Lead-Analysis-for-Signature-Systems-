@@ -1,0 +1,45 @@
+==============================================================================
+ATLAS — 00J v3 STRICT THREE-DATASET VALIDATION
+==============================================================================
+External consensus genes: 438
+Present in discovery: 332
+Same direction as discovery: 310
+Directional agreement among overlap: 93.4%
+Significant in discovery too (FDR<0.05 + same direction): 264
+Strict core (also |discovery log2FC|>=1): 242
+  Up: 130
+  Down: 112
+
+Top strict-core genes:
+ consensus_rank gene_symbol replication_direction  discovery_log2FC  discovery_padj  GSE121105_log2FC  GSE121105_padj  GSE237606_log2FC  GSE237606_padj
+              1     PPP1R1B       UP_IN_RESISTANT          8.684962    0.000000e+00          3.651143    6.914615e-52          8.944664    0.000000e+00
+              2      CXCL17       UP_IN_RESISTANT          2.315271    9.408022e-30          3.539296   1.347220e-158          3.818336    0.000000e+00
+              3       HAR1A       UP_IN_RESISTANT          5.068457    4.275050e-30          4.233776    1.782188e-03          6.349320    0.000000e+00
+              4       CRIP1     DOWN_IN_RESISTANT         -9.838986   4.495572e-301         -2.685503    1.698102e-03         -7.606852    0.000000e+00
+              6      P2RY10     DOWN_IN_RESISTANT         -3.415690    2.058277e-20         -3.590983    3.971834e-33         -5.258162   5.068100e-275
+              7       FSTL1     DOWN_IN_RESISTANT         -6.164599    1.452140e-58         -2.165214    1.798536e-42         -6.783564    0.000000e+00
+              8      MUC5AC       UP_IN_RESISTANT          5.343641    2.323725e-33          3.838806    6.817337e-19          5.309473   4.927339e-268
+              9       ITGAL       UP_IN_RESISTANT          5.543241    2.311431e-64          3.452659    3.924680e-05          5.794418   6.281871e-284
+             10       S100P       UP_IN_RESISTANT          2.497519    9.017748e-43          4.182662    1.905755e-45          2.959454   2.886475e-295
+             11       ELMO1       UP_IN_RESISTANT          4.779234    1.565147e-16          2.295473    2.024285e-02          6.452212    0.000000e+00
+             12       NPY1R     DOWN_IN_RESISTANT         -3.143199    3.764560e-26         -2.306428    3.886160e-62         -4.402777    0.000000e+00
+             13       ABCA4     DOWN_IN_RESISTANT         -4.812540    6.895040e-15         -1.834828    4.122432e-17         -6.724604    0.000000e+00
+             14       MRAP2       UP_IN_RESISTANT          4.464843    5.066809e-06          2.300545    2.387411e-02          5.845736    0.000000e+00
+             15       DAPK1       UP_IN_RESISTANT          3.446878    1.283911e-22          2.704869    2.181122e-25          4.206389    0.000000e+00
+             16       NCAM2     DOWN_IN_RESISTANT         -2.542207    6.394225e-25         -2.301245    8.296200e-57         -3.968471    0.000000e+00
+             17        DLK1       UP_IN_RESISTANT          7.113519    2.447932e-14          3.266995    2.047229e-02          8.006280   3.405688e-208
+             18         LOX       UP_IN_RESISTANT          3.359302    9.395795e-14          2.261396    3.332252e-18          4.997902    0.000000e+00
+             19       AZGP1       UP_IN_RESISTANT          1.688955    2.736135e-13          3.997579    2.178336e-62          3.759883   1.154134e-213
+             20        APOD       UP_IN_RESISTANT          5.166250    9.027594e-11          3.049875    3.158165e-05          7.389299   4.847759e-210
+             21       GFRA1     DOWN_IN_RESISTANT         -4.115647    1.392809e-40         -3.827062    5.737694e-73         -5.203779   3.507603e-150
+             22       CPNE4       UP_IN_RESISTANT          3.343991    5.846370e-10          3.935491    1.756796e-17          3.263222   5.099849e-259
+             23        AMBP       UP_IN_RESISTANT          3.871189    2.035066e-49          2.892137    1.857485e-11          3.448815    0.000000e+00
+             24      IGFBP5     DOWN_IN_RESISTANT         -1.741989    5.758538e-24         -2.826599    1.658013e-47         -2.498467    0.000000e+00
+             25        SDC2     DOWN_IN_RESISTANT         -2.072715    2.932476e-30         -2.152152    6.914615e-52         -2.889772    0.000000e+00
+             26        CNN2       UP_IN_RESISTANT          4.882126   2.343571e-225          1.592125    5.100899e-03          5.140486    0.000000e+00
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/discovery_consensus_overlap.csv
+/home/regulus/Documents/ATLAS/results/external_validation/three_dataset_significant_validated_genes.csv
+/home/regulus/Documents/ATLAS/results/external_validation/three_dataset_strict_core_genes.csv
+/home/regulus/Documents/ATLAS/results/external_validation/discovery_consensus_summary.csv

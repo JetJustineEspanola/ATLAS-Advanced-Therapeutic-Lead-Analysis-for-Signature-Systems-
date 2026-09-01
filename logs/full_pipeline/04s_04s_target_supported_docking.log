@@ -1,0 +1,12 @@
+
+==============================================================================
+ATLAS — Stage 04S Target-Supported Molecular Docking
+==============================================================================
+
+Missing required Meeko command-line tools:
+  - mk_prepare_ligand.py
+  - mk_prepare_receptor.py
+
+Install inside the ATLAS venv with:
+  python -m pip install -U meeko gemmi
+

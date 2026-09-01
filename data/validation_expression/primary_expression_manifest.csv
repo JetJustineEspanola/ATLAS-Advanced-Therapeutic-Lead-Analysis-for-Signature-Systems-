@@ -1,0 +1,3 @@
+accession,filename,path,size_bytes,sha256,extracted
+GSE121105,GSE121105_geneCount.csv.gz,/home/regulus/Documents/ATLAS/data/validation_expression/GSE121105/GSE121105_geneCount.csv.gz,1185096,df28ea4abf8751657cc84a5ac638f59e62b5ba198b74e1ba770eb340081d5935,False
+GSE237606,GSE237606_RawCounts.txt.gz,/home/regulus/Documents/ATLAS/data/validation_expression/GSE237606/GSE237606_RawCounts.txt.gz,1769237,0785fb49da5e333e9fcafce4551bed4d3961b386bed986cd8e683fbba2bff328,False

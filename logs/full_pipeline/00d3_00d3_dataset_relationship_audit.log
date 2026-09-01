@@ -1,0 +1,31 @@
+==============================================================================
+ATLAS — 00D3 DATASET RELATIONSHIP / OVERLAP AUDIT
+==============================================================================
+
+Potentially non-independent datasets:
+             dataset_id  sample_n               relationship_role                                              relationship_reason
+          GEO:GSE237607        80 SUPERSERIES_OR_UMBRELLA_DATASET Contains complete sample sets from: GEO:GSE237605, GEO:GSE237606
+          GEO:GSE161423        64 SUPERSERIES_OR_UMBRELLA_DATASET Contains complete sample sets from: GEO:GSE161420, GEO:GSE161422
+          GEO:GSE161420        60     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE161423
+          GEO:GSE237605        40     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE237607
+          GEO:GSE237606        40     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE237607
+          GEO:GSE244537        20 SUPERSERIES_OR_UMBRELLA_DATASET Contains complete sample sets from: GEO:GSE244533, GEO:GSE244535
+          GEO:GSE244535        14     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE244537
+BIOSTUDIES:E-MTAB-12224        12            HIGH_OVERLAP_DATASET                         >=80% of samples overlap another dataset
+BIOSTUDIES:E-MTAB-12225        12            HIGH_OVERLAP_DATASET                         >=80% of samples overlap another dataset
+          GEO:GSE244533         6     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE244537
+          GEO:GSE161422         4     SUBSERIES_OR_NESTED_DATASET                      All samples are contained in: GEO:GSE161423
+
+Overlapping dataset pairs:
+              dataset_a               dataset_b  samples_a  samples_b  shared_samples  fraction_a_shared  fraction_b_shared  jaccard           relationship
+          GEO:GSE161420           GEO:GSE161423         60         64              60                1.0             0.9375   0.9375          A_SUBSET_OF_B
+          GEO:GSE237605           GEO:GSE237607         40         80              40                1.0             0.5000   0.5000          A_SUBSET_OF_B
+          GEO:GSE237606           GEO:GSE237607         40         80              40                1.0             0.5000   0.5000          A_SUBSET_OF_B
+          GEO:GSE244535           GEO:GSE244537         14         20              14                1.0             0.7000   0.7000          A_SUBSET_OF_B
+BIOSTUDIES:E-MTAB-12224 BIOSTUDIES:E-MTAB-12225         12         12              12                1.0             1.0000   1.0000 EXACT_SAMPLE_DUPLICATE
+          GEO:GSE244533           GEO:GSE244537          6         20               6                1.0             0.3000   0.3000          A_SUBSET_OF_B
+          GEO:GSE161422           GEO:GSE161423          4         64               4                1.0             0.0625   0.0625          A_SUBSET_OF_B
+
+Outputs:
+/home/regulus/Documents/ATLAS/data/enriched/dataset_relationship_audit.csv
+/home/regulus/Documents/ATLAS/data/enriched/dataset_overlap_pairs.csv

@@ -1,0 +1,25 @@
+{
+  "stage": "03B",
+  "created_utc": "2026-08-30T09:32:08.777387+00:00",
+  "discovery_deg_file": "/home/regulus/Documents/ATLAS/results/differential_expression/DEGs_resistant_vs_sensitive_annotated.csv",
+  "datasets_requested": [
+    "GSE89216",
+    "GSE15043",
+    "GSE55005"
+  ],
+  "datasets_successfully_analyzed": [
+    "GSE55005"
+  ],
+  "analysis_errors": [
+    {
+      "dataset": "GSE89216",
+      "error": "RuntimeError('GSE89216: failed to retrieve platform annotation for GPL16686. Details: FTP annotation unavailable: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL16nnn/GPL16686/annot/GPL16686.annot.gz; GEOparse returned an empty platform table; SOFT platform table markers not found')"
+    },
+    {
+      "dataset": "GSE15043",
+      "error": "RuntimeError('GSE15043: failed to retrieve platform annotation for GPL570. Details: FTP annotation parser: Error tokenizing data. C error: Expected 1 fields in line 28, saw 21\\n; GEOparse returned an empty platform table; SOFT platform table markers not found')"
+    }
+  ],
+  "methodological_note": "External datasets are analyzed independently. Raw expression values are not pooled across platforms. Validation is based on gene-level direction/effect concordance and overlap.",
+  "next_stage": "03C consensus resistance signature"
+}

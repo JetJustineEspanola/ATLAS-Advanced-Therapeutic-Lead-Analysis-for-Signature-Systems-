@@ -1,0 +1,59 @@
+
+==============================================================================
+ATLAS — Stage 04U Integrated Evidence Matrix
+==============================================================================
+
+Candidates integrated: 25
+
+==============================================================================
+STAGE 04U SUMMARY
+==============================================================================
+             final_evidence_category  compound_count  median_experimental_priority_score  tier1_count
+                        DEPRIORITIZE               8                              0.9375            1
+EXPERIMENTAL_VALIDATION_WITH_CAUTION               3                              9.9380            1
+       HOLD_INSUFFICIENT_CONVERGENCE               1                              3.6250            0
+     MANUAL_REVIEW_BEFORE_EXPERIMENT               6                              3.3435            1
+    PRIORITY_EXPERIMENTAL_VALIDATION               1                             13.4380            1
+    SECONDARY_EXPERIMENTAL_CANDIDATE               6                              7.1560            1
+
+==============================================================================
+TOP INTEGRATED EVIDENCE
+==============================================================================
+ 04u_rank  priority_rank         pert_iname cmap_evidence_badge safety_evidence_badge target_evidence_badge network_evidence_badge developability_evidence_badge docking_evidence_badge  strong_evidence_layers_n  supportive_evidence_layers_n  caution_layers_n  experimental_priority_score              final_evidence_category
+        1              6        sitagliptin              STRONG     PASS_LIMITED_DATA              MODERATE               MODERATE       ACCEPTABLE_WITH_CAUTION      VALIDATED_DOCKING                         3                             4                 0                       13.438     PRIORITY_EXPERIMENTAL_VALIDATION
+        2              5         clofibrate              STRONG     PASS_LIMITED_DATA              MODERATE               MODERATE       ACCEPTABLE_WITH_CAUTION   DOCKING_WITH_CAUTION                         2                             5                 1                       11.062 EXPERIMENTAL_VALIDATION_WITH_CAUTION
+        3             80           SIB-1893            MODERATE        PASS_GOOD_DATA                STRONG               MODERATE       ACCEPTABLE_WITH_CAUTION   NO_VALIDATED_DOCKING                         2                             3                 0                        9.938 EXPERIMENTAL_VALIDATION_WITH_CAUTION
+        4             61          tiotidine            MODERATE        PASS_GOOD_DATA                STRONG               MODERATE    STRUCTURAL_REVIEW_REQUIRED   NO_VALIDATED_DOCKING                         2                             2                 1                        7.438 EXPERIMENTAL_VALIDATION_WITH_CAUTION
+        5              1        enalaprilat              STRONG        PASS_GOOD_DATA              MODERATE                   NONE       ACCEPTABLE_WITH_CAUTION   NO_VALIDATED_DOCKING                         2                             3                 0                        9.438     SECONDARY_EXPERIMENTAL_CANDIDATE
+        6             33      phenprobamate            MODERATE        PASS_GOOD_DATA                STRONG                   NONE      FAVORABLE_DEVELOPABILITY   NO_VALIDATED_DOCKING                         3                             1                 0                        9.250     SECONDARY_EXPERIMENTAL_CANDIDATE
+        7             75        rilmenidine            MODERATE               CAUTION                STRONG               MODERATE      FAVORABLE_DEVELOPABILITY   NO_VALIDATED_DOCKING                         2                             3                 1                        7.812     SECONDARY_EXPERIMENTAL_CANDIDATE
+        8             78 GSK-3-inhibitor-II            MODERATE               CAUTION                STRONG               MODERATE       ACCEPTABLE_WITH_CAUTION   NO_VALIDATED_DOCKING                         1                             4                 1                        6.500     SECONDARY_EXPERIMENTAL_CANDIDATE
+        9             82       palonosetron            MODERATE               CAUTION                STRONG               MODERATE       ACCEPTABLE_WITH_CAUTION   NO_VALIDATED_DOCKING                         1                             4                 1                        6.250     SECONDARY_EXPERIMENTAL_CANDIDATE
+       10             47           GR-55562            MODERATE               CAUTION                STRONG               MODERATE       ACCEPTABLE_WITH_CAUTION   NO_VALIDATED_DOCKING                         1                             3                 1                        5.875     SECONDARY_EXPERIMENTAL_CANDIDATE
+       11              3  PKCbeta-inhibitor              STRONG               CAUTION                STRONG               MODERATE       ACCEPTABLE_WITH_CAUTION   NO_VALIDATED_DOCKING                         2                             2                 1                        6.688      MANUAL_REVIEW_BEFORE_EXPERIMENT
+       12             71        zolantidine            MODERATE               CAUTION                STRONG                 STRONG    STRUCTURAL_REVIEW_REQUIRED   NO_VALIDATED_DOCKING                         2                             1                 2                        5.000      MANUAL_REVIEW_BEFORE_EXPERIMENT
+       13             57         cinalukast            MODERATE               CAUTION                STRONG               MODERATE    STRUCTURAL_REVIEW_REQUIRED   NO_VALIDATED_DOCKING                         1                             2                 2                        3.375      MANUAL_REVIEW_BEFORE_EXPERIMENT
+       14             66           L-701324            MODERATE               CAUTION                STRONG               MODERATE    STRUCTURAL_REVIEW_REQUIRED   NO_VALIDATED_DOCKING                         1                             2                 2                        3.312      MANUAL_REVIEW_BEFORE_EXPERIMENT
+       15             69           SR-27897            MODERATE               CAUTION                STRONG                   WEAK       ACCEPTABLE_WITH_CAUTION   NO_VALIDATED_DOCKING                         1                             2                 2                        2.975      MANUAL_REVIEW_BEFORE_EXPERIMENT
+
+==============================================================================
+EXPERIMENTAL VALIDATION SHORTLIST
+==============================================================================
+ experimental_shortlist_rank  pert_iname best_network_target validated_uniprot_accession  best_affinity_kcal_mol        protocol_validation  experimental_priority_score              final_evidence_category                                                                                          final_evidence_reason
+                           1 sitagliptin                DPP4                      P27487                  -9.327            PASS_RMSD_LE_2A                       13.438     PRIORITY_EXPERIMENTAL_VALIDATION Validated docking and multiple convergent strong/supportive evidence layers justify top experimental priority.
+                           2  clofibrate              CYP3A4                      P08684                  -6.528 COMPLETED_RMSD_UNAVAILABLE                       11.062 EXPERIMENTAL_VALIDATION_WITH_CAUTION                         Candidate remains well supported, but structural evidence is incomplete or cautionary.
+                           3    SIB-1893                GRM5                      P41594                     NaN             NOT_APPLICABLE                        9.938 EXPERIMENTAL_VALIDATION_WITH_CAUTION                         Candidate remains well supported, but structural evidence is incomplete or cautionary.
+                           4   tiotidine              CYP2D6                      P10635                     NaN             NOT_APPLICABLE                        7.438 EXPERIMENTAL_VALIDATION_WITH_CAUTION                         Candidate remains well supported, but structural evidence is incomplete or cautionary.
+                           5 enalaprilat                 NaN                         NaN                     NaN                        NaN                        9.438     SECONDARY_EXPERIMENTAL_CANDIDATE                Several evidence layers support follow-up, but evidence is not as convergent as top candidates.
+
+==============================================================================
+STAGE 04U COMPLETE
+==============================================================================
+
+Outputs:
+  /home/regulus/Documents/ATLAS/results/cmap/integrated_evidence/ATLAS_integrated_evidence_matrix.csv
+  /home/regulus/Documents/ATLAS/results/cmap/integrated_evidence/ATLAS_experimental_validation_shortlist.csv
+  /home/regulus/Documents/ATLAS/results/cmap/integrated_evidence/ATLAS_integrated_evidence_summary.csv
+  /home/regulus/Documents/ATLAS/results/cmap/integrated_evidence/ATLAS_integrated_evidence_metadata.json
+
+Next: experimental validation in trastuzumab-resistant HER2+ models

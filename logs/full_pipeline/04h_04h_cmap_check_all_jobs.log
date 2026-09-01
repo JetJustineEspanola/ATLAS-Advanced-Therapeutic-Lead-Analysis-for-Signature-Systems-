@@ -1,0 +1,33 @@
+============================================================
+ATLAS — CMap Job Status
+============================================================
+
+ATLAS_SIG_B_TOP100
+  Job ID: 6a92e7670262700013c4e5e9
+  HTTP status: 200
+  Status: completed
+  Download status: completed
+
+ATLAS_SIG_B_TOP150
+  Job ID: 6a954a5209168d001496ae2c
+  HTTP status: 200
+  Status: pending
+
+ATLAS_SIG_A_TOP150
+  Job ID: 6a954a540262700013c4e662
+  HTTP status: 200
+  Status: pending
+
+============================================================
+CMap JOB SUMMARY
+============================================================
+ATLAS_SIG_B_TOP100: completed
+ATLAS_SIG_B_TOP150: pending
+ATLAS_SIG_A_TOP150: pending
+
+Completed: 1
+Active:    2
+Failed:    0
+
+Saved:
+/home/regulus/Documents/ATLAS/results/cmap/jobs/cmap_job_status_all.json

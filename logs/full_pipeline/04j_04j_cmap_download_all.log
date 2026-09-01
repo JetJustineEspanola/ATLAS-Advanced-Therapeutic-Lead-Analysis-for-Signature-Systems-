@@ -1,0 +1,31 @@
+============================================================
+ATLAS — Download All Completed CMap Jobs
+============================================================
+
+ATLAS_SIG_B_TOP100
+  Job ID: 6a92e7670262700013c4e5e9
+  Already extracted — skipping.
+
+ATLAS_SIG_B_TOP150
+  Job ID: 6a954a5209168d001496ae2c
+  Status HTTP: 200
+  Job status: pending
+  Job is not completed.
+
+ATLAS_SIG_A_TOP150
+  Job ID: 6a954a540262700013c4e662
+  Status HTTP: 200
+  Job status: pending
+  Job is not completed.
+
+============================================================
+CMap DOWNLOAD SUMMARY
+============================================================
+ATLAS_SIG_B_TOP100: already_extracted
+ATLAS_SIG_B_TOP150: pending
+ATLAS_SIG_A_TOP150: pending
+
+Saved:
+/home/regulus/Documents/ATLAS/results/cmap/jobs/cmap_download_manifest.json
+
+Stage 4J download complete.

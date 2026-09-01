@@ -1,0 +1,28 @@
+==============================================================================
+ATLAS — 00O REPRODUCIBLE TGF-BETA MODULE VALIDATION
+==============================================================================
+ reproducible_positive_tgfb_module_genes  up_in_discovery  up_in_GSE237606  down_in_GSE121105  down_in_GSE121105_and_fdr05  overlap_with_242_gene_strict_core  gse121105_reversal_fraction
+                                      16               16               16                  5                            0                                  1                       0.3125
+
+Module genes:
+gene_symbol  discovery_log2FC  GSE121105_log2FC  GSE121105_padj  GSE237606_log2FC  in_three_dataset_strict_core  GSE121105_reversed_vs_positive_module
+      RAB31          1.174659          2.054783    8.363757e-12          1.133867                          True                                  False
+      FURIN          1.796828         -0.662516    1.456661e-01          2.389057                         False                                   True
+      HDAC1          0.598444         -0.040316    8.166729e-01          1.062570                         False                                   True
+      SMAD1          0.912620         -0.046133    8.382104e-01          0.447713                         False                                   True
+      TGFB1          1.106647         -0.550026    4.722888e-01          1.888973                         False                                   True
+     TRIM33          0.932316         -0.050850    8.938726e-01          0.364086                         False                                   True
+      ACVR1          0.739285          0.028471    8.985800e-01          0.515911                         False                                  False
+     ARID4B          0.745644          0.320515    4.732609e-01          0.389652                         False                                  False
+      LTBP2          3.489480          0.469651    2.680994e-01          3.132620                         False                                  False
+     MAP3K7          1.055252          0.211907    2.383341e-01          0.624377                         False                                  False
+        NOG          2.538396          0.202931    6.785503e-01          2.276486                         False                                  False
+       RHOA          0.500173          0.508146    2.799428e-03          1.137450                         False                                  False
+     SMURF2          0.583334          0.191568    2.815243e-01          0.296377                         False                                  False
+     SPTBN1          0.948874          0.176259    2.939579e-01          0.397370                         False                                  False
+     TGFBR1          0.901038          0.325761    2.723633e-01          1.043369                         False                                  False
+       XIAP          1.119929          0.163513    5.812673e-01          0.550575                         False                                  False
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_reproducible_module_gene_table.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_reproducible_module_summary.csv

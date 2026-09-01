@@ -1,0 +1,33 @@
+{
+  "existing_completed_queries": [
+    {
+      "signature": "ATLAS_SIG_B_TOP100",
+      "job_id": "6a92e7670262700013c4e5e9",
+      "status": "completed"
+    }
+  ],
+  "new_submissions": [
+    {
+      "signature": "ATLAS_SIG_B_TOP150",
+      "role": "secondary robustness",
+      "up_genes": 149,
+      "down_genes": 150,
+      "http_status": 200,
+      "status": "pending",
+      "job_id": "6a954a5209168d001496ae2c",
+      "submitted": true,
+      "errors": []
+    },
+    {
+      "signature": "ATLAS_SIG_A_TOP150",
+      "role": "alternative robustness",
+      "up_genes": 150,
+      "down_genes": 150,
+      "http_status": 200,
+      "status": "pending",
+      "job_id": "6a954a540262700013c4e662",
+      "submitted": true,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+==============================================================================
+ATLAS — 00L TARGETED TGF-BETA RANKED VALIDATION
+==============================================================================
+
+[discovery]
+  ranked genes: 13631
+  TGF-beta Hallmark: NES=1.7867800745606757, nominal_p=0.00202020202020202, FDR_q=0.004973527996149527
+
+[GSE121105]
+  ranked genes: 22558
+2026-08-31 17:36:34,919 [WARNING] Duplicated values found in preranked stats: 0.06% of genes
+The order of those genes will be arbitrary, which may produce unexpected results.
+  TGF-beta Hallmark: NES=-1.5053078446131767, nominal_p=0.02610441767068273, FDR_q=0.03670291646070193
+
+[GSE237606]
+  ranked genes: 28293
+  TGF-beta Hallmark: NES=1.6237798322774242, nominal_p=0.006734006734006734, FDR_q=0.007822625439733383
+
+Summary:
+  dataset               term       NES  nominal_p    FDR_q
+discovery TGF-beta Signaling  1.786780   0.002020 0.004974
+GSE121105 TGF-beta Signaling -1.505308   0.026104 0.036703
+GSE237606 TGF-beta Signaling  1.623780   0.006734 0.007823
+
+Output: /home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/tgfb_ranked_validation_summary.csv

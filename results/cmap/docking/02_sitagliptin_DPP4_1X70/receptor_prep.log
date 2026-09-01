@@ -1,0 +1,44 @@
+MEEKO ATTEMPT 1:
+@> 5984 atoms and 1 coordinate set(s) were parsed in 0.02s.
+Template padding will be used.
+[32m gasteiger charges will be read from template file 
+ [0m
+
+Error: Creation of data structure for receptor failed.
+
+Details:
+- Residues with alternate location: ['A:323', 'A:376', 'A:546']
+Either specify an altloc for each with option wanted_altloc
+or a general default altloc with option default_altloc.
+Recommendations:
+1. (for batch processing) Use -a/--allow_bad_res to automatically remove residues
+that do not match templates, and --default_altloc to set
+a default altloc variant. Use these at your own risk.
+
+2. (processing individual structure) Inspecting and fixing the input structure is recommended.
+Use --wanted_altloc to set variants for specific residues.
+
+
+
+MEEKO ATTEMPT 2:
+Template padding will be used.
+[32m gasteiger charges will be read from template file 
+ [0m
+
+Error: Creation of data structure for receptor failed.
+
+Details:
+- Residues with alternate location: ['A:323', 'A:376', 'A:546']
+Either specify an altloc for each with option wanted_altloc
+or a general default altloc with option default_altloc.
+Recommendations:
+1. (for batch processing) Use -a/--allow_bad_res to automatically remove residues
+that do not match templates, and --default_altloc to set
+a default altloc variant. Use these at your own risk.
+
+2. (processing individual structure) Inspecting and fixing the input structure is recommended.
+Use --wanted_altloc to set variants for specific residues.
+
+
+
+OPENBABEL_PYTHON: converted receptor to PDBQT; removed ROOT/BRANCH/TORSDOF torsion-tree records for rigid-receptor compatibility.

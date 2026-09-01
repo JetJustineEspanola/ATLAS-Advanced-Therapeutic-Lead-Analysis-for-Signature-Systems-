@@ -1,21 +1,40 @@
-My Project Structure for now
-ATLAS/
-├── data/
-│ ├── raw/
-│ └── processed/
-├── notebooks/
-├── src/
-└── results/
+# ATLAS 00D — Metadata Enrichment + Download Planning
 
-Current Data Set
-Quant Files
-Format
-Name, Length, EffectiveLength, TPM, NumReads BT-474_Trastuzumab_Resistance_1https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9067963   
-BT-474_Trastuzumab_Resistance_2https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9067964 
-BT-474_Trastuzumab_Resistance_3https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9067965 
-BT-474_Trastuzumab_Sensible_1https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9067960 
-BT-474_Trastuzumab_Sensible_2https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9067961 
-BT-474_Trastuzumab_Sensible_3https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9067962
+Run after 00A–00C.
 
-Human genes (GRCh38.p14) Biomart
-FormatGene stable ID Transcript stable ID Gene namehttps://asia.ensembl.org/biomart/martview/6a137e8337a28bc1b13dbefe5c6ba809
+```bash
+source .venv/bin/activate
+
+python -u scripts/00d_metadata_enrichment.py \
+  --min-score 40 \
+  --sources GEO,SRA \
+  --max-datasets 30 \
+  --workers 6
+```
+
+Then re-score with sample-level evidence:
+
+```bash
+python -u scripts/00c2_rescore_after_enrichment.py
+```
+
+Outputs:
+
+```text
+data/enriched/
+├── sample_metadata.csv
+├── sample_metadata.parquet
+├── download_manifest.csv
+├── download_manifest.parquet
+├── dataset_enrichment_summary.csv
+└── dataset_candidates_rescored.csv
+```
+
+00D does **not download FASTQ files yet**. It produces a download plan first.
+
+This is intentional: ATLAS should validate phenotype and replicate structure before
+large raw-data acquisition.
+
+Next stage:
+- 00E download manager + checksums
+- then platform-specific QC / harmonization

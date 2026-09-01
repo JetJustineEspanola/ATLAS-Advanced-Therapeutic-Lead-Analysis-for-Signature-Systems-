@@ -1,0 +1,10 @@
+ATLAS TGF-beta final evidence synthesis
+========================================================================
+Positive 16-gene module supported across datasets: True
+Negative 7-gene module supported across datasets: True
+Hallmark TGF-beta NES direction consistent across datasets: False
+
+Defensible interpretation:
+Trastuzumab resistance is associated with reproducible TGF-beta pathway remodeling, not a universally monotonic increase in the entire Hallmark TGF-beta pathway.
+A 16-gene positive TGF-beta module is strongly activated in discovery and GSE237606 and trends upward in GSE121105, while a distinct 7-gene module is repressed across datasets.
+Therefore, report pathway-level context dependence alongside reproducible submodule-level dysregulation.

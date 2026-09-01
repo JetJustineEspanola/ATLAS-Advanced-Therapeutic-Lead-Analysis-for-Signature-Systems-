@@ -1,0 +1,97 @@
+========================================================================================
+ATLAS — 00D-EBI BIOSTUDIES / ARRAYEXPRESS METADATA ENRICHMENT
+========================================================================================
+Candidates selected: 25
+Phenotype policy: NO automatic resistant/sensitive assignment
+
+[E-GEOD-38415]
+  GEO mirror: GSE38415 -> metadata only, no independent samples
+
+[E-GEOD-52660]
+  GEO mirror: GSE52660 -> metadata only, no independent samples
+
+[E-GEOD-41118]
+  GEO mirror: GSE41118 -> metadata only, no independent samples
+
+[E-GEOD-15043]
+  GEO mirror: GSE15043 -> metadata only, no independent samples
+
+[E-GEOD-17630]
+  GEO mirror: GSE17630 -> metadata only, no independent samples
+
+[E-GEOD-55005]
+  GEO mirror: GSE55005 -> metadata only, no independent samples
+
+[E-GEOD-67019]
+  GEO mirror: GSE67019 -> metadata only, no independent samples
+
+[E-GEOD-69042]
+  GEO mirror: GSE69042 -> metadata only, no independent samples
+
+[E-MTAB-7433]
+  SDRF: E-MTAB-7433.sdrf.txt
+  SDRF rows: 12; unique metadata samples: 6
+
+[E-MTAB-965]
+  SDRF: E-MTAB-965.sdrf.txt
+  SDRF rows: 24; unique metadata samples: 24
+
+[E-GEOD-16716]
+  GEO mirror: GSE16716, GSE20194 -> metadata only, no independent samples
+
+[E-GEOD-20194]
+  GEO mirror: GSE20194 -> metadata only, no independent samples
+
+[E-GEOD-44272]
+  GEO mirror: GSE44272 -> metadata only, no independent samples
+
+[E-GEOD-70233]
+  GEO mirror: GSE70233 -> metadata only, no independent samples
+
+[E-GEOD-75367]
+  GEO mirror: GSE75367 -> metadata only, no independent samples
+
+[E-GEOD-11293]
+  GEO mirror: GSE11293 -> metadata only, no independent samples
+
+[E-GEOD-16446]
+  GEO mirror: GSE16446 -> metadata only, no independent samples
+
+[E-MTAB-12224]
+  SDRF: E-MTAB-12224.sdrf.txt
+  SDRF rows: 24; unique metadata samples: 12
+
+[E-GEOD-69017]
+  GEO mirror: GSE69017 -> metadata only, no independent samples
+
+[E-MTAB-12225]
+  SDRF: E-MTAB-12225.sdrf.txt
+  SDRF rows: 24; unique metadata samples: 12
+
+[E-GEOD-16179]
+  GEO mirror: GSE16179 -> metadata only, no independent samples
+
+[E-GEOD-38008]
+  GEO mirror: GSE38008 -> metadata only, no independent samples
+
+[E-GEOD-52707]
+  GEO mirror: GSE52707 -> metadata only, no independent samples
+
+[E-GEOD-41656]
+  GEO mirror: GSE41656 -> metadata only, no independent samples
+
+[E-GEOD-67193]
+  GEO mirror: GSE67193 -> metadata only, no independent samples
+Shared sample metadata synchronized: 1262 total rows; 54 BioStudies rows
+
+========================================================================================
+00D-EBI COMPLETE
+========================================================================================
+status
+GEO_MIRROR       21
+ENRICHED_SDRF     4
+EBI sample rows written: 54
+/home/regulus/Documents/ATLAS/data/enriched/ebi_dataset_enrichment_summary.csv
+/home/regulus/Documents/ATLAS/data/enriched/ebi_sample_metadata.csv
+/home/regulus/Documents/ATLAS/data/enriched/ebi_file_inventory.csv
+IMPORTANT: EBI samples remain UNRESOLVED until ATLAS phenotype/design validation.

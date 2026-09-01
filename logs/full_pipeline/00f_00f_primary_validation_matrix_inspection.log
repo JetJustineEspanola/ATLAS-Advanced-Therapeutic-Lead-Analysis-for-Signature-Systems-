@@ -1,0 +1,62 @@
+==============================================================================
+ATLAS — 00F PRIMARY VALIDATION MATRIX INSPECTION
+==============================================================================
+
+[GSE121105]
+  shape: 37355 rows x 22 columns
+  first columns: ['Unnamed: 0', 'Sample_BT474_1', 'Sample_BT474_2', 'Sample_BT474_3', 'Sample_BT474_10T_1', 'Sample_BT474_10T_2', 'Sample_BT474_10T_3', 'Sample_BT474_10T10P_1', 'Sample_BT474_10T10P_2', 'Sample_BT474_10T10P_3']
+  candidate gene-id column: Unnamed: 0
+  sample columns: 21
+  high-confidence metadata matches: 21/21
+        matrix_column matched_sample_id                           matched_title matched_resistance_status primary_contrast_included match_field  match_score
+       Sample_BT474_1        GSM3426212                        BT474_replicate1     SENSITIVE_OR_PARENTAL                      True description          100
+       Sample_BT474_2        GSM3426213                        BT474_replicate2     SENSITIVE_OR_PARENTAL                      True description          100
+       Sample_BT474_3        GSM3426214                        BT474_replicate3     SENSITIVE_OR_PARENTAL                      True description          100
+   Sample_BT474_10T_1        GSM3426215            BT474+trastuzumab_replicate1                  EXCLUDED                     False description          100
+   Sample_BT474_10T_2        GSM3426216            BT474+trastuzumab_replicate2                  EXCLUDED                     False description          100
+   Sample_BT474_10T_3        GSM3426217            BT474+trastuzumab_replicate3                  EXCLUDED                     False description          100
+Sample_BT474_10T10P_1        GSM3426218 BT474+trastuzumab+pertuzumab_replicate1                  EXCLUDED                     False description          100
+Sample_BT474_10T10P_2        GSM3426219 BT474+trastuzumab+pertuzumab_replicate2                  EXCLUDED                     False description          100
+Sample_BT474_10T10P_3        GSM3426220 BT474+trastuzumab+pertuzumab_replicate3                  EXCLUDED                     False description          100
+      Sample_BT-TR1_1        GSM3426221                       BT-TR1_replicate1                 RESISTANT                      True description          100
+      Sample_BT-TR1_2        GSM3426222                       BT-TR1_replicate2                 RESISTANT                      True description          100
+      Sample_BT-TR1_3        GSM3426223                       BT-TR1_replicate3                 RESISTANT                      True description          100
+      Sample_BT-TR2_1        GSM3426224                       BT-TR2_replicate1                 RESISTANT                      True description          100
+      Sample_BT-TR2_2        GSM3426225                       BT-TR2_replicate2                 RESISTANT                      True description          100
+      Sample_BT-TR2_3        GSM3426226                       BT-TR2_replicate3                 RESISTANT                      True description          100
+     Sample_BT-TPR1_1        GSM3426227                      BT-TPR1_replicate1                  EXCLUDED                     False description          100
+     Sample_BT-TPR1_2        GSM3426228                      BT-TPR1_replicate2                  EXCLUDED                     False description          100
+     Sample_BT-TPR1_3        GSM3426229                      BT-TPR1_replicate3                  EXCLUDED                     False description          100
+     Sample_BT-TPR2_1        GSM3426230                      BT-TPR2_replicate1                  EXCLUDED                     False description          100
+     Sample_BT-TPR2_2        GSM3426231                      BT-TPR2_replicate2                  EXCLUDED                     False description          100
+
+[GSE237606]
+  shape: 44584 rows x 41 columns
+  first columns: ['Unnamed: 0', 'COHP_45251', 'COHP_45252', 'COHP_45253', 'COHP_45254', 'COHP_45255', 'COHP_45256', 'COHP_45257', 'COHP_45258', 'COHP_45263']
+  candidate gene-id column: Unnamed: 0
+  sample columns: 40
+  high-confidence metadata matches: 40/40
+matrix_column matched_sample_id                     matched_title matched_resistance_status primary_contrast_included match_field  match_score
+   COHP_45251        GSM7634708 S0_Baseline, 0 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45252        GSM7634709 S0_Baseline, 0 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45253        GSM7634710      S1_Con, 1 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45254        GSM7634711      S1_Con, 1 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45255        GSM7634712      S1_HRG, 1 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45256        GSM7634713      S1_HRG, 1 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45257        GSM7634714      S1_EGF, 1 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45258        GSM7634715      S1_EGF, 1 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45263        GSM7634716    S12_Con, 12 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45264        GSM7634717    S12_Con, 12 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45265        GSM7634718    S12_HRG, 12 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45266        GSM7634719    S12_HRG, 12 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45267        GSM7634720    S12_EGF, 12 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45268        GSM7634721    S12_EGF, 12 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45273        GSM7634722    S24_Con, 24 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45274        GSM7634723    S24_Con, 24 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45275        GSM7634724    S24_HRG, 24 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45276        GSM7634725    S24_HRG, 24 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45277        GSM7634726    S24_EGF, 24 hr. RNA-Seq, rep 1     SENSITIVE_OR_PARENTAL                           description          100
+   COHP_45278        GSM7634727    S24_EGF, 24 hr. RNA-Seq, rep 2     SENSITIVE_OR_PARENTAL                           description          100
+
+Output:
+/home/regulus/Documents/ATLAS/data/validation_expression/matrix_inspection_summary.csv

@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-01T11:44:59.961734+00:00",
+  "sources": [
+    "geo",
+    "sra",
+    "gdc",
+    "cbioportal"
+  ],
+  "query_family": "all",
+  "retmax": 25,
+  "unique_candidates": 168,
+  "output_csv": "/home/regulus/Documents/ATLAS/data/discovery/dataset_candidates.csv",
+  "output_parquet": "/home/regulus/Documents/ATLAS/data/discovery/dataset_candidates.parquet"
+}

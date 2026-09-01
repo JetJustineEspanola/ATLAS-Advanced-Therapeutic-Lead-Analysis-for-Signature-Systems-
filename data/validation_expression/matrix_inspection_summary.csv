@@ -1,0 +1,3 @@
+accession,rows,columns,gene_id_column,sample_columns,high_confidence_matches,mapping_file
+GSE121105,37355,22,Unnamed: 0,21,21,/home/regulus/Documents/ATLAS/data/validation_expression/GSE121105_column_mapping.csv
+GSE237606,44584,41,Unnamed: 0,40,40,/home/regulus/Documents/ATLAS/data/validation_expression/GSE237606_column_mapping.csv

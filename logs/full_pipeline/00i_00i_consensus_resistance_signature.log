@@ -1,0 +1,41 @@
+==============================================================================
+ATLAS — 00I CONSENSUS RESISTANCE SIGNATURE
+==============================================================================
+Replicated input genes: 2066
+Consensus genes with |log2FC| >= 1.0 in both studies: 438
+  Up in resistant: 193
+  Down in resistant: 245
+
+Top consensus genes:
+ consensus_rank gene_symbol replication_direction  GSE121105_log2FC  GSE121105_padj  GSE237606_log2FC  GSE237606_padj  min_abs_log2FC  geom_mean_abs_log2FC  combined_significance  consensus_rank_score
+              1     PPP1R1B       UP_IN_RESISTANT          3.651143    6.914615e-52          8.944664    0.000000e+00        3.651143              5.714740             351.160232           2006.789351
+              2      CXCL17       UP_IN_RESISTANT          3.539296   1.347220e-158          3.818336    0.000000e+00        3.539296              3.676169             457.870561           1683.209741
+              3       HAR1A       UP_IN_RESISTANT          4.233776    1.782188e-03          6.349320    0.000000e+00        4.233776              5.184747             302.749047           1569.677191
+              4       CRIP1     DOWN_IN_RESISTANT         -2.685503    1.698102e-03         -7.606852    0.000000e+00        2.685503              4.519759             302.770036           1368.447721
+              5     SCGB2A2       UP_IN_RESISTANT          6.951569   1.167036e-226          2.240011   1.046179e-113        2.240011              3.946085             338.913310           1337.380839
+              6      P2RY10     DOWN_IN_RESISTANT         -3.590983    3.971834e-33         -5.258162   5.068100e-275        3.590983              4.345339             306.696164           1332.698697
+              7       FSTL1     DOWN_IN_RESISTANT         -2.165214    1.798536e-42         -6.783564    0.000000e+00        2.165214              3.832475             341.745081           1309.729609
+              8      MUC5AC       UP_IN_RESISTANT          3.838806    6.817337e-19          5.309473   4.927339e-268        3.838806              4.514647             285.473773           1288.813299
+              9       ITGAL       UP_IN_RESISTANT          3.452659    3.924680e-05          5.794418   6.281871e-284        3.452659              4.472823             287.608107           1286.420176
+             10       S100P       UP_IN_RESISTANT          4.182662    1.905755e-45          2.959454   2.886475e-295        2.959454              3.518294             339.259565           1193.615046
+             11       ELMO1       UP_IN_RESISTANT          2.295473    2.024285e-02          6.452212    0.000000e+00        2.295473              3.848490             301.693728           1161.065442
+             12       NPY1R     DOWN_IN_RESISTANT         -2.306428    3.886160e-62         -4.402777    0.000000e+00        2.306428              3.186642             361.410479           1151.685867
+             13       ABCA4     DOWN_IN_RESISTANT         -1.834828    4.122432e-17         -6.724604    0.000000e+00        1.834828              3.512619             316.384847           1111.339544
+             14       MRAP2       UP_IN_RESISTANT          2.300545    2.387411e-02          5.845736    0.000000e+00        2.300545              3.667203             301.622073           1106.109471
+             15       DAPK1       UP_IN_RESISTANT          2.704869    2.181122e-25          4.206389    0.000000e+00        2.704869              3.373089             324.661320           1095.111632
+             16       NCAM2     DOWN_IN_RESISTANT         -2.301245    8.296200e-57         -3.968471    0.000000e+00        2.301245              3.021990             356.081121           1076.073583
+             17        DLK1       UP_IN_RESISTANT          3.266995    2.047229e-02          8.006280   3.405688e-208        3.266995              5.114340             209.156629           1069.698082
+             18         LOX       UP_IN_RESISTANT          2.261396    3.332252e-18          4.997902    0.000000e+00        2.261396              3.361880             317.477262           1067.320466
+             19       AZGP1       UP_IN_RESISTANT          3.997579    2.178336e-62          3.759883   1.154134e-213        3.759883              3.876910             274.599619           1064.597946
+             20        APOD       UP_IN_RESISTANT          3.049875    3.158165e-05          7.389299   4.847759e-210        3.049875              4.747256             213.815024           1015.034592
+             21       GFRA1     DOWN_IN_RESISTANT         -3.827062    5.737694e-73         -5.203779   3.507603e-150        3.827062              4.462643             221.696252            989.351213
+             22       CPNE4       UP_IN_RESISTANT          3.935491    1.756796e-17          3.263222   5.099849e-259        3.263222              3.583627             275.047721            985.668453
+             23        AMBP       UP_IN_RESISTANT          2.892137    1.857485e-11          3.448815    0.000000e+00        2.892137              3.158235             310.731075            981.361665
+             24      IGFBP5     DOWN_IN_RESISTANT         -2.826599    1.658013e-47         -2.498467    0.000000e+00        2.498467              2.657473             346.780412            921.559595
+             25        SDC2     DOWN_IN_RESISTANT         -2.152152    6.914615e-52         -2.889772    0.000000e+00        2.152152              2.493838             351.160232            875.736667
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/consensus_resistance_signature.csv
+/home/regulus/Documents/ATLAS/results/external_validation/consensus_top100_up.csv
+/home/regulus/Documents/ATLAS/results/external_validation/consensus_top100_down.csv
+/home/regulus/Documents/ATLAS/results/external_validation/consensus_signature_summary.csv

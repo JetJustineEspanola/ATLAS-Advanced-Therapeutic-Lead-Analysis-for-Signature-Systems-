@@ -1,0 +1,3 @@
+dataset_id,included_n,resistant_n,sensitive_parental_n,balanced_across_strata
+GEO:GSE121105,9,6,3,
+GEO:GSE237606,40,20,20,True

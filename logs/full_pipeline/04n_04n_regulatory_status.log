@@ -1,0 +1,25 @@
+
+========================================================================
+ATLAS — Stage 04N Optimized Regulatory / Clinical Verification
+========================================================================
+
+Input:
+/home/regulus/Documents/ATLAS/results/cmap/drug_filter/ATLAS_CMap_drug_candidates.csv
+
+Rows loaded: 1,090
+Columns loaded: 42
+HTTP cache loaded: 4,009 entries
+
+Runtime configuration:
+  Mode: full
+  Candidates selected: 1,090
+  Workers: 8
+  Timeout: connect=3.5s, read=8s
+  Retries: 1
+  openFDA pacing: ~3.5 requests/sec shared
+  ClinicalTrials.gov pacing: ~5 requests/sec shared
+
+Checkpoint resumed: 1,090/1,090 already complete.
+Remaining candidates: 0
+
+Nothing left to query; final outputs rebuilt.

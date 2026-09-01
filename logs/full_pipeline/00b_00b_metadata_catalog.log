@@ -1,0 +1,9 @@
+=== 00B COMPLETE ===
+Catalog: /home/regulus/Documents/ATLAS/data/catalog/atlas_catalog.duckdb
+Datasets: 193
+                 source  n
+                    GEO 63
+                    SRA 56
+                    GDC 25
+BIOSTUDIES_ARRAYEXPRESS 25
+             CBIOPORTAL 24

@@ -1,0 +1,8 @@
+priority_rank,priority_tier_number,priority_tier,cross_signature_consistency_score,pert_id,pert_iname,ATLAS_SIG_A_TOP150,ATLAS_SIG_B_TOP100,ATLAS_SIG_B_TOP150,n_signatures,n_negative,n_strong_negative,mean_tau,median_tau,minimum_tau,strong_negative_threshold,consensus_rank,A_TOP150_negative,A_TOP150_strong_negative,B_TOP100_negative,B_TOP100_strong_negative,B_TOP150_negative,B_TOP150_strong_negative
+1,1,Tier 1 — Strong consensus,5,BRD-K99447003,enalaprilat,-2.249479,-94.186320,-95.636980,3,3,2,-64.024260,-94.186320,-95.636980,-90.000000,1,True,False,True,True,True,True
+2,1,Tier 1 — Strong consensus,5,BRD-A81541225,oligomycin-a,-31.808538,-93.997200,-97.533480,3,3,2,-74.446406,-93.997200,-97.533480,-90.000000,2,True,False,True,True,True,True
+3,1,Tier 1 — Strong consensus,5,BRD-K89687904,PKCbeta-inhibitor,-24.450300,-90.709640,-97.772630,3,3,2,-70.977523,-90.709640,-97.772630,-90.000000,3,True,False,True,True,True,True
+4,1,Tier 1 — Strong consensus,4,BRD-K33483813,actarit,0.000000,-98.731500,-94.041336,3,2,2,-64.257612,-94.041336,-98.731500,-90.000000,4,False,False,True,True,True,True
+5,1,Tier 1 — Strong consensus,4,BRD-K45252063,clofibrate,0.000000,-95.066950,-93.316580,3,2,2,-62.794510,-93.316580,-95.066950,-90.000000,5,False,False,True,True,True,True
+6,1,Tier 1 — Strong consensus,4,BRD-K19416115,sitagliptin,0.000000,-95.046020,-92.978720,3,2,2,-62.674913,-92.978720,-95.046020,-90.000000,6,False,False,True,True,True,True
+7,1,Tier 1 — Strong consensus,4,BRD-K01976263,emetine,0.000000,-96.723045,-91.633950,3,2,2,-62.785665,-91.633950,-96.723045,-90.000000,7,False,False,True,True,True,True

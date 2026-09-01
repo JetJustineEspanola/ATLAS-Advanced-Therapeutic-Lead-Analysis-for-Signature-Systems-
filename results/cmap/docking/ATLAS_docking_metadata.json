@@ -1,0 +1,40 @@
+{
+  "stage": "04S",
+  "implementation": "v3_rigid_receptor_pdbqt_fix",
+  "created_utc": "2026-08-31T09:06:41.580348+00:00",
+  "input": "/home/regulus/Documents/ATLAS/results/cmap/final_prioritization/ATLAS_docking_shortlist.csv",
+  "output": "/home/regulus/Documents/ATLAS/results/cmap/docking/ATLAS_docking_results.csv",
+  "exhaustiveness": 16,
+  "num_modes": 9,
+  "structure_plan": {
+    "CYP3A4": {
+      "uniprot": "P08684",
+      "pdb_id": "3NXU",
+      "reference_ligand": "RIT",
+      "keep_hetero": [
+        "HEM"
+      ],
+      "box_padding": 6.0,
+      "minimum_box": 22.0,
+      "note": "Human CYP3A4; heme retained; ritonavir defines active-site box."
+    },
+    "DPP4": {
+      "uniprot": "P27487",
+      "pdb_id": "1X70",
+      "reference_ligand": "715",
+      "keep_hetero": [],
+      "box_padding": 6.0,
+      "minimum_box": 22.0,
+      "note": "Human DPP4; co-crystallized sitagliptin defines active-site box."
+    }
+  },
+  "guardrails": [
+    "Docking score is not proof of binding.",
+    "Docking score is not proof of efficacy.",
+    "Docking score is not proof of reversal of trastuzumab resistance.",
+    "Experimental structures are preferred to predicted structures.",
+    "CYP3A4 heme is retained.",
+    "Binding-site boxes are derived from co-crystal ligand coordinates."
+  ],
+  "next_stage": "04T_ADMET_structural_assessment"
+}

@@ -1,0 +1,36 @@
+==============================================================================
+ATLAS — 00K STRICT-CORE PATHWAY VALIDATION
+==============================================================================
+Strict-core UP genes: 130
+Strict-core DOWN genes: 112
+
+Top Hallmark pathways — UP_IN_RESISTANT:
+                             Term  Adjusted P-value  Combined Score                                Genes
+                     Angiogenesis          0.002649      184.362246               VTN;COL5A2;STC1;S100A4
+                          Hypoxia          0.020485       30.541899 LOX;STC1;CXCR4;S100A4;TGFBI;B4GALNT2
+                       Glycolysis          0.020485       30.541899    GFPT1;B3GAT1;STC1;CXCR4;TGFBI;GNE
+Epithelial Mesenchymal Transition          0.038560       18.605861        LOX;COL5A2;SPOCK1;TGFBI;FBLN5
+            Inflammatory Response          0.038560       18.605861          LYN;RGS16;PTAFR;BDKRB1;NOD2
+            Xenobiotic Metabolism          0.038560       18.605861            VTN;MPP2;MAOA;PDK4;PAPSS2
+                      p53 Pathway          0.038560       18.605861        GPX2;RGS16;S100A4;ALOX15B;ADA
+                KRAS Signaling Up          0.038560       18.605861        ALDH1A3;RGS16;CXCR4;APOD;TFPI
+                   UV Response Dn          0.050153       18.922214             COL5A2;PTPN21;TFPI;FBLN5
+                Androgen Response          0.085207       17.306366                 ALDH1A3;AZGP1;PTPN21
+
+Top Hallmark pathways — DOWN_IN_RESISTANT:
+                             Term  Adjusted P-value  Combined Score                                                                Genes
+          Estrogen Response Early      3.706101e-08      257.058656 REEP1;OLFM1;SLC24A3;STC2;GREB1;NPY1R;BCL2;RARA;PGR;GFRA1;AREG;SLC7A2
+           Estrogen Response Late      2.610273e-06      157.493672          SCUBE2;OLFM1;SLC24A3;FABP5;NPY1R;BCL2;PGR;CXCL14;AREG;KLK11
+                     Angiogenesis      1.614403e-01       43.075874                                                          PDGFA;FSTL1
+                          Hypoxia      4.770401e-01        6.274012                                                       SDC2;STC2;BCL2
+                       Myogenesis      4.770401e-01        6.274012                                                    REEP1;CAMK2B;STC2
+Epithelial Mesenchymal Transition      4.770401e-01        6.274012                                                   COL12A1;AREG;FSTL1
+             Bile Acid Metabolism      5.209027e-01        6.663997                                                         ABCA4;PEX11G
+               Hedgehog Signaling      5.400799e-01        8.673252                                                                SLIT1
+                   UV Response Dn      5.400799e-01        4.158552                                                          IGFBP5;SDC2
+                   Apical Surface      5.400799e-01        6.311679                                                                GATA3
+
+Outputs:
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/strict_core_up_hallmark2020.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/strict_core_down_hallmark2020.csv
+/home/regulus/Documents/ATLAS/results/external_validation/pathway_validation/strict_core_pathway_summary.csv

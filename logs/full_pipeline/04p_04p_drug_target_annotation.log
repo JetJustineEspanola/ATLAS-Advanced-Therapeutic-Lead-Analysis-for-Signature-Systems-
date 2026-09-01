@@ -1,0 +1,54 @@
+
+============================================================================
+ATLAS — Stage 04P Drug–Target Annotation
+============================================================================
+
+Input source: 04O_PRIORITIZED
+Input file:
+/home/regulus/Documents/ATLAS/results/cmap/safety_screening/ATLAS_CMap_safety_prioritized.csv
+
+Safety-filtered: 63 -> 63 candidates
+Candidates selected for target annotation: 50
+Minimum pChEMBL: 5
+Workers: 6
+
+Cache: molecules=83, activities=82, targets=522
+  1/50 candidates annotated (69.77/s, ETA ~0.0 min)
+  10/50 candidates annotated (696.64/s, ETA ~0.0 min)
+  20/50 candidates annotated (895.87/s, ETA ~0.0 min)
+  30/50 candidates annotated (1322.46/s, ETA ~0.0 min)
+  40/50 candidates annotated (1374.22/s, ETA ~0.0 min)
+  50/50 candidates annotated (1634.71/s, ETA ~0.0 min)
+
+============================================================================
+STAGE 04P SUMMARY
+============================================================================
+target_support_category  compound_count  tier1_count  median_chembl_target_n  median_target_strength_score
+MODERATE_TARGET_SUPPORT              21            4                     6.0                           2.0
+  STRONG_TARGET_SUPPORT              19            1                     5.0                           4.0
+    WEAK_TARGET_SUPPORT               6            1                     1.0                           1.0
+NO_TARGET_SUPPORT_FOUND               4            0                     0.0                           0.0
+
+============================================================================
+TIER 1 TARGET EVIDENCE
+============================================================================
+ priority_rank        pert_iname target_support_category  target_evidence_strength_score molecule_chembl_id  chembl_target_n                                                                        chembl_target_ids  chembl_max_pchembl  pubchem_target_accession_n  pubchem_target_gene_id_n
+             3 PKCbeta-inhibitor   STRONG_TARGET_SUPPORT                               4      CHEMBL5715921                7 CHEMBL2226 | CHEMBL2273 | CHEMBL3131 | CHEMBL3776 | CHEMBL4801 | CHEMBL5037 | CHEMBL5991                8.42                          11                         8
+             1       enalaprilat MODERATE_TARGET_SUPPORT                               2      CHEMBL3989406                0                                                                                                          NaN                           9                         8
+             2      oligomycin-a MODERATE_TARGET_SUPPORT                               2      CHEMBL1255855                6         CHEMBL1697668 | CHEMBL1743121 | CHEMBL367 | CHEMBL385 | CHEMBL394 | CHEMBL614793                6.96                           2                         2
+             5        clofibrate MODERATE_TARGET_SUPPORT                               2          CHEMBL565                6              CHEMBL1963 | CHEMBL2026 | CHEMBL276 | CHEMBL340 | CHEMBL5738 | CHEMBL612545                8.30                           0                         0
+             6       sitagliptin MODERATE_TARGET_SUPPORT                               2         CHEMBL1422                7   CHEMBL224 | CHEMBL284 | CHEMBL3883 | CHEMBL4653 | CHEMBL4657 | CHEMBL4683 | CHEMBL4793                9.06                           0                         0
+             4           actarit     WEAK_TARGET_SUPPORT                               1      CHEMBL1885632                0                                                                                                          NaN                           2                         2
+
+============================================================================
+STAGE 04P COMPLETE
+============================================================================
+
+Outputs:
+  /home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_annotations.csv
+  /home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_pairs.csv
+  /home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_prioritized.csv
+  /home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_summary.csv
+  /home/regulus/Documents/ATLAS/results/cmap/drug_targets/ATLAS_CMap_drug_target_metadata.json
+
+Next: 04Q — PPI + pathway/network integration

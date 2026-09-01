@@ -1,0 +1,6 @@
+signature,description,cmap_role
+ATLAS_SIG_A_STRICT,Significant resistance DEGs with |log2FC| >= 1,Reference; too large for direct CMap query
+ATLAS_SIG_B_TOP100,Top 100 Resistant-up and Resistant-down genes by Wald statistic,Primary; already completed
+ATLAS_SIG_B_TOP150,Top 150 Resistant-up and Resistant-down genes by Wald statistic,Secondary robustness query
+ATLAS_SIG_A_TOP150,Significant genes ranked by absolute log2 fold change,Alternative robustness query
+ATLAS_SIG_C_TGFB,Significant TGF-beta-associated resistance genes,Exploratory; currently too small

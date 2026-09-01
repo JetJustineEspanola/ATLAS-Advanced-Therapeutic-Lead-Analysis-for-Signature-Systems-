@@ -1,0 +1,50 @@
+==============================================================================
+ATLAS — 00F1 v2 PRIMARY VALIDATION DESIGN AUDIT
+==============================================================================
+
+[GSE121105] curated primary contrast
+phenotype
+RESISTANT                6
+SENSITIVE_OR_PARENTAL    3
+Included: 9 / 21
+
+[GSE237606] phenotype x timepoint x stimulus
+            phenotype timepoint stimulus  n
+            RESISTANT         0 BASELINE  2
+SENSITIVE_OR_PARENTAL         0 BASELINE  2
+            RESISTANT         1      CON  2
+SENSITIVE_OR_PARENTAL         1      CON  2
+            RESISTANT         1      EGF  2
+SENSITIVE_OR_PARENTAL         1      EGF  2
+            RESISTANT         1      HRG  2
+SENSITIVE_OR_PARENTAL         1      HRG  2
+            RESISTANT        12      CON  2
+SENSITIVE_OR_PARENTAL        12      CON  2
+            RESISTANT        12      EGF  2
+SENSITIVE_OR_PARENTAL        12      EGF  2
+            RESISTANT        12      HRG  2
+SENSITIVE_OR_PARENTAL        12      HRG  2
+            RESISTANT        24      CON  2
+SENSITIVE_OR_PARENTAL        24      CON  2
+            RESISTANT        24      EGF  2
+SENSITIVE_OR_PARENTAL        24      EGF  2
+            RESISTANT        24      HRG  2
+SENSITIVE_OR_PARENTAL        24      HRG  2
+
+[GSE237606] stratum balance
+timepoint stimulus  RESISTANT  SENSITIVE_OR_PARENTAL  balanced  both_present
+        0 BASELINE          2                      2      True          True
+        1      CON          2                      2      True          True
+        1      EGF          2                      2      True          True
+        1      HRG          2                      2      True          True
+       12      CON          2                      2      True          True
+       12      EGF          2                      2      True          True
+       12      HRG          2                      2      True          True
+       24      CON          2                      2      True          True
+       24      EGF          2                      2      True          True
+       24      HRG          2                      2      True          True
+
+GSE237606 fully phenotype-balanced across strata: True
+
+Output:
+/home/regulus/Documents/ATLAS/data/validation_expression/primary_validation_design_audit.csv

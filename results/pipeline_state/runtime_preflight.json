@@ -1,0 +1,404 @@
+{
+  "created_utc": "2026-09-01T01:44:23.564029+00:00",
+  "project_root": "/home/regulus/Documents/ATLAS",
+  "overall_status": "PASS",
+  "warnings": [],
+  "checks": [
+    {
+      "check": "python_version",
+      "target": "3.12.13",
+      "status": "PASS",
+      "detail": "requires Python >= 3.10"
+    },
+    {
+      "check": "python_import",
+      "target": "pandas",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "numpy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "scipy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "requests",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "duckdb",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "pydeseq2",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "gseapy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "rdkit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "vina",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "python_import",
+      "target": "openbabel",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00y_runtime_preflight.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00a_dataset_discovery.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00a2_ebi_external_discovery.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00b_metadata_catalog.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00c_dataset_eligibility.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d_metadata_enrichment.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d_ebi_metadata_enrichment.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d1_phenotype_audit.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d2_conservative_phenotype_classifier.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d2b_curated_study_phenotype_mapping.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d2c_confirm_her2_status.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d3_dataset_relationship_audit.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00c4_independence_modality_scoring.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00w_scientific_automation_gate.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00e_primary_validation_expression_fetch.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00aa_dataset_volume_metadata.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00f_primary_validation_matrix_inspection.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00f1_primary_validation_design_audit.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00g_primary_validation_differential_expression.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00h_cross_study_deg_concordance.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00i_consensus_resistance_signature.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00j_discovery_consensus_validation.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00k_strict_core_pathway_validation.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00l_tgfb_ranked_validation.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00m_tgfb_gene_level_audit.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00n_tgfb_leading_edge_comparison.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00o_tgfb_reproducible_module_validation.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00p_tgfb_module_score_validation.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00q_tgfb_dual_module_cross_dataset_audit.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00r_tgfb_final_evidence_synthesis.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00s_validated_resistance_evidence_export.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04g_cmap_submit_all.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04h_cmap_check_all_jobs.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04j_cmap_download_all.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04k_cmap_parse_all_tau.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04l_cmap_prioritize.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04m_cmap_drug_filter.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04n_regulatory_status.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04o_safety_screening.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04p_drug_target_annotation.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04q_network_integration.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04r_final_candidate_prioritization.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04s_target_supported_docking.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04t_admet_structural_assessment.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "04u_integrated_evidence_matrix.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "writable_directory",
+      "target": "/home/regulus/Documents/ATLAS/results",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "writable_directory",
+      "target": "/home/regulus/Documents/ATLAS/logs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "writable_directory",
+      "target": "/home/regulus/Documents/ATLAS/data",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "disk_space",
+      "target": "/home/regulus/Documents/ATLAS",
+      "status": "PASS",
+      "detail": "58.30 GiB free; minimum 3.0 GiB"
+    },
+    {
+      "check": "network_connectivity",
+      "target": "NCBI",
+      "status": "PASS",
+      "detail": "eutils.ncbi.nlm.nih.gov"
+    },
+    {
+      "check": "network_connectivity",
+      "target": "STRING",
+      "status": "PASS",
+      "detail": "string-db.org"
+    },
+    {
+      "check": "network_connectivity",
+      "target": "UniProt",
+      "status": "PASS",
+      "detail": "rest.uniprot.org"
+    },
+    {
+      "check": "network_connectivity",
+      "target": "PubChem",
+      "status": "PASS",
+      "detail": "pubchem.ncbi.nlm.nih.gov"
+    },
+    {
+      "check": "network_connectivity",
+      "target": "ClinicalTrials",
+      "status": "PASS",
+      "detail": "clinicaltrials.gov"
+    },
+    {
+      "check": "cmap_environment",
+      "target": "CLUE_API_KEY",
+      "status": "PASS",
+      "detail": "set"
+    }
+  ]
+}

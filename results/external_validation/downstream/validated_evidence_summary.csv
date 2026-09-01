@@ -1,0 +1,2 @@
+strict_core_gene_n,strict_core_up_n,strict_core_down_n,very_strong_gene_n,tgfb_positive_module_gene_n,tgfb_negative_module_gene_n,tgfb_positive_module_strict_core_overlap,tgfb_negative_module_strict_core_overlap,tgfb_hallmark_direction_consistent,tgfb_interpretation
+242,130,112,54,16,7,1,0,False,Reproducible TGF-beta pathway remodeling with a positive 16-gene module and a repressed 7-gene module; whole-pathway direction is context-dependent.

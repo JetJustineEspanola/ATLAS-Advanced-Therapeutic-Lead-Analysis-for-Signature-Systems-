@@ -1,0 +1,4 @@
+accession,series_matrix_downloaded,processed_comparison_downloaded,download_error
+GSE89216,True,False,
+GSE15043,True,False,
+GSE55005,False,True,

@@ -1,0 +1,458 @@
+{
+  "created_utc": "2026-08-31T08:22:04.434004+00:00",
+  "stages": {
+    "00y": {
+      "key": "00y",
+      "script": "00y_runtime_preflight.py",
+      "description": "Runtime, network, dependency, and credential preflight",
+      "started_utc": "2026-09-01T01:44:20.508845+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T01:44:23.931445+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00y_00y_runtime_preflight.log"
+    },
+    "00w": {
+      "key": "00w",
+      "script": "00w_scientific_automation_gate.py",
+      "description": "Scientific automation gate before expression validation",
+      "started_utc": "2026-08-31T09:31:07.714618+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:31:08.024368+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00w_00w_scientific_automation_gate.log"
+    },
+    "00a": {
+      "key": "00a",
+      "script": "00a_dataset_discovery.py",
+      "description": "Discover candidate datasets online",
+      "started_utc": "2026-09-01T11:44:22.182463+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:45:00.052773+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00a_00a_dataset_discovery.log"
+    },
+    "00b": {
+      "key": "00b",
+      "script": "00b_metadata_catalog.py",
+      "description": "Build/update metadata catalog",
+      "started_utc": "2026-09-01T11:46:06.784852+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:07.166048+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00b_00b_metadata_catalog.log"
+    },
+    "00c": {
+      "key": "00c",
+      "script": "00c_dataset_eligibility.py",
+      "description": "Initial dataset eligibility scoring",
+      "started_utc": "2026-09-01T11:46:07.166455+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:07.546791+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00c_00c_dataset_eligibility.log"
+    },
+    "00d": {
+      "key": "00d",
+      "script": "00d_metadata_enrichment.py",
+      "description": "Enrich candidate dataset metadata online",
+      "started_utc": "2026-09-01T11:46:07.547305+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:20.798880+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00d_00d_metadata_enrichment.log"
+    },
+    "00d1": {
+      "key": "00d1",
+      "script": "00d1_phenotype_audit.py",
+      "description": "Audit resistance phenotype metadata",
+      "started_utc": "2026-09-01T11:46:35.155976+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:35.703317+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00d1_00d1_phenotype_audit.log"
+    },
+    "00d2": {
+      "key": "00d2",
+      "script": "00d2_conservative_phenotype_classifier.py",
+      "description": "Conservative phenotype classification",
+      "started_utc": "2026-09-01T11:46:35.703721+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:36.370782+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00d2_00d2_conservative_phenotype_classifier.log"
+    },
+    "00d2b": {
+      "key": "00d2b",
+      "script": "00d2b_curated_study_phenotype_mapping.py",
+      "description": "Apply curated phenotype mappings",
+      "started_utc": "2026-09-01T11:46:36.371188+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:36.719902+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00d2b_00d2b_curated_study_phenotype_mapping.log"
+    },
+    "00d2c": {
+      "key": "00d2c",
+      "script": "00d2c_confirm_her2_status.py",
+      "description": "Confirm HER2-positive context",
+      "started_utc": "2026-09-01T11:46:36.720467+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:37.059928+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00d2c_00d2c_confirm_her2_status.log"
+    },
+    "00d3": {
+      "key": "00d3",
+      "script": "00d3_dataset_relationship_audit.py",
+      "description": "Audit study overlap / umbrella relationships",
+      "started_utc": "2026-09-01T11:46:37.060335+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:37.327880+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00d3_00d3_dataset_relationship_audit.log"
+    },
+    "00c4": {
+      "key": "00c4",
+      "script": "00c4_independence_modality_scoring.py",
+      "description": "Score modality, independence, and primary-validation eligibility",
+      "started_utc": "2026-09-01T11:46:37.328476+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:37.663361+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00c4_00c4_independence_modality_scoring.log"
+    },
+    "00e": {
+      "key": "00e",
+      "script": "00e_primary_validation_expression_fetch.py",
+      "description": "Download processed primary-validation expression matrices",
+      "started_utc": "2026-08-31T09:31:08.024914+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:31:10.051977+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00e_00e_primary_validation_expression_fetch.log"
+    },
+    "00f": {
+      "key": "00f",
+      "script": "00f_primary_validation_matrix_inspection.py",
+      "description": "Inspect and map expression matrices",
+      "started_utc": "2026-08-31T09:31:10.388327+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:31:10.876736+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00f_00f_primary_validation_matrix_inspection.log"
+    },
+    "00f1": {
+      "key": "00f1",
+      "script": "00f1_primary_validation_design_audit.py",
+      "description": "Audit primary-validation experimental designs",
+      "started_utc": "2026-08-31T09:31:10.877385+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:31:11.193224+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00f1_00f1_primary_validation_design_audit.log"
+    },
+    "00g": {
+      "key": "00g",
+      "script": "00g_primary_validation_differential_expression.py",
+      "description": "Run primary-validation differential expression",
+      "started_utc": "2026-08-31T09:31:11.193678+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:32:36.827310+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00g_00g_primary_validation_differential_expression.log"
+    },
+    "00h": {
+      "key": "00h",
+      "script": "00h_cross_study_deg_concordance.py",
+      "description": "Compute cross-study DEG concordance",
+      "started_utc": "2026-08-31T09:32:36.827694+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:32:37.859613+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00h_00h_cross_study_deg_concordance.log"
+    },
+    "00i": {
+      "key": "00i",
+      "script": "00i_consensus_resistance_signature.py",
+      "description": "Build external consensus resistance signature",
+      "started_utc": "2026-08-31T09:32:37.860098+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:32:38.122099+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00i_00i_consensus_resistance_signature.log"
+    },
+    "00j": {
+      "key": "00j",
+      "script": "00j_discovery_consensus_validation.py",
+      "description": "Validate external consensus against discovery",
+      "started_utc": "2026-08-31T09:32:38.122506+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:32:38.426778+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00j_00j_discovery_consensus_validation.log"
+    },
+    "00k": {
+      "key": "00k",
+      "script": "00k_strict_core_pathway_validation.py",
+      "description": "Strict-core pathway validation",
+      "started_utc": "2026-08-31T09:32:38.427173+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:32:43.862843+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00k_00k_strict_core_pathway_validation.log"
+    },
+    "00l": {
+      "key": "00l",
+      "script": "00l_tgfb_ranked_validation.py",
+      "description": "Ranked TGF-beta pathway validation",
+      "started_utc": "2026-08-31T09:32:43.863330+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:32:51.695789+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00l_00l_tgfb_ranked_validation.log"
+    },
+    "00m": {
+      "key": "00m",
+      "script": "00m_tgfb_gene_level_audit.py",
+      "description": "TGF-beta gene-level direction audit",
+      "started_utc": "2026-08-31T09:32:51.696280+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:32:55.389680+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00m_00m_tgfb_gene_level_audit.log"
+    },
+    "00n": {
+      "key": "00n",
+      "script": "00n_tgfb_leading_edge_comparison.py",
+      "description": "TGF-beta leading-edge comparison",
+      "started_utc": "2026-08-31T09:32:55.390176+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:02.823621+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00n_00n_tgfb_leading_edge_comparison.log"
+    },
+    "00o": {
+      "key": "00o",
+      "script": "00o_tgfb_reproducible_module_validation.py",
+      "description": "Validate reproducible positive TGF-beta module",
+      "started_utc": "2026-08-31T09:33:02.824113+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:03.082694+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00o_00o_tgfb_reproducible_module_validation.log"
+    },
+    "00p": {
+      "key": "00p",
+      "script": "00p_tgfb_module_score_validation.py",
+      "description": "Sample-level TGF-beta module scoring",
+      "started_utc": "2026-08-31T09:33:03.083206+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:04.162271+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00p_00p_tgfb_module_score_validation.log"
+    },
+    "00qv": {
+      "key": "00qv",
+      "script": "00q_tgfb_dual_module_cross_dataset_audit.py",
+      "description": "Cross-dataset dual-module TGF-beta audit",
+      "started_utc": "2026-08-31T09:33:04.162800+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:04.958560+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00qv_00q_tgfb_dual_module_cross_dataset_audit.log"
+    },
+    "00r": {
+      "key": "00r",
+      "script": "00r_tgfb_final_evidence_synthesis.py",
+      "description": "Final TGF-beta evidence synthesis",
+      "started_utc": "2026-08-31T09:33:04.959200+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:05.208170+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00r_00r_tgfb_final_evidence_synthesis.log"
+    },
+    "00s": {
+      "key": "00s",
+      "script": "00s_validated_resistance_evidence_export.py",
+      "description": "Export validated resistance evidence for downstream integration",
+      "started_utc": "2026-08-31T09:33:05.208689+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:05.473599+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00s_00s_validated_resistance_evidence_export.log"
+    },
+    "04g": {
+      "key": "04g",
+      "script": "04g_cmap_submit_all.py",
+      "description": "Submit all CMap jobs",
+      "started_utc": "2026-08-31T09:33:05.474123+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:08.331157+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04g_04g_cmap_submit_all.log"
+    },
+    "04h": {
+      "key": "04h",
+      "script": "04h_cmap_check_all_jobs.py",
+      "description": "Poll CMap jobs until complete",
+      "started_utc": "2026-08-31T09:33:08.331704+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:12.049322+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04h_04h_cmap_check_all_jobs.log"
+    },
+    "04j": {
+      "key": "04j",
+      "script": "04j_cmap_download_all.py",
+      "description": "Download completed CMap results",
+      "started_utc": "2026-08-31T09:33:12.049856+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:14.518948+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04j_04j_cmap_download_all.log"
+    },
+    "04k": {
+      "key": "04k",
+      "script": "04k_cmap_parse_all_tau.py",
+      "description": "Parse all CMap tau results",
+      "started_utc": "2026-08-31T09:33:14.519453+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:15.016096+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04k_04k_cmap_parse_all_tau.log"
+    },
+    "04l": {
+      "key": "04l",
+      "script": "04l_cmap_prioritize.py",
+      "description": "Pure CMap prioritization",
+      "started_utc": "2026-08-31T09:33:15.016621+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:33:15.360544+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04l_04l_cmap_prioritize.log"
+    },
+    "04m": {
+      "key": "04m",
+      "script": "04m_cmap_drug_filter.py",
+      "description": "Compound identity / drug filtering",
+      "started_utc": "2026-08-31T09:33:15.361065+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T10:03:24.265979+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04m_04m_cmap_drug_filter.log"
+    },
+    "04n": {
+      "key": "04n",
+      "script": "04n_regulatory_status.py",
+      "description": "Regulatory and clinical-trial status",
+      "started_utc": "2026-08-31T10:03:24.266495+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T10:03:24.776301+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04n_04n_regulatory_status.log"
+    },
+    "04o": {
+      "key": "04o",
+      "script": "04o_safety_screening.py",
+      "description": "Safety / cytotoxicity / PAINS screening",
+      "started_utc": "2026-08-31T10:03:24.776847+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T10:04:47.404121+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04o_04o_safety_screening.log"
+    },
+    "04p": {
+      "key": "04p",
+      "script": "04p_drug_target_annotation.py",
+      "description": "Drug-target annotation",
+      "started_utc": "2026-08-31T10:04:47.404644+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T10:04:47.752219+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04p_04p_drug_target_annotation.log"
+    },
+    "04q": {
+      "key": "04q",
+      "script": "04q_network_integration.py",
+      "description": "Validated resistance-network integration",
+      "started_utc": "2026-08-31T10:04:47.752710+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T10:04:48.120171+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04q_04q_network_integration.log"
+    },
+    "04r": {
+      "key": "04r",
+      "script": "04r_final_candidate_prioritization.py",
+      "description": "Final multi-layer candidate prioritization",
+      "started_utc": "2026-08-31T10:04:48.120711+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T10:05:03.970582+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04r_04r_final_candidate_prioritization.log"
+    },
+    "04s": {
+      "key": "04s",
+      "script": "04s_target_supported_docking.py",
+      "description": "Target-supported docking",
+      "started_utc": "2026-08-31T10:05:03.971134+00:00",
+      "status": "FAILED",
+      "ended_utc": "2026-08-31T10:05:04.368734+00:00",
+      "return_code": 2,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04s_04s_target_supported_docking.log"
+    },
+    "04t": {
+      "key": "04t",
+      "script": "04t_admet_structural_assessment.py",
+      "description": "ADMET / structural assessment",
+      "started_utc": "2026-08-31T09:06:41.671430+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:06:42.178815+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04t_04t_admet_structural_assessment.log"
+    },
+    "04u": {
+      "key": "04u",
+      "script": "04u_integrated_evidence_matrix.py",
+      "description": "Build final integrated evidence matrix",
+      "started_utc": "2026-08-31T09:06:42.179352+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:06:42.548396+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/04u_04u_integrated_evidence_matrix.log"
+    },
+    "00aa": {
+      "key": "00aa",
+      "script": "00aa_dataset_volume_metadata.py",
+      "description": "Record dataset counts and local/remote storage volume metadata",
+      "started_utc": "2026-08-31T09:31:10.052503+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-08-31T09:31:10.387720+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00aa_00aa_dataset_volume_metadata.log"
+    },
+    "00a2": {
+      "key": "00a2",
+      "script": "00a2_ebi_external_discovery.py",
+      "description": "Discover BioStudies/ArrayExpress candidates and merge external leads",
+      "started_utc": "2026-09-01T11:45:00.053453+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:06.784315+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00a2_00a2_ebi_external_discovery.log"
+    },
+    "00d_ebi": {
+      "key": "00d_ebi",
+      "script": "00d_ebi_metadata_enrichment.py",
+      "description": "Enrich BioStudies/ArrayExpress sample metadata and SDRF records",
+      "started_utc": "2026-09-01T11:46:20.799394+00:00",
+      "status": "SUCCESS",
+      "ended_utc": "2026-09-01T11:46:35.155564+00:00",
+      "return_code": 0,
+      "log": "/home/regulus/Documents/ATLAS/logs/full_pipeline/00d_ebi_00d_ebi_metadata_enrichment.log"
+    }
+  },
+  "last_run_started_utc": "2026-09-01T11:44:22.182052+00:00",
+  "last_run_ended_utc": "2026-09-01T11:46:37.663789+00:00",
+  "last_run_status": "SUCCESS"
+}
