@@ -26,3 +26,11 @@ data/raw/
 data/processed/
 
 results/cmap/*submission_response.json
+# ATLAS large/generated data
+data/cache/
+results/cmap/raw/
+*.gct
+*.gctx
+*.h5
+*.hdf5
+*.zarr/

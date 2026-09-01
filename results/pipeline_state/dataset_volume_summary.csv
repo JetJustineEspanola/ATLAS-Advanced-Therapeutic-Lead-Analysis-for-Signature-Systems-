@@ -2,7 +2,7 @@ metric,value,unit,note
 candidate_metadata_rows_scanned,289,rows,May contain the same dataset in multiple metadata tables.
 unique_dataset_accessions_discovered,193,datasets,Unique accessions sifted at metadata level.
 unique_accessions_with_local_files,5,datasets,Accessions inferred from local file paths.
-local_data_directory_bytes,726026882,bytes,692.39 MB
+local_data_directory_bytes,726026874,bytes,692.39 MB
 comparison_download_bytes,50110384,bytes,47.79 MB
-tracked_local_bytes_data_plus_validation_results,1258512901,bytes,1.17 GB
+tracked_local_bytes_data_plus_validation_results,1258512893,bytes,1.17 GB
 catalog_advertised_remote_bytes,0,bytes,Unavailable in current metadata schema
