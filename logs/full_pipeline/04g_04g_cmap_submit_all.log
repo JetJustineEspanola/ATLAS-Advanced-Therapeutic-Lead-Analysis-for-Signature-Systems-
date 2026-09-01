@@ -9,7 +9,7 @@ ATLAS_SIG_B_TOP150
 
   Submitting...
   HTTP status: 200
-  Job ID: 6a953bd20262700013c4e65a
+  Job ID: 6a954a5209168d001496ae2c
   Status: pending
 
 ATLAS_SIG_A_TOP150
@@ -19,14 +19,14 @@ ATLAS_SIG_A_TOP150
 
   Submitting...
   HTTP status: 200
-  Job ID: 6a953bd30262700013c4e65c
+  Job ID: 6a954a540262700013c4e662
   Status: pending
 
 ============================================================
 CMap MULTI-SIGNATURE SUBMISSION SUMMARY
 ============================================================
-ATLAS_SIG_B_TOP150: submitted=True | HTTP=200 | status=pending | job_id=6a953bd20262700013c4e65a
-ATLAS_SIG_A_TOP150: submitted=True | HTTP=200 | status=pending | job_id=6a953bd30262700013c4e65c
+ATLAS_SIG_B_TOP150: submitted=True | HTTP=200 | status=pending | job_id=6a954a5209168d001496ae2c
+ATLAS_SIG_A_TOP150: submitted=True | HTTP=200 | status=pending | job_id=6a954a540262700013c4e662
 
 Saved job manifest:
 /home/regulus/Documents/ATLAS/results/cmap/jobs/cmap_job_manifest.json

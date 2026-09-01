@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #191c1e;
+  background: #f7f9fb;
+  font-family: Inter, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html.dark { color-scheme: dark; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+* { box-sizing: border-box; }
+::selection { background: rgba(0, 106, 97, 0.18); }
+
+@layer components {
+  .panel {
+    @apply rounded-lg border border-outline-variant bg-surface-lowest shadow-panel dark:border-slate-700 dark:bg-slate-900;
+  }
+  .label-caps {
+    @apply text-[11px] font-bold uppercase tracking-[0.05em];
+  }
+}

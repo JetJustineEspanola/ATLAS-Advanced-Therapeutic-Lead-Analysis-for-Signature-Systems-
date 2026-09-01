@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-08-31T09:22:41.403230+00:00",
+  "created_utc": "2026-09-01T01:44:23.564029+00:00",
   "project_root": "/home/regulus/Documents/ATLAS",
   "overall_status": "PASS",
   "warnings": [],
@@ -84,6 +84,12 @@
     },
     {
       "check": "runner_script",
+      "target": "00a2_ebi_external_discovery.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
       "target": "00b_metadata_catalog.py",
       "status": "PASS",
       "detail": ""
@@ -97,6 +103,12 @@
     {
       "check": "runner_script",
       "target": "00d_metadata_enrichment.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00d_ebi_metadata_enrichment.py",
       "status": "PASS",
       "detail": ""
     },
@@ -145,6 +157,12 @@
     {
       "check": "runner_script",
       "target": "00e_primary_validation_expression_fetch.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runner_script",
+      "target": "00aa_dataset_volume_metadata.py",
       "status": "PASS",
       "detail": ""
     },
@@ -344,7 +362,7 @@
       "check": "disk_space",
       "target": "/home/regulus/Documents/ATLAS",
       "status": "PASS",
-      "detail": "59.20 GiB free; minimum 3.0 GiB"
+      "detail": "58.30 GiB free; minimum 3.0 GiB"
     },
     {
       "check": "network_connectivity",

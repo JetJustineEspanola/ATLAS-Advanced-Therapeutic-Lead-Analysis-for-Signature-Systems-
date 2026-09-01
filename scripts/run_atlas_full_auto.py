@@ -85,6 +85,11 @@ STAGES = [
         "data/catalog/dataset_candidates.csv",
     ),
     Stage(
+        "00a2", "00a2_ebi_external_discovery.py", "acquisition",
+        "Discover BioStudies/ArrayExpress candidates and merge external leads",
+        args=("--merge-existing",),
+    ),
+    Stage(
         "00b", "00b_metadata_catalog.py", "acquisition",
         "Build/update metadata catalog",
         "data/catalog/atlas_metadata.duckdb",
@@ -96,6 +101,10 @@ STAGES = [
     Stage(
         "00d", "00d_metadata_enrichment.py", "acquisition",
         "Enrich candidate dataset metadata online",
+    ),
+    Stage(
+        "00d_ebi", "00d_ebi_metadata_enrichment.py", "acquisition",
+        "Enrich BioStudies/ArrayExpress sample metadata and SDRF records",
     ),
     Stage(
         "00d1", "00d1_phenotype_audit.py", "phenotype",

@@ -1,0 +1,50 @@
+========================================================================================
+ATLAS — 00A2 EMBL-EBI / ARRAYEXPRESS EXTERNAL DISCOVERY
+========================================================================================
+[BioStudies/ArrayExpress] "HER2" AND trastuzumab AND resistance
+  hits: 11
+[BioStudies/ArrayExpress] ERBB2 AND trastuzumab AND resistance
+  hits: 1
+[BioStudies/ArrayExpress] "trastuzumab resistant" AND breast
+  hits: 3
+[BioStudies/ArrayExpress] BT474 AND trastuzumab
+  hits: 9
+[BioStudies/ArrayExpress] SKBR3 AND trastuzumab
+  hits: 7
+[BioStudies/ArrayExpress] "anti-HER2" AND resistance AND breast
+  hits: 3
+[BioStudies/ArrayExpress] "HER2-positive" AND breast AND resistance
+  hits: 14
+[BioStudies/ArrayExpress] TGF-beta AND HER2 AND resistance
+  hits: 0
+[detail 1/25] E-GEOD-11293
+[detail 2/25] E-GEOD-15043
+[detail 3/25] E-GEOD-16179
+[detail 4/25] E-GEOD-16446
+[detail 5/25] E-GEOD-16716
+[detail 6/25] E-GEOD-17630
+[detail 7/25] E-GEOD-20194
+[detail 8/25] E-GEOD-38008
+[detail 9/25] E-GEOD-38415
+[detail 10/25] E-GEOD-41118
+[detail 11/25] E-GEOD-41656
+[detail 12/25] E-GEOD-44272
+[detail 13/25] E-GEOD-52660
+[detail 14/25] E-GEOD-52707
+[detail 15/25] E-GEOD-55005
+[detail 16/25] E-GEOD-67019
+[detail 17/25] E-GEOD-67193
+[detail 18/25] E-GEOD-69017
+[detail 19/25] E-GEOD-69042
+[detail 20/25] E-GEOD-70233
+[detail 21/25] E-GEOD-75367
+[detail 22/25] E-MTAB-12224
+[detail 23/25] E-MTAB-12225
+[detail 24/25] E-MTAB-7433
+[detail 25/25] E-MTAB-965
+Unique external leads: 25
+Cross-reference rows: 52
+/home/regulus/Documents/ATLAS/data/discovery/ebi_external_candidates.csv
+/home/regulus/Documents/ATLAS/data/discovery/ebi_cross_reference_map.csv
+Merged 25 new BioStudies/ArrayExpress leads into /home/regulus/Documents/ATLAS/data/discovery/dataset_candidates.csv
+SUCCESS [00a2] External discovery complete

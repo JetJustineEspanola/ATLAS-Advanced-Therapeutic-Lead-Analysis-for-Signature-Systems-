@@ -13,12 +13,12 @@ Minimum pChEMBL: 5
 Workers: 6
 
 Cache: molecules=83, activities=82, targets=522
-  1/50 candidates annotated (74.32/s, ETA ~0.0 min)
-  10/50 candidates annotated (678.13/s, ETA ~0.0 min)
-  20/50 candidates annotated (1096.78/s, ETA ~0.0 min)
-  30/50 candidates annotated (1111.31/s, ETA ~0.0 min)
-  40/50 candidates annotated (1410.87/s, ETA ~0.0 min)
-  50/50 candidates annotated (1572.14/s, ETA ~0.0 min)
+  1/50 candidates annotated (69.77/s, ETA ~0.0 min)
+  10/50 candidates annotated (696.64/s, ETA ~0.0 min)
+  20/50 candidates annotated (895.87/s, ETA ~0.0 min)
+  30/50 candidates annotated (1322.46/s, ETA ~0.0 min)
+  40/50 candidates annotated (1374.22/s, ETA ~0.0 min)
+  50/50 candidates annotated (1634.71/s, ETA ~0.0 min)
 
 ============================================================================
 STAGE 04P SUMMARY

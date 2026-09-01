@@ -1,7 +1,7 @@
 === 00C COMPLETE ===
 eligibility_category
-EXCLUDE_OR_MANUAL_REVIEW    89
-EXPLORATORY                 79
+EXCLUDE_OR_MANUAL_REVIEW    114
+EXPLORATORY                  79
 
 Top candidates:
  eligibility_score eligibility_category source source_accession title  manual_review_required

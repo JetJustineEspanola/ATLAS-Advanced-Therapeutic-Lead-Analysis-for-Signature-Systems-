@@ -105,7 +105,7 @@ Workers: 6
 ==============================================================================
 STAGE 00D COMPLETE
 ==============================================================================
-Sample metadata rows (catalog total): 690
+Sample metadata rows (catalog total): 1262
 Planned SRA run files (catalog total): 27
 
 /home/regulus/Documents/ATLAS/data/enriched/sample_metadata.csv

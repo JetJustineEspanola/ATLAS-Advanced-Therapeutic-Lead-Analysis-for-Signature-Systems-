@@ -14,16 +14,16 @@ Using None as control genes, passed at DeseqDataSet initialization
 ... done in 0.01 seconds.
 
 Fitting dispersions...
-... done in 7.82 seconds.
+... done in 9.42 seconds.
 
 Fitting dispersion trend curve...
-... done in 0.24 seconds.
+... done in 0.28 seconds.
 
 Fitting MAP dispersions...
-... done in 8.41 seconds.
+... done in 12.51 seconds.
 
 Fitting LFCs...
-... done in 4.22 seconds.
+... done in 4.45 seconds.
 
 Calculating cook's distance...
 ... done in 0.01 seconds.
@@ -31,7 +31,7 @@ Calculating cook's distance...
 Replacing 0 outlier genes.
 
 Running Wald tests...
-... done in 0.95 seconds.
+... done in 0.99 seconds.
 
 Log2 fold change & Wald test p-value: phenotype RESISTANT vs SENSITIVE_OR_PARENTAL
                                baseMean  log2FoldChange  ...    pvalue      padj
@@ -66,16 +66,16 @@ Using None as control genes, passed at DeseqDataSet initialization
 ... done in 0.02 seconds.
 
 Fitting dispersions...
-... done in 15.68 seconds.
+... done in 12.58 seconds.
 
 Fitting dispersion trend curve...
-... done in 0.38 seconds.
+... done in 0.41 seconds.
 
 Fitting MAP dispersions...
-... done in 13.10 seconds.
+... done in 17.53 seconds.
 
 Fitting LFCs...
-... done in 8.38 seconds.
+... done in 8.90 seconds.
 
 Calculating cook's distance...
 ... done in 0.04 seconds.

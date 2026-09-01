@@ -1,17 +1,4 @@
 pert_id,pert_iname,priority_rank,priority_tier_number,molecule_chembl_id,target_chembl_id,target_pref_name,target_type,target_organism,target_accessions,target_component_descriptions,target_evidence_source,minimum_pchembl_filter
-BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL1697668,Solute carrier organic anion transporter family member 1B1,SINGLE PROTEIN,Homo sapiens,Q9Y6L6,Solute carrier organic anion transporter family member 1B1,ChEMBL_activity,5.0
-BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL1743121,Solute carrier organic anion transporter family member 1B3,SINGLE PROTEIN,Homo sapiens,Q9NPD5,Solute carrier organic anion transporter family member 1B3,ChEMBL_activity,5.0
-BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL367,Leishmania donovani,ORGANISM,Leishmania donovani,,,ChEMBL_activity,5.0
-BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL385,K562,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
-BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL394,HCT-116,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
-BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL614793,L6,CELL-LINE,Rattus norvegicus,,,ChEMBL_activity,5.0
-BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL2226,Caspase-4,SINGLE PROTEIN,Homo sapiens,P49662,Caspase-4,ChEMBL_activity,5.0
-BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL2273,Caspase-9,SINGLE PROTEIN,Homo sapiens,P55211,Caspase-9,ChEMBL_activity,5.0
-BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL3131,Caspase-5,SINGLE PROTEIN,Homo sapiens,P51878,Caspase-5,ChEMBL_activity,5.0
-BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL3776,Caspase-8,SINGLE PROTEIN,Homo sapiens,Q14790,Caspase-8,ChEMBL_activity,5.0
-BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL4801,Caspase-1,SINGLE PROTEIN,Homo sapiens,P29466,Caspase-1,ChEMBL_activity,5.0
-BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL5037,Caspase-10,SINGLE PROTEIN,Homo sapiens,Q92851,Caspase-10,ChEMBL_activity,5.0
-BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL5991,Caspase-14,SINGLE PROTEIN,Homo sapiens,P31944,Caspase-14,ChEMBL_activity,5.0
 BRD-A30977374,nifedipine,15,2,CHEMBL193,CHEMBL1075183,Potassium channel subfamily K member 2,SINGLE PROTEIN,Bos taurus,Q8HY88,Potassium channel subfamily K member 2,ChEMBL_activity,5.0
 BRD-A30977374,nifedipine,15,2,CHEMBL193,CHEMBL1075310,Transient receptor potential cation channel subfamily A member 1,SINGLE PROTEIN,Mus musculus,Q8BLA8,Transient receptor potential cation channel subfamily A member 1,ChEMBL_activity,5.0
 BRD-A30977374,nifedipine,15,2,CHEMBL193,CHEMBL1293224,Microtubule-associated protein tau,SINGLE PROTEIN,Homo sapiens,P10636,Microtubule-associated protein tau,ChEMBL_activity,5.0
@@ -62,17 +49,6 @@ BRD-A30977374,nifedipine,15,2,CHEMBL193,CHEMBL4078,Acetylcholinesterase,SINGLE P
 BRD-A30977374,nifedipine,15,2,CHEMBL193,CHEMBL4132,Voltage-dependent L-type calcium channel subunit alpha-1D,SINGLE PROTEIN,Rattus norvegicus,P27732,Voltage-dependent L-type calcium channel subunit alpha-1D,ChEMBL_activity,5.0
 BRD-A30977374,nifedipine,15,2,CHEMBL193,CHEMBL4138,Voltage-dependent L-type calcium channel subunit alpha-1D,SINGLE PROTEIN,Homo sapiens,Q01668,Voltage-dependent L-type calcium channel subunit alpha-1D,ChEMBL_activity,5.0
 BRD-A30977374,nifedipine,15,2,CHEMBL193,CHEMBL4159,3-hydroxyacyl-CoA dehydrogenase type-2,SINGLE PROTEIN,Homo sapiens,Q99714,3-hydroxyacyl-CoA dehydrogenase type-2,ChEMBL_activity,5.0
-BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL1963,Thyrotropin receptor,SINGLE PROTEIN,Homo sapiens,P16473,Thyrotropin receptor,ChEMBL_activity,5.0
-BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL2026,Beta-lactamase,SINGLE PROTEIN,Escherichia coli K-12,P00811,Beta-lactamase,ChEMBL_activity,5.0
-BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL276,Muscarinic acetylcholine receptor M1,SINGLE PROTEIN,Rattus norvegicus,P08482,Muscarinic acetylcholine receptor M1,ChEMBL_activity,5.0
-BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
-BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL5738,"Fatty acid-binding protein, liver",SINGLE PROTEIN,Rattus norvegicus,P02692,"Fatty acid-binding protein, liver",ChEMBL_activity,5.0
-BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL2026,Beta-lactamase,SINGLE PROTEIN,Escherichia coli K-12,P00811,Beta-lactamase,ChEMBL_activity,5.0
-BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL2072,Sodium channel protein type 4 subunit alpha,SINGLE PROTEIN,Homo sapiens,P35499,Sodium channel protein type 4 subunit alpha,ChEMBL_activity,5.0
-BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
-BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL3577,Aldehyde dehydrogenase 1A1,SINGLE PROTEIN,Homo sapiens,P00352,Aldehyde dehydrogenase 1A1,ChEMBL_activity,5.0
-BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
 BRD-K19416115,sitagliptin,6,1,CHEMBL1422,CHEMBL224,5-hydroxytryptamine receptor 2A,SINGLE PROTEIN,Homo sapiens,P28223,5-hydroxytryptamine receptor 2A,ChEMBL_activity,5.0
 BRD-K19416115,sitagliptin,6,1,CHEMBL1422,CHEMBL284,Dipeptidyl peptidase 4,SINGLE PROTEIN,Homo sapiens,P27487,Dipeptidyl peptidase 4,ChEMBL_activity,5.0
 BRD-K19416115,sitagliptin,6,1,CHEMBL1422,CHEMBL3883,Dipeptidyl peptidase 4,SINGLE PROTEIN,Mus musculus,P28843,Dipeptidyl peptidase 4,ChEMBL_activity,5.0
@@ -80,6 +56,31 @@ BRD-K19416115,sitagliptin,6,1,CHEMBL1422,CHEMBL4653,Dipeptidyl peptidase 4,SINGL
 BRD-K19416115,sitagliptin,6,1,CHEMBL1422,CHEMBL4657,Dipeptidyl peptidase 8,SINGLE PROTEIN,Homo sapiens,Q6V1X1,Dipeptidyl peptidase 8,ChEMBL_activity,5.0
 BRD-K19416115,sitagliptin,6,1,CHEMBL1422,CHEMBL4683,Prolyl endopeptidase FAP,SINGLE PROTEIN,Homo sapiens,Q12884,Prolyl endopeptidase FAP,ChEMBL_activity,5.0
 BRD-K19416115,sitagliptin,6,1,CHEMBL1422,CHEMBL4793,Dipeptidyl peptidase 9,SINGLE PROTEIN,Homo sapiens,Q86TI2,Dipeptidyl peptidase 9,ChEMBL_activity,5.0
+BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL2226,Caspase-4,SINGLE PROTEIN,Homo sapiens,P49662,Caspase-4,ChEMBL_activity,5.0
+BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL2273,Caspase-9,SINGLE PROTEIN,Homo sapiens,P55211,Caspase-9,ChEMBL_activity,5.0
+BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL3131,Caspase-5,SINGLE PROTEIN,Homo sapiens,P51878,Caspase-5,ChEMBL_activity,5.0
+BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL3776,Caspase-8,SINGLE PROTEIN,Homo sapiens,Q14790,Caspase-8,ChEMBL_activity,5.0
+BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL4801,Caspase-1,SINGLE PROTEIN,Homo sapiens,P29466,Caspase-1,ChEMBL_activity,5.0
+BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL5037,Caspase-10,SINGLE PROTEIN,Homo sapiens,Q92851,Caspase-10,ChEMBL_activity,5.0
+BRD-K89687904,PKCbeta-inhibitor,3,1,CHEMBL5715921,CHEMBL5991,Caspase-14,SINGLE PROTEIN,Homo sapiens,P31944,Caspase-14,ChEMBL_activity,5.0
+BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL1697668,Solute carrier organic anion transporter family member 1B1,SINGLE PROTEIN,Homo sapiens,Q9Y6L6,Solute carrier organic anion transporter family member 1B1,ChEMBL_activity,5.0
+BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL1743121,Solute carrier organic anion transporter family member 1B3,SINGLE PROTEIN,Homo sapiens,Q9NPD5,Solute carrier organic anion transporter family member 1B3,ChEMBL_activity,5.0
+BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL367,Leishmania donovani,ORGANISM,Leishmania donovani,,,ChEMBL_activity,5.0
+BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL385,K562,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
+BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL394,HCT-116,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
+BRD-A81541225,oligomycin-a,2,1,CHEMBL1255855,CHEMBL614793,L6,CELL-LINE,Rattus norvegicus,,,ChEMBL_activity,5.0
+BRD-K22009844,phenprobamate,33,2,CHEMBL1079576,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
+BRD-K43164539,cholic-acid,42,2,CHEMBL205596,CHEMBL1255150,G-protein coupled bile acid receptor 1,SINGLE PROTEIN,Mus musculus,Q80SS6,G-protein coupled bile acid receptor 1,ChEMBL_activity,5.0
+BRD-K43164539,cholic-acid,42,2,CHEMBL205596,CHEMBL5409,G-protein coupled bile acid receptor 1,SINGLE PROTEIN,Homo sapiens,Q8TDU6,G-protein coupled bile acid receptor 1,ChEMBL_activity,5.0
+BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL1293231,Nuclear receptor ROR-gamma,SINGLE PROTEIN,Mus musculus,P51450,Nuclear receptor ROR-gamma,ChEMBL_activity,5.0
+BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL1615322,microRNA 21,NUCLEIC-ACID,Homo sapiens,ENSG00000284190,microRNA 21,ChEMBL_activity,5.0
+BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL2034,Glucocorticoid receptor,SINGLE PROTEIN,Homo sapiens,P04150,Glucocorticoid receptor,ChEMBL_activity,5.0
+BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL208,Progesterone receptor,SINGLE PROTEIN,Homo sapiens,P06401,Progesterone receptor,ChEMBL_activity,5.0
+BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL218,Cannabinoid receptor 1,SINGLE PROTEIN,Homo sapiens,P21554,Cannabinoid receptor 1,ChEMBL_activity,5.0
+BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL4261,Hypoxia-inducible factor 1-alpha,SINGLE PROTEIN,Homo sapiens,Q16665,Hypoxia-inducible factor 1-alpha,ChEMBL_activity,5.0
+BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL5162,Neuropeptide S receptor,SINGLE PROTEIN,Homo sapiens,Q6W5P4,Neuropeptide S receptor,ChEMBL_activity,5.0
+BRD-K68558722,deracoxib,40,2,CHEMBL28636,CHEMBL230,Prostaglandin G/H synthase 2,SINGLE PROTEIN,Homo sapiens,P35354,Prostaglandin G/H synthase 2,ChEMBL_activity,5.0
+BRD-K68558722,deracoxib,40,2,CHEMBL28636,CHEMBL4033,Cyclooxygenase-2,SINGLE PROTEIN,Canis lupus familiaris,Q8SPQ9,Prostaglandin G/H synthase 2,ChEMBL_activity,5.0
 BRD-K85603128,resorcinol,34,2,CHEMBL24147,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
 BRD-K85603128,resorcinol,34,2,CHEMBL24147,CHEMBL1795125,Carbonic anhydrase,SINGLE PROTEIN,Dicentrarchus labrax,Q2PCB5,carbonic anhydrase,ChEMBL_activity,5.0
 BRD-K85603128,resorcinol,34,2,CHEMBL24147,CHEMBL205,Carbonic anhydrase 2,SINGLE PROTEIN,Homo sapiens,P00918,Carbonic anhydrase 2,ChEMBL_activity,5.0
@@ -90,48 +91,29 @@ BRD-K85603128,resorcinol,34,2,CHEMBL24147,CHEMBL3969,"Carbonic anhydrase 5B, mit
 BRD-K85603128,resorcinol,34,2,CHEMBL24147,CHEMBL4789,"Carbonic anhydrase 5A, mitochondrial",SINGLE PROTEIN,Homo sapiens,P35218,"Carbonic anhydrase 5A, mitochondrial",ChEMBL_activity,5.0
 BRD-K85603128,resorcinol,34,2,CHEMBL24147,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
 BRD-K85603128,resorcinol,34,2,CHEMBL24147,CHEMBL614696,Lymphoblastoid cell,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
-BRD-K22009844,phenprobamate,33,2,CHEMBL1079576,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL1907607,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Rattus norvegicus,O09028 | P15431 | P18506 | P18508 | P19969 | P20236 | P23574 | P23576 | P28471 | P28473 | P30191 | P62813 | P63079 | P63138 | Q91ZM7 | Q9ES14,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit delta | Gamma-aminobutyric acid receptor subunit epsilon | Gamma-aminobutyric acid receptor subunit gamma-1 | Gamma-aminobutyric acid receptor subunit gamma-2 | Gamma-aminobutyric acid receptor subunit gamma-3 | Gamma-aminobutyric acid receptor subunit pi | Gamma-aminobutyric acid receptor subunit theta,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL1962,Gamma-aminobutyric acid receptor subunit alpha-1,SINGLE PROTEIN,Homo sapiens,P14867,Gamma-aminobutyric acid receptor subunit alpha-1,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2093872,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Homo sapiens,O00591 | O14764 | P14867 | P18505 | P18507 | P28472 | P31644 | P34903 | P47869 | P47870 | P48169 | P78334 | Q16445 | Q8N1C3 | Q99928 | Q9UN88,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit delta | Gamma-aminobutyric acid receptor subunit epsilon | Gamma-aminobutyric acid receptor subunit gamma-1 | Gamma-aminobutyric acid receptor subunit gamma-2 | Gamma-aminobutyric acid receptor subunit gamma-3 | Gamma-aminobutyric acid receptor subunit pi | Gamma-aminobutyric acid receptor subunit theta,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094107,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Bos taurus,P08219 | P08220 | P10063 | P10064 | P20237 | P22300,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094120,GABA-A receptor; alpha-3/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P28472 | P34903,Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094121,GABA-A receptor; alpha-1/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P14867 | P18507 | P28472,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094122,GABA-A receptor; alpha-5/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P28472 | P31644,Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094130,GABA-A receptor; alpha-2/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P28472 | P47869,Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094133,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Mus musculus,A2AMW3 | P16305 | P22723 | P22933 | P26048 | P26049 | P27681 | P50571 | P62812 | P63080 | Q8BHJ7 | Q8QZW7 | Q9D6F4 | Q9JLF1 | Q9R0Y8,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit delta | Gamma-aminobutyric acid receptor subunit epsilon | Gamma-aminobutyric acid receptor subunit gamma-1 | Gamma-aminobutyric acid receptor subunit gamma-2 | Gamma-aminobutyric acid receptor subunit gamma-3 | Gamma-aminobutyric acid receptor subunit pi | Gamma-aminobutyric acid receptor subunit theta,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2095167,GABA-A receptor; alpha-1/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P62813 | P63138,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2095172,GABA-A receptor; alpha-1/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P14867 | P18507 | P47870,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111327,GABA A receptor alpha-2/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P23576 | P63138,Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111339,GABA A receptor alpha-3/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P34903 | P47870,Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111343,GABA A receptor alpha-3/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P20236 | P63138,Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111365,GABA A receptor alpha-6/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P30191 | P63138,Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111374,GABA A receptor alpha-5/beta-3/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P19969 | P63079,Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111392,GABA A receptor alpha-1/beta-1/gamma-2,PROTEIN COMPLEX,Homo sapiens,P14867 | P18505 | P18507,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111413,GABA A receptor alpha-2/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P47869 | P47870,Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL237,Kappa-type opioid receptor,SINGLE PROTEIN,Homo sapiens,P41145,Kappa-type opioid receptor,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2419,Translocator protein,SINGLE PROTEIN,Bos taurus,P30535,Translocator protein,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL296,Gamma-aminobutyric acid receptor subunit gamma-1,SINGLE PROTEIN,Rattus norvegicus,P23574,Gamma-aminobutyric acid receptor subunit gamma-1,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL300,Gamma-aminobutyric acid receptor subunit alpha-5,SINGLE PROTEIN,Rattus norvegicus,P19969,Gamma-aminobutyric acid receptor subunit alpha-5,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL3026,Gamma-aminobutyric acid receptor subunit alpha-3,SINGLE PROTEIN,Homo sapiens,P34903,Gamma-aminobutyric acid receptor subunit alpha-3,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL328,Gamma-aminobutyric acid receptor subunit alpha-3,SINGLE PROTEIN,Rattus norvegicus,P20236,Gamma-aminobutyric acid receptor subunit alpha-3,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL341,Gamma-aminobutyric acid receptor subunit alpha-2,SINGLE PROTEIN,Rattus norvegicus,P23576,Gamma-aminobutyric acid receptor subunit alpha-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL343,Gamma-aminobutyric acid receptor subunit alpha-1,SINGLE PROTEIN,Rattus norvegicus,P62813,Gamma-aminobutyric acid receptor subunit alpha-1,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4296054,Gamma-aminobutyric acid receptor subunit alpha-6/beta-3/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P30191 | P63079,Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4523641,Gamma-aminobutyric acid receptor subunit alpha-5/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P31644 | P47870,Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4552,Translocator protein,SINGLE PROTEIN,Rattus norvegicus,P16257,Translocator protein,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4956,Gamma-aminobutyric acid receptor subunit alpha-2,SINGLE PROTEIN,Homo sapiens,P47869,Gamma-aminobutyric acid receptor subunit alpha-2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5112,Gamma-aminobutyric acid receptor subunit alpha-5,SINGLE PROTEIN,Homo sapiens,P31644,Gamma-aminobutyric acid receptor subunit alpha-5,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5738,"Fatty acid-binding protein, liver",SINGLE PROTEIN,Rattus norvegicus,P02692,"Fatty acid-binding protein, liver",ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5763,Cholinesterase,SINGLE PROTEIN,Equus caballus,P81908,Cholinesterase,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5847,Aldo-keto reductase family 1 member C2,SINGLE PROTEIN,Homo sapiens,P52895,Aldo-keto reductase family 1 member C2,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5905,Aldo-keto reductase family 1 member C1,SINGLE PROTEIN,Homo sapiens,Q04828,Aldo-keto reductase family 1 member C1,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL612558,ADMET,ADMET,,,,ChEMBL_activity,5.0
+BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL2026,Beta-lactamase,SINGLE PROTEIN,Escherichia coli K-12,P00811,Beta-lactamase,ChEMBL_activity,5.0
+BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL2072,Sodium channel protein type 4 subunit alpha,SINGLE PROTEIN,Homo sapiens,P35499,Sodium channel protein type 4 subunit alpha,ChEMBL_activity,5.0
+BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
+BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL3577,Aldehyde dehydrogenase 1A1,SINGLE PROTEIN,Homo sapiens,P00352,Aldehyde dehydrogenase 1A1,ChEMBL_activity,5.0
+BRD-K52662033,lidocaine,22,2,CHEMBL79,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
 BRD-K89046952,ciclacillin,37,2,CHEMBL1200356,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
 BRD-K89046952,ciclacillin,37,2,CHEMBL1200356,CHEMBL245,Muscarinic acetylcholine receptor M3,SINGLE PROTEIN,Homo sapiens,P20309,Muscarinic acetylcholine receptor M3,ChEMBL_activity,5.0
-BRD-K68558722,deracoxib,40,2,CHEMBL28636,CHEMBL230,Prostaglandin G/H synthase 2,SINGLE PROTEIN,Homo sapiens,P35354,Prostaglandin G/H synthase 2,ChEMBL_activity,5.0
-BRD-K68558722,deracoxib,40,2,CHEMBL28636,CHEMBL4033,Cyclooxygenase-2,SINGLE PROTEIN,Canis lupus familiaris,Q8SPQ9,Prostaglandin G/H synthase 2,ChEMBL_activity,5.0
+BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL1963,Thyrotropin receptor,SINGLE PROTEIN,Homo sapiens,P16473,Thyrotropin receptor,ChEMBL_activity,5.0
+BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL2026,Beta-lactamase,SINGLE PROTEIN,Escherichia coli K-12,P00811,Beta-lactamase,ChEMBL_activity,5.0
+BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL276,Muscarinic acetylcholine receptor M1,SINGLE PROTEIN,Rattus norvegicus,P08482,Muscarinic acetylcholine receptor M1,ChEMBL_activity,5.0
+BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
+BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL5738,"Fatty acid-binding protein, liver",SINGLE PROTEIN,Rattus norvegicus,P02692,"Fatty acid-binding protein, liver",ChEMBL_activity,5.0
+BRD-K45252063,clofibrate,5,1,CHEMBL565,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL1293251,ATP-dependent molecular chaperone HSP82,SINGLE PROTEIN,Candida albicans (strain WO-1) (Yeast),C4YTQ8,ATP-dependent molecular chaperone HSP82,ChEMBL_activity,5.0
+BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL1293303,Nonstructural protein 1,SINGLE PROTEIN,Influenza A virus,Q194T2,Non-structural protein 1,ChEMBL_activity,5.0
+BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL366,Candida albicans,ORGANISM,Candida albicans,,,ChEMBL_activity,5.0
+BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL1898,5-hydroxytryptamine receptor 1B,SINGLE PROTEIN,Homo sapiens,P28222,5-hydroxytryptamine receptor 1B,ChEMBL_activity,5.0
+BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL1983,5-hydroxytryptamine receptor 1D,SINGLE PROTEIN,Homo sapiens,P28221,5-hydroxytryptamine receptor 1D,ChEMBL_activity,5.0
+BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL214,5-hydroxytryptamine receptor 1A,SINGLE PROTEIN,Homo sapiens,P08908,5-hydroxytryptamine receptor 1A,ChEMBL_activity,5.0
+BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
+BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
+BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
 BRD-K37846922,"3,3'-diindolylmethane",46,2,CHEMBL446452,CHEMBL3201,Aryl hydrocarbon receptor,SINGLE PROTEIN,Homo sapiens,P35869,Aryl hydrocarbon receptor,ChEMBL_activity,5.0
 BRD-K37846922,"3,3'-diindolylmethane",46,2,CHEMBL446452,CHEMBL367,Leishmania donovani,ORGANISM,Leishmania donovani,,,ChEMBL_activity,5.0
 BRD-K37846922,"3,3'-diindolylmethane",46,2,CHEMBL446452,CHEMBL3714079,G-protein coupled receptor 84,SINGLE PROTEIN,Homo sapiens,Q9NQS5,G-protein coupled receptor 84,ChEMBL_activity,5.0
@@ -140,28 +122,25 @@ BRD-K37846922,"3,3'-diindolylmethane",46,2,CHEMBL446452,CHEMBL400,MDA-MB-231,CEL
 BRD-K37846922,"3,3'-diindolylmethane",46,2,CHEMBL446452,CHEMBL4523386,G-protein coupled receptor 84,SINGLE PROTEIN,Mus musculus,Q8CIM5,G-protein coupled receptor 84,ChEMBL_activity,5.0
 BRD-K37846922,"3,3'-diindolylmethane",46,2,CHEMBL446452,CHEMBL6099,Aryl hydrocarbon receptor,SINGLE PROTEIN,Mus musculus,P30561,Aryl hydrocarbon receptor,ChEMBL_activity,5.0
 BRD-K37846922,"3,3'-diindolylmethane",46,2,CHEMBL446452,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K43164539,cholic-acid,42,2,CHEMBL205596,CHEMBL1255150,G-protein coupled bile acid receptor 1,SINGLE PROTEIN,Mus musculus,Q80SS6,G-protein coupled bile acid receptor 1,ChEMBL_activity,5.0
-BRD-K43164539,cholic-acid,42,2,CHEMBL205596,CHEMBL5409,G-protein coupled bile acid receptor 1,SINGLE PROTEIN,Homo sapiens,Q8TDU6,G-protein coupled bile acid receptor 1,ChEMBL_activity,5.0
-BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL1898,5-hydroxytryptamine receptor 1B,SINGLE PROTEIN,Homo sapiens,P28222,5-hydroxytryptamine receptor 1B,ChEMBL_activity,5.0
-BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL1983,5-hydroxytryptamine receptor 1D,SINGLE PROTEIN,Homo sapiens,P28221,5-hydroxytryptamine receptor 1D,ChEMBL_activity,5.0
-BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL214,5-hydroxytryptamine receptor 1A,SINGLE PROTEIN,Homo sapiens,P08908,5-hydroxytryptamine receptor 1A,ChEMBL_activity,5.0
-BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
-BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
-BRD-K46441700,GR-55562,47,2,CHEMBL119264,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL1293251,ATP-dependent molecular chaperone HSP82,SINGLE PROTEIN,Candida albicans (strain WO-1) (Yeast),C4YTQ8,ATP-dependent molecular chaperone HSP82,ChEMBL_activity,5.0
-BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL1293303,Nonstructural protein 1,SINGLE PROTEIN,Influenza A virus,Q194T2,Non-structural protein 1,ChEMBL_activity,5.0
-BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL366,Candida albicans,ORGANISM,Candida albicans,,,ChEMBL_activity,5.0
-BRD-K82143716,flucytosine,44,2,CHEMBL1463,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
 BRD-K72816382,cinalukast,57,2,CHEMBL283754,CHEMBL2093861,Menin/Histone-lysine N-methyltransferase MLL,PROTEIN-PROTEIN INTERACTION,Homo sapiens,O00255 | Q03164,Histone-lysine N-methyltransferase 2A | Menin,ChEMBL_activity,5.0
 BRD-K72816382,cinalukast,57,2,CHEMBL283754,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
 BRD-K72816382,cinalukast,57,2,CHEMBL283754,CHEMBL5645,Cysteinyl leukotriene receptor 1,SINGLE PROTEIN,Cavia porcellus,Q2NNR5,Cysteinyl leukotriene receptor 1,ChEMBL_activity,5.0
-BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL1293231,Nuclear receptor ROR-gamma,SINGLE PROTEIN,Mus musculus,P51450,Nuclear receptor ROR-gamma,ChEMBL_activity,5.0
-BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL1615322,microRNA 21,NUCLEIC-ACID,Homo sapiens,ENSG00000284190,microRNA 21,ChEMBL_activity,5.0
-BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL2034,Glucocorticoid receptor,SINGLE PROTEIN,Homo sapiens,P04150,Glucocorticoid receptor,ChEMBL_activity,5.0
-BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL208,Progesterone receptor,SINGLE PROTEIN,Homo sapiens,P06401,Progesterone receptor,ChEMBL_activity,5.0
-BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL218,Cannabinoid receptor 1,SINGLE PROTEIN,Homo sapiens,P21554,Cannabinoid receptor 1,ChEMBL_activity,5.0
-BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL4261,Hypoxia-inducible factor 1-alpha,SINGLE PROTEIN,Homo sapiens,Q16665,Hypoxia-inducible factor 1-alpha,ChEMBL_activity,5.0
-BRD-A36010170,amcinonide,28,2,CHEMBL1200732,CHEMBL5162,Neuropeptide S receptor,SINGLE PROTEIN,Homo sapiens,Q6W5P4,Neuropeptide S receptor,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293226,Lysine-specific demethylase 4E,SINGLE PROTEIN,Homo sapiens,B2RXH2,Lysine-specific demethylase 4E,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293234,Fructose-bisphosphate aldolase,SINGLE PROTEIN,Giardia intestinalis,A8B2U2,Fructose-bisphosphate aldolase,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293248,4'-phosphopantetheinyl transferase ffp,SINGLE PROTEIN,Bacillus subtilis,Q9F4F7,4'-phosphopantetheinyl transferase ffp,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293303,Nonstructural protein 1,SINGLE PROTEIN,Influenza A virus,Q194T2,Non-structural protein 1,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1938210,Lysine-specific demethylase 2A,SINGLE PROTEIN,Homo sapiens,Q9Y2K7,Lysine-specific demethylase 2A,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL2069164,Lysine-specific demethylase 6A,SINGLE PROTEIN,Homo sapiens,O15550,Lysine-specific demethylase 6A,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL2163176,Lysine-specific demethylase 5C,SINGLE PROTEIN,Homo sapiens,P41229,Lysine-specific demethylase 5C,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL2362975,No relevant target,NO TARGET,,,,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL3397,Cytochrome P450 2C9,SINGLE PROTEIN,Homo sapiens,P11712,Cytochrome P450 2C9,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL3622,Cytochrome P450 2C19,SINGLE PROTEIN,Homo sapiens,P33261,Cytochrome P450 2C19,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL363,Aspergillus fumigatus,ORGANISM,Aspergillus fumigatus,,,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL376,Rattus norvegicus,ORGANISM,Rattus norvegicus,,,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL3779760,Lysine-specific demethylase 2B,SINGLE PROTEIN,Homo sapiens,Q8NHM5,Lysine-specific demethylase 2B,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL386,L1210,CELL-LINE,Mus musculus,,,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL4523441,Deoxyhypusine hydroxylase,SINGLE PROTEIN,Homo sapiens,Q9BU89,Deoxyhypusine hydroxylase,ChEMBL_activity,5.0
+BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL5896,Lysine-specific demethylase 4A,SINGLE PROTEIN,Homo sapiens,O75164,Lysine-specific demethylase 4A,ChEMBL_activity,5.0
 BRD-K86727142,embelin,50,2,CHEMBL221137,CHEMBL1075138,Tyrosyl-DNA phosphodiesterase 1,SINGLE PROTEIN,Homo sapiens,Q9NUW8,Tyrosyl-DNA phosphodiesterase 1,ChEMBL_activity,5.0
 BRD-K86727142,embelin,50,2,CHEMBL221137,CHEMBL1075385,769-P,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
 BRD-K86727142,embelin,50,2,CHEMBL221137,CHEMBL1075392,AN3-CA,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
@@ -216,35 +195,44 @@ BRD-K02607075,tubocurarine,59,2,CHEMBL339427,CHEMBL1743126,Multidrug and toxin e
 BRD-K02607075,tubocurarine,59,2,CHEMBL339427,CHEMBL1743128,ATP-binding cassette sub-family C member 4,SINGLE PROTEIN,Homo sapiens,O15439,ATP-binding cassette sub-family C member 4,ChEMBL_activity,5.0
 BRD-K02607075,tubocurarine,59,2,CHEMBL339427,CHEMBL2366408,Nicotinic acetylcholine receptor alpha 5 subunit,SINGLE PROTEIN,Musca domestica,A9XFY4,Neuronal acetylcholine receptor subunit alpha-7-like precursor,ChEMBL_activity,5.0
 BRD-K02607075,tubocurarine,59,2,CHEMBL339427,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293226,Lysine-specific demethylase 4E,SINGLE PROTEIN,Homo sapiens,B2RXH2,Lysine-specific demethylase 4E,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293234,Fructose-bisphosphate aldolase,SINGLE PROTEIN,Giardia intestinalis,A8B2U2,Fructose-bisphosphate aldolase,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293248,4'-phosphopantetheinyl transferase ffp,SINGLE PROTEIN,Bacillus subtilis,Q9F4F7,4'-phosphopantetheinyl transferase ffp,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1293303,Nonstructural protein 1,SINGLE PROTEIN,Influenza A virus,Q194T2,Non-structural protein 1,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL1938210,Lysine-specific demethylase 2A,SINGLE PROTEIN,Homo sapiens,Q9Y2K7,Lysine-specific demethylase 2A,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL2069164,Lysine-specific demethylase 6A,SINGLE PROTEIN,Homo sapiens,O15550,Lysine-specific demethylase 6A,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL2163176,Lysine-specific demethylase 5C,SINGLE PROTEIN,Homo sapiens,P41229,Lysine-specific demethylase 5C,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL2362975,No relevant target,NO TARGET,,,,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL3397,Cytochrome P450 2C9,SINGLE PROTEIN,Homo sapiens,P11712,Cytochrome P450 2C9,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL3622,Cytochrome P450 2C19,SINGLE PROTEIN,Homo sapiens,P33261,Cytochrome P450 2C19,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL363,Aspergillus fumigatus,ORGANISM,Aspergillus fumigatus,,,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL376,Rattus norvegicus,ORGANISM,Rattus norvegicus,,,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL3779760,Lysine-specific demethylase 2B,SINGLE PROTEIN,Homo sapiens,Q8NHM5,Lysine-specific demethylase 2B,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL386,L1210,CELL-LINE,Mus musculus,,,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL4523441,Deoxyhypusine hydroxylase,SINGLE PROTEIN,Homo sapiens,Q9BU89,Deoxyhypusine hydroxylase,ChEMBL_activity,5.0
-BRD-K06878038,deferiprone,64,2,CHEMBL70927,CHEMBL5896,Lysine-specific demethylase 4A,SINGLE PROTEIN,Homo sapiens,O75164,Lysine-specific demethylase 4A,ChEMBL_activity,5.0
-BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL1075189,Pyruvate kinase PKM,SINGLE PROTEIN,Homo sapiens,P14618,Pyruvate kinase PKM,ChEMBL_activity,5.0
-BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL1293232,Survival motor neuron protein,SINGLE PROTEIN,Homo sapiens,Q16637,Survival motor neuron protein,ChEMBL_activity,5.0
-BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL276,Muscarinic acetylcholine receptor M1,SINGLE PROTEIN,Rattus norvegicus,P08482,Muscarinic acetylcholine receptor M1,ChEMBL_activity,5.0
-BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
-BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL5162,Neuropeptide S receptor,SINGLE PROTEIN,Homo sapiens,Q6W5P4,Neuropeptide S receptor,ChEMBL_activity,5.0
-BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-A77349281,RK-682,74,2,CHEMBL426373,CHEMBL2723,M-phase inducer phosphatase 2,SINGLE PROTEIN,Mus musculus,P30306,M-phase inducer phosphatase 2,ChEMBL_activity,5.0
-BRD-A77349281,RK-682,74,2,CHEMBL426373,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,SINGLE PROTEIN,Homo sapiens,P18031,Tyrosine-protein phosphatase non-receptor type 1,ChEMBL_activity,5.0
-BRD-A77349281,RK-682,74,2,CHEMBL426373,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,SINGLE PROTEIN,Homo sapiens,P17706,Tyrosine-protein phosphatase non-receptor type 2,ChEMBL_activity,5.0
-BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL1293238,Inositol monophosphatase 1,SINGLE PROTEIN,Rattus norvegicus,P97697,Inositol monophosphatase 1,ChEMBL_activity,5.0
-BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL1941,Histamine H2 receptor,SINGLE PROTEIN,Homo sapiens,P25021,Histamine H2 receptor,ChEMBL_activity,5.0
-BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL2882,Histamine H2 receptor,SINGLE PROTEIN,Cavia porcellus,P47747,Histamine H2 receptor,ChEMBL_activity,5.0
-BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
+BRD-K35629949,SR-27897,69,2,CHEMBL249973,CHEMBL1901,Cholecystokinin receptor type A,SINGLE PROTEIN,Homo sapiens,P32238,Cholecystokinin receptor type A,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL1907607,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Rattus norvegicus,O09028 | P15431 | P18506 | P18508 | P19969 | P20236 | P23574 | P23576 | P28471 | P28473 | P30191 | P62813 | P63079 | P63138 | Q91ZM7 | Q9ES14,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit delta | Gamma-aminobutyric acid receptor subunit epsilon | Gamma-aminobutyric acid receptor subunit gamma-1 | Gamma-aminobutyric acid receptor subunit gamma-2 | Gamma-aminobutyric acid receptor subunit gamma-3 | Gamma-aminobutyric acid receptor subunit pi | Gamma-aminobutyric acid receptor subunit theta,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL1962,Gamma-aminobutyric acid receptor subunit alpha-1,SINGLE PROTEIN,Homo sapiens,P14867,Gamma-aminobutyric acid receptor subunit alpha-1,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2093872,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Homo sapiens,O00591 | O14764 | P14867 | P18505 | P18507 | P28472 | P31644 | P34903 | P47869 | P47870 | P48169 | P78334 | Q16445 | Q8N1C3 | Q99928 | Q9UN88,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit delta | Gamma-aminobutyric acid receptor subunit epsilon | Gamma-aminobutyric acid receptor subunit gamma-1 | Gamma-aminobutyric acid receptor subunit gamma-2 | Gamma-aminobutyric acid receptor subunit gamma-3 | Gamma-aminobutyric acid receptor subunit pi | Gamma-aminobutyric acid receptor subunit theta,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094107,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Bos taurus,P08219 | P08220 | P10063 | P10064 | P20237 | P22300,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094120,GABA-A receptor; alpha-3/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P28472 | P34903,Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094121,GABA-A receptor; alpha-1/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P14867 | P18507 | P28472,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094122,GABA-A receptor; alpha-5/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P28472 | P31644,Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094130,GABA-A receptor; alpha-2/beta-3/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P28472 | P47869,Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2094133,GABA-A receptor; anion channel,PROTEIN COMPLEX GROUP,Mus musculus,A2AMW3 | P16305 | P22723 | P22933 | P26048 | P26049 | P27681 | P50571 | P62812 | P63080 | Q8BHJ7 | Q8QZW7 | Q9D6F4 | Q9JLF1 | Q9R0Y8,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit alpha-4 | Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit delta | Gamma-aminobutyric acid receptor subunit epsilon | Gamma-aminobutyric acid receptor subunit gamma-1 | Gamma-aminobutyric acid receptor subunit gamma-2 | Gamma-aminobutyric acid receptor subunit gamma-3 | Gamma-aminobutyric acid receptor subunit pi | Gamma-aminobutyric acid receptor subunit theta,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2095167,GABA-A receptor; alpha-1/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P62813 | P63138,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2095172,GABA-A receptor; alpha-1/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P14867 | P18507 | P47870,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111327,GABA A receptor alpha-2/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P23576 | P63138,Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111339,GABA A receptor alpha-3/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P34903 | P47870,Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111343,GABA A receptor alpha-3/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P20236 | P63138,Gamma-aminobutyric acid receptor subunit alpha-3 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111365,GABA A receptor alpha-6/beta-2/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P30191 | P63138,Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111374,GABA A receptor alpha-5/beta-3/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P19969 | P63079,Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111392,GABA A receptor alpha-1/beta-1/gamma-2,PROTEIN COMPLEX,Homo sapiens,P14867 | P18505 | P18507,Gamma-aminobutyric acid receptor subunit alpha-1 | Gamma-aminobutyric acid receptor subunit beta-1 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2111413,GABA A receptor alpha-2/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P47869 | P47870,Gamma-aminobutyric acid receptor subunit alpha-2 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL237,Kappa-type opioid receptor,SINGLE PROTEIN,Homo sapiens,P41145,Kappa-type opioid receptor,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL2419,Translocator protein,SINGLE PROTEIN,Bos taurus,P30535,Translocator protein,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL296,Gamma-aminobutyric acid receptor subunit gamma-1,SINGLE PROTEIN,Rattus norvegicus,P23574,Gamma-aminobutyric acid receptor subunit gamma-1,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL300,Gamma-aminobutyric acid receptor subunit alpha-5,SINGLE PROTEIN,Rattus norvegicus,P19969,Gamma-aminobutyric acid receptor subunit alpha-5,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL3026,Gamma-aminobutyric acid receptor subunit alpha-3,SINGLE PROTEIN,Homo sapiens,P34903,Gamma-aminobutyric acid receptor subunit alpha-3,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL328,Gamma-aminobutyric acid receptor subunit alpha-3,SINGLE PROTEIN,Rattus norvegicus,P20236,Gamma-aminobutyric acid receptor subunit alpha-3,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL341,Gamma-aminobutyric acid receptor subunit alpha-2,SINGLE PROTEIN,Rattus norvegicus,P23576,Gamma-aminobutyric acid receptor subunit alpha-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL343,Gamma-aminobutyric acid receptor subunit alpha-1,SINGLE PROTEIN,Rattus norvegicus,P62813,Gamma-aminobutyric acid receptor subunit alpha-1,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4296054,Gamma-aminobutyric acid receptor subunit alpha-6/beta-3/gamma-2,PROTEIN COMPLEX,Rattus norvegicus,P18508 | P30191 | P63079,Gamma-aminobutyric acid receptor subunit alpha-6 | Gamma-aminobutyric acid receptor subunit beta-3 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4523641,Gamma-aminobutyric acid receptor subunit alpha-5/beta-2/gamma-2,PROTEIN COMPLEX,Homo sapiens,P18507 | P31644 | P47870,Gamma-aminobutyric acid receptor subunit alpha-5 | Gamma-aminobutyric acid receptor subunit beta-2 | Gamma-aminobutyric acid receptor subunit gamma-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4552,Translocator protein,SINGLE PROTEIN,Rattus norvegicus,P16257,Translocator protein,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL4956,Gamma-aminobutyric acid receptor subunit alpha-2,SINGLE PROTEIN,Homo sapiens,P47869,Gamma-aminobutyric acid receptor subunit alpha-2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5112,Gamma-aminobutyric acid receptor subunit alpha-5,SINGLE PROTEIN,Homo sapiens,P31644,Gamma-aminobutyric acid receptor subunit alpha-5,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5738,"Fatty acid-binding protein, liver",SINGLE PROTEIN,Rattus norvegicus,P02692,"Fatty acid-binding protein, liver",ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5763,Cholinesterase,SINGLE PROTEIN,Equus caballus,P81908,Cholinesterase,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5847,Aldo-keto reductase family 1 member C2,SINGLE PROTEIN,Homo sapiens,P52895,Aldo-keto reductase family 1 member C2,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL5905,Aldo-keto reductase family 1 member C1,SINGLE PROTEIN,Homo sapiens,Q04828,Aldo-keto reductase family 1 member C1,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K16508793,diazepam,36,2,CHEMBL12,CHEMBL612558,ADMET,ADMET,,,,ChEMBL_activity,5.0
 BRD-K08109516,L-701324,66,2,CHEMBL31741,CHEMBL1907608,Glutamate NMDA receptor,PROTEIN COMPLEX GROUP,Rattus norvegicus,P35439 | Q00959 | Q00960 | Q00961 | Q62645 | Q8VHN2 | Q9R1M7,"Glutamate receptor ionotropic, NMDA 1 | Glutamate receptor ionotropic, NMDA 2A | Glutamate receptor ionotropic, NMDA 2B | Glutamate receptor ionotropic, NMDA 2C | Glutamate receptor ionotropic, NMDA 2D | Glutamate receptor ionotropic, NMDA 3A | Glutamate receptor ionotropic, NMDA 3B",ChEMBL_activity,5.0
 BRD-K08109516,L-701324,66,2,CHEMBL31741,CHEMBL2096666,Glutamate NMDA receptor; Grin1/Grin2b,PROTEIN COMPLEX,Rattus norvegicus,P35439 | Q00960,"Glutamate receptor ionotropic, NMDA 1 | Glutamate receptor ionotropic, NMDA 2B",ChEMBL_activity,5.0
 BRD-K08109516,L-701324,66,2,CHEMBL31741,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
@@ -252,37 +240,12 @@ BRD-K08109516,L-701324,66,2,CHEMBL31741,CHEMBL330,"Glutamate receptor ionotropic
 BRD-K08109516,L-701324,66,2,CHEMBL31741,CHEMBL3356,Cytochrome P450 1A2,SINGLE PROTEIN,Homo sapiens,P05177,Cytochrome P450 1A2,ChEMBL_activity,5.0
 BRD-K08109516,L-701324,66,2,CHEMBL31741,CHEMBL3563,Cruzipain,SINGLE PROTEIN,Trypanosoma cruzi,P25779,Cruzipain,ChEMBL_activity,5.0
 BRD-K08109516,L-701324,66,2,CHEMBL31741,CHEMBL376,Rattus norvegicus,ORGANISM,Rattus norvegicus,,,ChEMBL_activity,5.0
-BRD-K09991945,GSK-3-inhibitor-II,78,2,CHEMBL5723360,CHEMBL2334,Caspase-3,SINGLE PROTEIN,Homo sapiens,P42574,Caspase-3,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL1867,Alpha-2A adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P08913,Alpha-2A adrenergic receptor,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL1916,Alpha-2C adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P18825,Alpha-2C adrenergic receptor,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL1942,Alpha-2B adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P18089,Alpha-2B adrenergic receptor,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL2095158,Adrenergic receptor alpha-2,PROTEIN FAMILY,Homo sapiens,P08913 | P18089 | P18825,Alpha-2A adrenergic receptor | Alpha-2B adrenergic receptor | Alpha-2C adrenergic receptor,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL229,Alpha-1A adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P35348,Alpha-1A adrenergic receptor,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL237,Kappa-type opioid receptor,SINGLE PROTEIN,Homo sapiens,P41145,Kappa-type opioid receptor,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL3397,Cytochrome P450 2C9,SINGLE PROTEIN,Homo sapiens,P11712,Cytochrome P450 2C9,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL3923,Nischarin,SINGLE PROTEIN,Homo sapiens,Q9Y2I1,Nischarin,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL5221,Nischarin,SINGLE PROTEIN,Rattus norvegicus,Q4G017,Nischarin,ChEMBL_activity,5.0
-BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K04170657,psoromic-acid,77,2,CHEMBL176570,CHEMBL3471,Human immunodeficiency virus type 1 integrase,SINGLE PROTEIN,Human immunodeficiency virus 1,Q7ZJM1,Gag-Pol polyprotein,ChEMBL_activity,5.0
+BRD-A77349281,RK-682,74,2,CHEMBL426373,CHEMBL2723,M-phase inducer phosphatase 2,SINGLE PROTEIN,Mus musculus,P30306,M-phase inducer phosphatase 2,ChEMBL_activity,5.0
+BRD-A77349281,RK-682,74,2,CHEMBL426373,CHEMBL335,Tyrosine-protein phosphatase non-receptor type 1,SINGLE PROTEIN,Homo sapiens,P18031,Tyrosine-protein phosphatase non-receptor type 1,ChEMBL_activity,5.0
+BRD-A77349281,RK-682,74,2,CHEMBL426373,CHEMBL3807,Tyrosine-protein phosphatase non-receptor type 2,SINGLE PROTEIN,Homo sapiens,P17706,Tyrosine-protein phosphatase non-receptor type 2,ChEMBL_activity,5.0
 BRD-K34098590,tienilic-acid,73,2,CHEMBL267744,CHEMBL2622,Aldo-keto reductase family 1 member B1,SINGLE PROTEIN,Rattus norvegicus,P07943,Aldo-keto reductase family 1 member B1,ChEMBL_activity,5.0
 BRD-K34098590,tienilic-acid,73,2,CHEMBL267744,CHEMBL3397,Cytochrome P450 2C9,SINGLE PROTEIN,Homo sapiens,P11712,Cytochrome P450 2C9,ChEMBL_activity,5.0
-BRD-K60476892,YC-1,85,2,CHEMBL5838159,CHEMBL1892,Glutamate carboxypeptidase 2,SINGLE PROTEIN,Homo sapiens,Q04609,Glutamate carboxypeptidase 2,ChEMBL_activity,5.0
-BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL276,Muscarinic acetylcholine receptor M1,SINGLE PROTEIN,Rattus norvegicus,P08482,Muscarinic acetylcholine receptor M1,ChEMBL_activity,5.0
-BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
-BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL4040,Mitogen-activated protein kinase 1,SINGLE PROTEIN,Homo sapiens,P28482,Mitogen-activated protein kinase 1,ChEMBL_activity,5.0
-BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL4096,Cellular tumor antigen p53,SINGLE PROTEIN,Homo sapiens,P04637,Cellular tumor antigen p53,ChEMBL_activity,5.0
-BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL4261,Hypoxia-inducible factor 1-alpha,SINGLE PROTEIN,Homo sapiens,Q16665,Hypoxia-inducible factor 1-alpha,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL1899,5-hydroxytryptamine receptor 3A,SINGLE PROTEIN,Homo sapiens,P46098,5-hydroxytryptamine receptor 3A,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL1916,Alpha-2C adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P18825,Alpha-2C adrenergic receptor,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL2111332,Serotonin 3 (5-HT3) receptor,PROTEIN COMPLEX,Homo sapiens,O95264 | P46098,5-hydroxytryptamine receptor 3A | 5-hydroxytryptamine receptor 3B,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL228,Sodium-dependent serotonin transporter,SINGLE PROTEIN,Homo sapiens,P31645,Sodium-dependent serotonin transporter,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL231,Histamine H1 receptor,SINGLE PROTEIN,Homo sapiens,P35367,Histamine H1 receptor,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL240,Voltage-gated inwardly rectifying potassium channel KCNH2,SINGLE PROTEIN,Homo sapiens,Q12809,Voltage-gated inwardly rectifying potassium channel KCNH2,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL3895,5-hydroxytryptamine receptor 3B,SINGLE PROTEIN,Homo sapiens,O95264,5-hydroxytryptamine receptor 3B,ChEMBL_activity,5.0
-BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K04170657,psoromic-acid,77,2,CHEMBL176570,CHEMBL3471,Human immunodeficiency virus type 1 integrase,SINGLE PROTEIN,Human immunodeficiency virus 1,Q7ZJM1,Gag-Pol polyprotein,ChEMBL_activity,5.0
 BRD-K67439147,SIB-1893,80,2,CHEMBL88612,CHEMBL1865,Protein deacetylase HDAC6,SINGLE PROTEIN,Homo sapiens,Q9UBN7,Protein deacetylase HDAC6,ChEMBL_activity,5.0
 BRD-K67439147,SIB-1893,80,2,CHEMBL88612,CHEMBL2564,Metabotropic glutamate receptor 5,SINGLE PROTEIN,Rattus norvegicus,P31424,Metabotropic glutamate receptor 5,ChEMBL_activity,5.0
 BRD-K67439147,SIB-1893,80,2,CHEMBL88612,CHEMBL3227,Metabotropic glutamate receptor 5,SINGLE PROTEIN,Homo sapiens,P41594,Metabotropic glutamate receptor 5,ChEMBL_activity,5.0
@@ -290,54 +253,16 @@ BRD-K67439147,SIB-1893,80,2,CHEMBL88612,CHEMBL5150,Luciferin 4-monooxygenase,SIN
 BRD-K67439147,SIB-1893,80,2,CHEMBL88612,CHEMBL5162,Neuropeptide S receptor,SINGLE PROTEIN,Homo sapiens,Q6W5P4,Neuropeptide S receptor,ChEMBL_activity,5.0
 BRD-K67439147,SIB-1893,80,2,CHEMBL88612,CHEMBL5567,Luciferin 4-monooxygenase,SINGLE PROTEIN,Photinus pyralis,P08659,Luciferin 4-monooxygenase,ChEMBL_activity,5.0
 BRD-K67439147,SIB-1893,80,2,CHEMBL88612,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL1795174,Mitogen-activated protein kinase 8,SINGLE PROTEIN,Mus musculus,Q91Y86,Mitogen-activated protein kinase 8,ChEMBL_activity,5.0
-BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL2147,Serine/threonine-protein kinase pim-1,SINGLE PROTEIN,Homo sapiens,P11309,Serine/threonine-protein kinase pim-1,ChEMBL_activity,5.0
-BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL3471,Human immunodeficiency virus type 1 integrase,SINGLE PROTEIN,Human immunodeficiency virus 1,Q7ZJM1,Gag-Pol polyprotein,ChEMBL_activity,5.0
-BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL3817719,Synapsin-1,SINGLE PROTEIN,Bos taurus,P17599,Synapsin-1,ChEMBL_activity,5.0
-BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL4523582,Replicase polyprotein 1ab,SINGLE PROTEIN,Severe acute respiratory syndrome coronavirus 2,P0DTD1,Replicase polyprotein 1ab,ChEMBL_activity,5.0
-BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL1980,Sodium channel protein type 5 subunit alpha,SINGLE PROTEIN,Homo sapiens,Q14524,Sodium channel protein type 5 subunit alpha,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL2034,Glucocorticoid receptor,SINGLE PROTEIN,Homo sapiens,P04150,Glucocorticoid receptor,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL2047,Bile acid receptor,SINGLE PROTEIN,Homo sapiens,Q96RI1,Bile acid receptor,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL2069,Thromboxane A2 receptor,SINGLE PROTEIN,Homo sapiens,P21731,Thromboxane A2 receptor,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL208,Progesterone receptor,SINGLE PROTEIN,Homo sapiens,P06401,Progesterone receptor,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL237,Kappa-type opioid receptor,SINGLE PROTEIN,Homo sapiens,P41145,Kappa-type opioid receptor,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL256,Adenosine receptor A3,SINGLE PROTEIN,Homo sapiens,P0DMS8,Adenosine receptor A3,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL288,"3',5'-cyclic-AMP phosphodiesterase 4D",SINGLE PROTEIN,Homo sapiens,Q08499,"3',5'-cyclic-AMP phosphodiesterase 4D",ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3397,Cytochrome P450 2C9,SINGLE PROTEIN,Homo sapiens,P11712,Cytochrome P450 2C9,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3401,Nuclear receptor subfamily 1 group I member 2,SINGLE PROTEIN,Homo sapiens,O75469,Nuclear receptor subfamily 1 group I member 2,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL361,Saccharomyces cerevisiae,ORGANISM,Saccharomyces cerevisiae,,,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL364,Plasmodium falciparum,ORGANISM,Plasmodium falciparum,,,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL369,Cavia porcellus,ORGANISM,Cavia porcellus,,,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3762,Voltage-dependent L-type calcium channel subunit alpha-1C,SINGLE PROTEIN,Rattus norvegicus,P22002,Voltage-dependent L-type calcium channel subunit alpha-1C,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL613963,Danio rerio,ORGANISM,Danio rerio,,,ChEMBL_activity,5.0
-BRD-K56596464,QX-314,96,2,CHEMBL1255750,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
-BRD-K56596464,QX-314,96,2,CHEMBL1255750,CHEMBL1293237,RecQ-like DNA helicase BLM,SINGLE PROTEIN,Homo sapiens,P54132,RecQ-like DNA helicase BLM,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL1293231,Nuclear receptor ROR-gamma,SINGLE PROTEIN,Mus musculus,P51450,Nuclear receptor ROR-gamma,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL260,Mitogen-activated protein kinase 14,SINGLE PROTEIN,Homo sapiens,Q16539,Mitogen-activated protein kinase 14,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL2793,Casein kinase I isoform alpha,SINGLE PROTEIN,Homo sapiens,P48729,Casein kinase I isoform alpha,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL2828,Casein kinase I isoform delta,SINGLE PROTEIN,Homo sapiens,P48730,Casein kinase I isoform delta,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL3886,Mitogen-activated protein kinase kinase kinase 20,SINGLE PROTEIN,Homo sapiens,Q9NYL2,Mitogen-activated protein kinase kinase kinase 20,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL395,HepG2,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL4014,Tyrosine-protein kinase ABL2,SINGLE PROTEIN,Homo sapiens,P42684,Tyrosine-protein kinase ABL2,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL4267,TGF-beta receptor type-2,SINGLE PROTEIN,Homo sapiens,P37173,TGF-beta receptor type-2,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL4439,TGF-beta receptor type-1,SINGLE PROTEIN,Homo sapiens,P36897,TGF-beta receptor type-1,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL614822,NIH3T3,CELL-LINE,Mus musculus,,,ChEMBL_activity,5.0
-BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL6196188,Serine/threonine protein kinase YCK2,SINGLE PROTEIN,Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast),A0A1D8PKB4,Serine/threonine protein kinase YCK2,ChEMBL_activity,5.0
-BRD-K35629949,SR-27897,69,2,CHEMBL249973,CHEMBL1901,Cholecystokinin receptor type A,SINGLE PROTEIN,Homo sapiens,P32238,Cholecystokinin receptor type A,ChEMBL_activity,5.0
-BRD-K08619838,tremorine,98,2,CHEMBL1483237,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
-BRD-K08619838,tremorine,98,2,CHEMBL1483237,CHEMBL4372,Lethal factor,SINGLE PROTEIN,Bacillus anthracis,P15917,Lethal factor,ChEMBL_activity,5.0
-BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL1293255,15-hydroxyprostaglandin dehydrogenase [NAD(+)],SINGLE PROTEIN,Homo sapiens,P15428,15-hydroxyprostaglandin dehydrogenase [NAD(+)],ChEMBL_activity,5.0
-BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
-BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL3563,Cruzipain,SINGLE PROTEIN,Trypanosoma cruzi,P25779,Cruzipain,ChEMBL_activity,5.0
-BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL372,Homo sapiens,ORGANISM,Homo sapiens,,,ChEMBL_activity,5.0
-BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL4159,3-hydroxyacyl-CoA dehydrogenase type-2,SINGLE PROTEIN,Homo sapiens,Q99714,3-hydroxyacyl-CoA dehydrogenase type-2,ChEMBL_activity,5.0
-BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL4296519,Platelet,CELL-LINE,,,,ChEMBL_activity,5.0
-BRD-K55034111,pefloxacin,97,2,CHEMBL267648,CHEMBL234,D(3) dopamine receptor,SINGLE PROTEIN,Homo sapiens,P35462,D(3) dopamine receptor,ChEMBL_activity,5.0
+BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL1075189,Pyruvate kinase PKM,SINGLE PROTEIN,Homo sapiens,P14618,Pyruvate kinase PKM,ChEMBL_activity,5.0
+BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL1293232,Survival motor neuron protein,SINGLE PROTEIN,Homo sapiens,Q16637,Survival motor neuron protein,ChEMBL_activity,5.0
+BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL276,Muscarinic acetylcholine receptor M1,SINGLE PROTEIN,Rattus norvegicus,P08482,Muscarinic acetylcholine receptor M1,ChEMBL_activity,5.0
+BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
+BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL5162,Neuropeptide S receptor,SINGLE PROTEIN,Homo sapiens,Q6W5P4,Neuropeptide S receptor,ChEMBL_activity,5.0
+BRD-K99107520,felbamate,68,2,CHEMBL1094,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL1293238,Inositol monophosphatase 1,SINGLE PROTEIN,Rattus norvegicus,P97697,Inositol monophosphatase 1,ChEMBL_activity,5.0
+BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL1941,Histamine H2 receptor,SINGLE PROTEIN,Homo sapiens,P25021,Histamine H2 receptor,ChEMBL_activity,5.0
+BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL2882,Histamine H2 receptor,SINGLE PROTEIN,Cavia porcellus,P47747,Histamine H2 receptor,ChEMBL_activity,5.0
+BRD-K11107424,tiotidine,61,2,CHEMBL269646,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
 BRD-K98769987,flumazenil,88,2,CHEMBL407,CHEMBL1293231,Nuclear receptor ROR-gamma,SINGLE PROTEIN,Mus musculus,P51450,Nuclear receptor ROR-gamma,ChEMBL_activity,5.0
 BRD-K98769987,flumazenil,88,2,CHEMBL407,CHEMBL1293232,Survival motor neuron protein,SINGLE PROTEIN,Homo sapiens,Q16637,Survival motor neuron protein,ChEMBL_activity,5.0
 BRD-K98769987,flumazenil,88,2,CHEMBL407,CHEMBL1293285,Endonuclease 4,SINGLE PROTEIN,Escherichia coli K-12,P0A6C1,Endonuclease 4,ChEMBL_activity,5.0
@@ -366,3 +291,78 @@ BRD-K98769987,flumazenil,88,2,CHEMBL407,CHEMBL3622,Cytochrome P450 2C19,SINGLE P
 BRD-K98769987,flumazenil,88,2,CHEMBL407,CHEMBL4956,Gamma-aminobutyric acid receptor subunit alpha-2,SINGLE PROTEIN,Homo sapiens,P47869,Gamma-aminobutyric acid receptor subunit alpha-2,ChEMBL_activity,5.0
 BRD-K98769987,flumazenil,88,2,CHEMBL407,CHEMBL5112,Gamma-aminobutyric acid receptor subunit alpha-5,SINGLE PROTEIN,Homo sapiens,P31644,Gamma-aminobutyric acid receptor subunit alpha-5,ChEMBL_activity,5.0
 BRD-K98769987,flumazenil,88,2,CHEMBL407,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K09991945,GSK-3-inhibitor-II,78,2,CHEMBL5723360,CHEMBL2334,Caspase-3,SINGLE PROTEIN,Homo sapiens,P42574,Caspase-3,ChEMBL_activity,5.0
+BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL276,Muscarinic acetylcholine receptor M1,SINGLE PROTEIN,Rattus norvegicus,P08482,Muscarinic acetylcholine receptor M1,ChEMBL_activity,5.0
+BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
+BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL4040,Mitogen-activated protein kinase 1,SINGLE PROTEIN,Homo sapiens,P28482,Mitogen-activated protein kinase 1,ChEMBL_activity,5.0
+BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL4096,Cellular tumor antigen p53,SINGLE PROTEIN,Homo sapiens,P04637,Cellular tumor antigen p53,ChEMBL_activity,5.0
+BRD-K08996725,zolantidine,71,2,CHEMBL419296,CHEMBL4261,Hypoxia-inducible factor 1-alpha,SINGLE PROTEIN,Homo sapiens,Q16665,Hypoxia-inducible factor 1-alpha,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL1867,Alpha-2A adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P08913,Alpha-2A adrenergic receptor,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL1916,Alpha-2C adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P18825,Alpha-2C adrenergic receptor,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL1942,Alpha-2B adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P18089,Alpha-2B adrenergic receptor,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL2095158,Adrenergic receptor alpha-2,PROTEIN FAMILY,Homo sapiens,P08913 | P18089 | P18825,Alpha-2A adrenergic receptor | Alpha-2B adrenergic receptor | Alpha-2C adrenergic receptor,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL229,Alpha-1A adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P35348,Alpha-1A adrenergic receptor,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL237,Kappa-type opioid receptor,SINGLE PROTEIN,Homo sapiens,P41145,Kappa-type opioid receptor,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL3397,Cytochrome P450 2C9,SINGLE PROTEIN,Homo sapiens,P11712,Cytochrome P450 2C9,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL340,Cytochrome P450 3A4,SINGLE PROTEIN,Homo sapiens,P08684,Cytochrome P450 3A4,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL3923,Nischarin,SINGLE PROTEIN,Homo sapiens,Q9Y2I1,Nischarin,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL5221,Nischarin,SINGLE PROTEIN,Rattus norvegicus,Q4G017,Nischarin,ChEMBL_activity,5.0
+BRD-K01638814,rilmenidine,75,2,CHEMBL289480,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL1980,Sodium channel protein type 5 subunit alpha,SINGLE PROTEIN,Homo sapiens,Q14524,Sodium channel protein type 5 subunit alpha,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL2034,Glucocorticoid receptor,SINGLE PROTEIN,Homo sapiens,P04150,Glucocorticoid receptor,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL2047,Bile acid receptor,SINGLE PROTEIN,Homo sapiens,Q96RI1,Bile acid receptor,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL2069,Thromboxane A2 receptor,SINGLE PROTEIN,Homo sapiens,P21731,Thromboxane A2 receptor,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL208,Progesterone receptor,SINGLE PROTEIN,Homo sapiens,P06401,Progesterone receptor,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL237,Kappa-type opioid receptor,SINGLE PROTEIN,Homo sapiens,P41145,Kappa-type opioid receptor,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL256,Adenosine receptor A3,SINGLE PROTEIN,Homo sapiens,P0DMS8,Adenosine receptor A3,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL288,"3',5'-cyclic-AMP phosphodiesterase 4D",SINGLE PROTEIN,Homo sapiens,Q08499,"3',5'-cyclic-AMP phosphodiesterase 4D",ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3397,Cytochrome P450 2C9,SINGLE PROTEIN,Homo sapiens,P11712,Cytochrome P450 2C9,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3401,Nuclear receptor subfamily 1 group I member 2,SINGLE PROTEIN,Homo sapiens,O75469,Nuclear receptor subfamily 1 group I member 2,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL361,Saccharomyces cerevisiae,ORGANISM,Saccharomyces cerevisiae,,,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL364,Plasmodium falciparum,ORGANISM,Plasmodium falciparum,,,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL369,Cavia porcellus,ORGANISM,Cavia porcellus,,,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3762,Voltage-dependent L-type calcium channel subunit alpha-1C,SINGLE PROTEIN,Rattus norvegicus,P22002,Voltage-dependent L-type calcium channel subunit alpha-1C,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-A30815329,felodipine,94,2,CHEMBL1480,CHEMBL613963,Danio rerio,ORGANISM,Danio rerio,,,ChEMBL_activity,5.0
+BRD-K55034111,pefloxacin,97,2,CHEMBL267648,CHEMBL234,D(3) dopamine receptor,SINGLE PROTEIN,Homo sapiens,P35462,D(3) dopamine receptor,ChEMBL_activity,5.0
+BRD-K60476892,YC-1,85,2,CHEMBL5838159,CHEMBL1892,Glutamate carboxypeptidase 2,SINGLE PROTEIN,Homo sapiens,Q04609,Glutamate carboxypeptidase 2,ChEMBL_activity,5.0
+BRD-K08619838,tremorine,98,2,CHEMBL1483237,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
+BRD-K08619838,tremorine,98,2,CHEMBL1483237,CHEMBL4372,Lethal factor,SINGLE PROTEIN,Bacillus anthracis,P15917,Lethal factor,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL1293231,Nuclear receptor ROR-gamma,SINGLE PROTEIN,Mus musculus,P51450,Nuclear receptor ROR-gamma,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL260,Mitogen-activated protein kinase 14,SINGLE PROTEIN,Homo sapiens,Q16539,Mitogen-activated protein kinase 14,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL2793,Casein kinase I isoform alpha,SINGLE PROTEIN,Homo sapiens,P48729,Casein kinase I isoform alpha,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL2828,Casein kinase I isoform delta,SINGLE PROTEIN,Homo sapiens,P48730,Casein kinase I isoform delta,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL3879801,NON-PROTEIN TARGET,NON-MOLECULAR,,,,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL3886,Mitogen-activated protein kinase kinase kinase 20,SINGLE PROTEIN,Homo sapiens,Q9NYL2,Mitogen-activated protein kinase kinase kinase 20,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL395,HepG2,CELL-LINE,Homo sapiens,,,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL4014,Tyrosine-protein kinase ABL2,SINGLE PROTEIN,Homo sapiens,P42684,Tyrosine-protein kinase ABL2,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL4267,TGF-beta receptor type-2,SINGLE PROTEIN,Homo sapiens,P37173,TGF-beta receptor type-2,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL4439,TGF-beta receptor type-1,SINGLE PROTEIN,Homo sapiens,P36897,TGF-beta receptor type-1,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL614822,NIH3T3,CELL-LINE,Mus musculus,,,ChEMBL_activity,5.0
+BRD-K06234293,LY-364947,104,2,CHEMBL261454,CHEMBL6196188,Serine/threonine protein kinase YCK2,SINGLE PROTEIN,Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast),A0A1D8PKB4,Serine/threonine protein kinase YCK2,ChEMBL_activity,5.0
+BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL1795174,Mitogen-activated protein kinase 8,SINGLE PROTEIN,Mus musculus,Q91Y86,Mitogen-activated protein kinase 8,ChEMBL_activity,5.0
+BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL2147,Serine/threonine-protein kinase pim-1,SINGLE PROTEIN,Homo sapiens,P11309,Serine/threonine-protein kinase pim-1,ChEMBL_activity,5.0
+BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL3471,Human immunodeficiency virus type 1 integrase,SINGLE PROTEIN,Human immunodeficiency virus 1,Q7ZJM1,Gag-Pol polyprotein,ChEMBL_activity,5.0
+BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL3817719,Synapsin-1,SINGLE PROTEIN,Bos taurus,P17599,Synapsin-1,ChEMBL_activity,5.0
+BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL4523582,Replicase polyprotein 1ab,SINGLE PROTEIN,Severe acute respiratory syndrome coronavirus 2,P0DTD1,Replicase polyprotein 1ab,ChEMBL_activity,5.0
+BRD-K95885906,quercetagetin,93,2,CHEMBL413552,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
+BRD-K56596464,QX-314,96,2,CHEMBL1255750,CHEMBL1293235,Prelamin-A/C,SINGLE PROTEIN,Homo sapiens,P02545,Prelamin-A/C,ChEMBL_activity,5.0
+BRD-K56596464,QX-314,96,2,CHEMBL1255750,CHEMBL1293237,RecQ-like DNA helicase BLM,SINGLE PROTEIN,Homo sapiens,P54132,RecQ-like DNA helicase BLM,ChEMBL_activity,5.0
+BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL1293255,15-hydroxyprostaglandin dehydrogenase [NAD(+)],SINGLE PROTEIN,Homo sapiens,P15428,15-hydroxyprostaglandin dehydrogenase [NAD(+)],ChEMBL_activity,5.0
+BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL289,Cytochrome P450 2D6,SINGLE PROTEIN,Homo sapiens,P10635,Cytochrome P450 2D6,ChEMBL_activity,5.0
+BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL3563,Cruzipain,SINGLE PROTEIN,Trypanosoma cruzi,P25779,Cruzipain,ChEMBL_activity,5.0
+BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL372,Homo sapiens,ORGANISM,Homo sapiens,,,ChEMBL_activity,5.0
+BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL4159,3-hydroxyacyl-CoA dehydrogenase type-2,SINGLE PROTEIN,Homo sapiens,Q99714,3-hydroxyacyl-CoA dehydrogenase type-2,ChEMBL_activity,5.0
+BRD-K84895041,BMY-45778,102,2,CHEMBL125569,CHEMBL4296519,Platelet,CELL-LINE,,,,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL1899,5-hydroxytryptamine receptor 3A,SINGLE PROTEIN,Homo sapiens,P46098,5-hydroxytryptamine receptor 3A,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL1916,Alpha-2C adrenergic receptor,SINGLE PROTEIN,Homo sapiens,P18825,Alpha-2C adrenergic receptor,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL2111332,Serotonin 3 (5-HT3) receptor,PROTEIN COMPLEX,Homo sapiens,O95264 | P46098,5-hydroxytryptamine receptor 3A | 5-hydroxytryptamine receptor 3B,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL228,Sodium-dependent serotonin transporter,SINGLE PROTEIN,Homo sapiens,P31645,Sodium-dependent serotonin transporter,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL231,Histamine H1 receptor,SINGLE PROTEIN,Homo sapiens,P35367,Histamine H1 receptor,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL240,Voltage-gated inwardly rectifying potassium channel KCNH2,SINGLE PROTEIN,Homo sapiens,Q12809,Voltage-gated inwardly rectifying potassium channel KCNH2,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL3895,5-hydroxytryptamine receptor 3B,SINGLE PROTEIN,Homo sapiens,O95264,5-hydroxytryptamine receptor 3B,ChEMBL_activity,5.0
+BRD-K08924299,palonosetron,82,2,CHEMBL1189679,CHEMBL612545,Unchecked,UNCHECKED,,,,ChEMBL_activity,5.0
