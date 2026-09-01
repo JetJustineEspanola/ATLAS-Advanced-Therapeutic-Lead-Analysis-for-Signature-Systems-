@@ -7,8 +7,10 @@ import type {
   ResearchStatistics
 } from "../types";
 
+const API_BASE = (import.meta.env.VITE_API_URL ?? "").replace(/\/$/, "");
+
 async function request<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, init);
+  const response = await fetch(`${API_BASE}${url}`, init);
   if (!response.ok) {
     let message = `Request failed: ${response.status}`;
     try {
