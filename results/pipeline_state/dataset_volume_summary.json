@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-01T12:31:01.953774+00:00",
+  "created_utc": "2026-09-01T12:53:10.343157+00:00",
   "candidate_tables_scanned": [
     "data/enriched/dataset_candidates_independence_scored.csv",
     "data/enriched/transcriptomic_validation_candidates.csv"
@@ -8,9 +8,9 @@
   "unique_dataset_accessions_discovered": 193,
   "unique_accessions_with_local_files": 5,
   "local_data_directory": {
-    "bytes": 726026871,
-    "mb": 692.3931798934937,
-    "gb": 0.6761652147397399,
+    "bytes": 726026908,
+    "mb": 692.3932151794434,
+    "gb": 0.6761652491986752,
     "human": "692.39 MB"
   },
   "comparison_downloads": {
@@ -20,9 +20,9 @@
     "human": "47.79 MB"
   },
   "tracked_local_total": {
-    "bytes": 1258512890,
-    "mb": 1200.211420059204,
-    "gb": 1.1720814649015665,
+    "bytes": 1258512927,
+    "mb": 1200.2114553451538,
+    "gb": 1.1720814993605018,
     "human": "1.17 GB"
   },
   "catalog_advertised_remote_size": {
