@@ -58,7 +58,7 @@ runner_script,04u_integrated_evidence_matrix.py,PASS,
 writable_directory,/home/regulus/Documents/ATLAS/results,PASS,
 writable_directory,/home/regulus/Documents/ATLAS/logs,PASS,
 writable_directory,/home/regulus/Documents/ATLAS/data,PASS,
-disk_space,/home/regulus/Documents/ATLAS,PASS,58.30 GiB free; minimum 3.0 GiB
+disk_space,/home/regulus/Documents/ATLAS,PASS,50.71 GiB free; minimum 3.0 GiB
 network_connectivity,NCBI,PASS,eutils.ncbi.nlm.nih.gov
 network_connectivity,STRING,PASS,string-db.org
 network_connectivity,UniProt,PASS,rest.uniprot.org

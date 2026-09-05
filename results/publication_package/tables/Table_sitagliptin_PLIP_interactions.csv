@@ -1,0 +1,8 @@
+ligand,ligand_chain,interaction_type,residue_number,residue,protein_chain,distance,distance_HA,distance_DA,angle,protein_is_donor,sidechain
+LIG,Z,hydrophobic_interactions,711,VAL,A,3.44,,,,,
+LIG,Z,hydrogen_bonds,205,GLU,A,,2.34,3.16,,True,True
+LIG,Z,hydrogen_bonds,662,TYR,A,,2.98,3.87,,True,True
+LIG,Z,hydrogen_bonds,662,TYR,A,,2.88,3.87,,False,True
+LIG,Z,pi_stacks,357,PHE,A,,,,9.73,,
+LIG,Z,pi_stacks,662,TYR,A,,,,26.70,,
+LIG,Z,pi_stacks,666,TYR,A,,,,78.68,,

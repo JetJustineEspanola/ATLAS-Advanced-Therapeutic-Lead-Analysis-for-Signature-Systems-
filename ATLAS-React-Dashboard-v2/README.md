@@ -1,211 +1,172 @@
 # ATLAS React Dashboard v2
 
-A scalable React + FastAPI research interface for the ATLAS trastuzumab-resistance pipeline.
+A React + TypeScript frontend and FastAPI backend for exploring local ATLAS research outputs. It includes candidate evidence tables, dataset eligibility, research charts, settings, documentation and optional developer diagnostics.
 
-## What changed in v2
+For research setup, expected input data, pipeline stages, automation and interpretation, see the [main project README](../README.md).
 
-- Built-in **Documentation** page with pipeline, architecture, evidence roles, API reference, interpretation guardrails, operations, troubleshooting, and development notes.
-- Functional **Settings** page backed by a persistent server-side JSON configuration.
-- **Research Statistics** page with dynamic plots generated from current ATLAS outputs.
-- Optional **Developer Mode** with runtime, filesystem, queue-service, queue-state, artifact registry, and API diagnostics.
-- Settings now control `ATLAS_ROOT`, auto-refresh, refresh interval, table/chart display limits, developer mode, guardrail visibility, and dense tables.
-- Existing ATLAS `.env` one directory above the web project is automatically loaded as a fallback. Secrets are never exposed to React.
+## First-time setup
 
-## Architecture
+Commands assume this dashboard is inside `/home/regulus/Documents/ATLAS`; replace the path for your checkout. You need Python with `venv`, Node.js and npm. The local backend was checked with Python 3.12.13; use Node/npm compatible with `frontend/package-lock.json`.
 
-```text
-React + TypeScript + Vite
-          |
-          | /api/*
-          v
-FastAPI dashboard adapter
-          |
-          v
-ATLAS_ROOT
-├── data/
-├── results/
-├── scripts/
-└── results/pipeline_state/
-```
-
-The UI is intentionally read-focused. It can inspect outputs and diagnostics but does not expose arbitrary shell execution or silently run expensive pipeline stages.
-
-## Quick start
-
-Place/extract the folder inside the existing ATLAS project, for example:
-
-```text
-/home/regulus/Documents/ATLAS/ATLAS-React-Dashboard-v2
-```
-
-The backend automatically tries both:
-
-```text
-ATLAS-React-Dashboard-v2/.env
-../.env
-```
-
-So if your main project already has `/home/regulus/Documents/ATLAS/.env`, you do not need to duplicate secrets.
-
-### Terminal 1 — backend
+Install the backend into its own environment:
 
 ```bash
 cd /home/regulus/Documents/ATLAS/ATLAS-React-Dashboard-v2
-./run_backend.sh
+python3 -m venv backend/.venv
+backend/.venv/bin/python -m pip install -r backend/requirements.txt
 ```
 
-Backend:
+Create this directory's `.env` if absent, or edit it without replacing existing settings:
 
-```text
-http://127.0.0.1:8000
+```dotenv
+ATLAS_ROOT=/home/regulus/Documents/ATLAS
 ```
 
-Health check:
+The root contains `data/` and `results/`. Research API keys belong in the parent project's `.env`, not frontend variables.
 
-```text
-http://127.0.0.1:8000/api/health
-```
-
-### Terminal 2 — frontend
+Install the frontend from its lockfile:
 
 ```bash
-cd /home/regulus/Documents/ATLAS/ATLAS-React-Dashboard-v2
-./run_frontend.sh
+cd /home/regulus/Documents/ATLAS/ATLAS-React-Dashboard-v2/frontend
+npm ci
 ```
 
-Frontend:
+## Start development servers
 
-```text
-http://localhost:5173
+Both servers must run. Start the backend first and keep each terminal open.
+
+### Terminal 1: backend
+
+```bash
+cd /home/regulus/Documents/ATLAS/ATLAS-React-Dashboard-v2/backend
+.venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-## Main pages
+Wait for `Application startup complete.`
 
-### Dashboard
+### Terminal 2: frontend
 
-Live overview of current evidence outputs, dataset funnel, candidate table, recent artifact updates, and primary-validation cohorts.
-
-### Research Statistics
-
-The backend derives statistics from current files rather than using demo values. The page can display:
-
-- Differential-expression volcano plot
-- Exact full-file DEG summary counts
-- Dataset evidence-role composition
-- Pathway/GSEA NES chart when a compatible file exists
-- Integrated candidate score chart when a numeric integrated score is present
-- TGF-beta ranked validation chart when a compatible table exists
-
-The chart layer uses graceful unavailable states. If the required output does not exist or its schema is incompatible, the site says so instead of inventing data.
-
-### Documentation
-
-The documentation is inside the app so research users can inspect methodology while looking at results. It covers:
-
-- scientific scope
-- software/data architecture
-- source databases and evidence roles
-- pipeline stage map
-- chart definitions
-- configuration
-- scientific interpretation guardrails
-- operations/runbook
-- API reference
-- developer extension guide
-- troubleshooting
-- wet-lab handoff principles
-
-### Settings
-
-Saved in:
-
-```text
-ATLAS-React-Dashboard-v2/.atlas-dashboard-settings.json
+```bash
+cd /home/regulus/Documents/ATLAS/ATLAS-React-Dashboard-v2/frontend
+npm run dev
 ```
 
-This file contains only dashboard preferences, not credentials.
+Open **http://localhost:5173/** or the URL printed by Vite.
 
-Available settings:
+Alternative helpers, run from this dashboard directory in separate terminals, are `bash run_backend.sh` and `bash run_frontend.sh`. The backend helper installs requirements on every run. The frontend helper installs packages only if `node_modules` is absent. Each starts only its own server.
 
-| Setting | Purpose |
+Use `Ctrl+C` in each server terminal to stop it.
+
+## Verify connectivity
+
+```bash
+curl --fail http://127.0.0.1:8000/api/health
+curl --fail http://127.0.0.1:8000/api/settings
+curl --fail http://localhost:5173/api/health
+```
+
+The final request checks Vite's proxy. Interactive API documentation is at **http://127.0.0.1:8000/docs**.
+
+If Vite logs `ECONNREFUSED 127.0.0.1:8000`, it cannot reach the backend. Start Terminal 1's command and check its traceback if it exits. Vite startup does not indicate that the API is running. If the API uses another port, update `frontend/vite.config.ts` to match and restart Vite.
+
+## Configuration
+
+| Configuration | Meaning |
 |---|---|
-| `ATLAS_ROOT` | Select the research project directory. Must exist. |
-| Auto refresh | Enable/disable timed dashboard refresh. |
-| Refresh seconds | 5–3600 second refresh interval. |
-| Table/chart limit | 100–10000 display limit. |
-| Developer mode | Unlock read-only operational diagnostics. |
-| Scientific guardrails | Keep interpretation warnings visible. |
-| Dense tables | Compact large result tables. |
+| Backend `ATLAS_ROOT` | Initial research data directory. |
+| Backend `FRONTEND_ORIGIN` | Extra allowed browser origin for direct cross-origin API requests. Defaults already allow localhost and 127.0.0.1 on port 5173 over HTTP. |
+| `frontend/.env.local`: `VITE_API_URL` | Optional API origin without `/api`. Omit for relative requests through Vite. Restart/rebuild after changes. |
+| `.atlas-dashboard-settings.json` | Saved UI settings. Its root takes precedence over the initial environment root once the file exists. |
 
-### Developer Mode
+Environment precedence is process variables, this directory's `.env`, then the parent project's `.env`. Existing values are not overwritten. The example `ATLAS_API_HOST` and `ATLAS_API_PORT` variables are currently unused by the launchers; use Uvicorn arguments and matching proxy configuration.
 
-Enable it in Settings and save. A **Developer** navigation item appears.
+Settings include root, auto refresh, interval (5–3600 seconds), row limit (100–10000), developer mode, scientific guidance and dense tables. Auto refresh controls Dashboard and Research Statistics; generic tables fetch on navigation/query refresh. Developer diagnostics poll every 15 seconds while enabled.
 
-It displays:
+## Pages and data
 
-- Python/runtime information
-- dashboard process PID
-- filesystem total/used/free space
-- `atlas-dataset-queue.service` state
-- dataset queue row/status summary
-- important output-file existence, size, and modification times
-- API endpoint registry
+| Route | Page |
+|---|---|
+| `/` | Dashboard: metrics, funnel, top candidates and activity |
+| `/statistics` | Research Statistics |
+| `/datasets` | Dataset eligibility and independence |
+| `/signature` | Signature Discovery |
+| `/cmap` | CMap Results |
+| `/docking` | Docking Results |
+| `/candidates` | Final Candidates |
+| `/documentation` | In-app documentation |
+| `/settings` | Configuration |
+| `/developer` | Developer diagnostics; requires developer mode |
 
-Developer mode remains read-only.
+Final Candidates reads `results/cmap/integrated_evidence/ATLAS_integrated_evidence_matrix.csv` under the configured root. Top Final Candidates displays its first eight rows in the same order, using final evidence fields. The earlier `results/cmap/final_prioritization/ATLAS_final_candidate_prioritization.csv` is not this page's source.
+
+Datasets prefer the independence-scored CSV in `data/enriched/`; signatures prefer annotated discovery DEGs in `results/differential_expression/`. CMap and docking views can use filename-based source discovery. Inspect displayed source paths when tracing evidence. Generic tables display the first 14 columns and an adjustable row limit; open the source CSV for all columns.
+
+Missing or unreadable files can produce empty views. Starting the app does not generate scientific data. Health `ok: true` means the configured root exists, not that every stage completed.
+
+### Docking score display
+
+The dashboard table labels docking scores in **kcal/mol**. The API's `docking_score` comes from the integrated matrix's `best_affinity_kcal_mol`, not the pose count (`vina_mode_n`) or reference affinity. A dash means the candidate has no score; zero remains a displayed value.
+
+In the artifacts checked on September 6, 2026, sitagliptin has **-9.327 kcal/mol** and clofibrate has **-6.528 kcal/mol**. These values come from the files and will change when evidence is regenerated.
+
+Check the dashboard payload through Vite:
+
+```bash
+curl --fail --silent http://localhost:5173/api/dashboard | python3 -c 'import json, sys; rows = json.load(sys.stdin)["top_candidates"]; print(*[(r["name"], r["docking_score"]) for r in rows], sep="\n")'
+```
+
+New docking output must be incorporated into the integrated matrix before the dashboard can show it. See the [docking data workflow](../README.md#docking-scores-on-the-dashboard). Restart the backend after code changes if it was started without `--reload`.
 
 ## API
 
-```text
-GET /api/health
-GET /api/dashboard
-GET /api/datasets
-GET /api/signature
-GET /api/candidates
-GET /api/cmap
-GET /api/docking
-GET /api/research/statistics
-GET /api/settings
-PUT /api/settings
-GET /api/developer/statistics
-```
+| Method | Endpoint |
+|---|---|
+| GET | `/api/health` |
+| GET | `/api/dashboard` |
+| GET | `/api/datasets` |
+| GET | `/api/signature` |
+| GET | `/api/candidates` |
+| GET | `/api/cmap` |
+| GET | `/api/docking` |
+| GET / PUT | `/api/settings` |
+| GET | `/api/research/statistics` |
+| GET | `/api/developer/statistics` |
 
-`GET /api/developer/statistics` returns HTTP 403 unless Developer Mode is enabled.
+Table responses contain `rows`, `columns` and `source_file`. Developer statistics return HTTP 403 until developer mode is enabled. Settings updates validate the root and field values. See `/docs` for schemas.
 
-## Scientific interpretation rules encoded into the UI
-
-- Negative CMap tau/connectivity = transcriptional opposition, not proof of resistance reversal or efficacy.
-- Docking = structural-computational evidence, not proof of binding or efficacy.
-- PAINS flags = possible assay interference, not toxicity.
-- Network/target support = plausibility, not causal proof.
-- Regulatory absence is missing evidence and should not automatically become a penalty.
-- Mirrors and umbrella datasets should not be double-counted as independent validation.
-- Patient datasets provide translational context unless their design directly supports the resistance contrast being claimed.
-
-## Production build
+## Build and checks
 
 ```bash
-cd frontend
-npm install
+cd /home/regulus/Documents/ATLAS/ATLAS-React-Dashboard-v2/frontend
 npm run build
 ```
 
-Static assets are written to:
+This performs TypeScript checks and writes `frontend/dist/`. `npm run preview` serves a local build preview; keep the API running and verify `/api/health` through that server. There is no frontend `npm test` script.
 
-```text
-frontend/dist/
+Run backend regression checks from this dashboard directory:
+
+```bash
+backend/.venv/bin/python -m unittest discover -s backend -p 'test_*.py' -v
 ```
 
-For deployment, serve the built frontend behind Nginx/Caddy and run FastAPI with a production ASGI process. Keep write/execution privileges separated from the public web process.
+For deployment, serve `dist/` with an `index.html` fallback for browser routes and proxy `/api/` to the backend, preserving the path. Run Uvicorn without `--reload` under a process supervisor. The API has no authentication; shared deployments need access controls outside this application. See the [deployment guide](../README.md#build-and-deployment).
 
-## Adding a new research visualization
+## Troubleshooting
 
-1. Compute/normalize the required data in the FastAPI layer.
-2. Add a typed response shape in `frontend/src/types.ts`.
-3. Add an API function in `frontend/src/lib/api.ts`.
-4. Build a reusable component under `frontend/src/components/statistics/`.
-5. Document the statistic, thresholds, and interpretation limits in the Documentation page.
-6. Prefer full-data calculations on the backend and performance-limited rendering in the browser.
+| Problem | Action |
+|---|---|
+| Connection refused on port 8000 | Start the backend, confirm startup completes, then retry `/api/health`. |
+| Cannot import `main` | Start Uvicorn from the `backend` directory. |
+| Missing Python package | Install requirements using `backend/.venv/bin/python -m pip`. |
+| Port occupied | Inspect the existing server and reuse it, or stop it in its terminal before restarting. |
+| Empty results | Check Settings and `/api/health`, then verify source CSVs exist and are readable. |
+| Missing docking score | Inspect `best_affinity_kcal_mol` in the integrated matrix and regenerate downstream evidence if docking results were updated. |
+| Pose count appears as score | Restart with the corrected backend mapping, then verify `/api/dashboard` returns the candidate affinity. |
+| Root environment change ignored | Update the saved root through Settings. |
+| CORS failure | Check `VITE_API_URL` and the allowed frontend origin; default development uses Vite's proxy. |
+| HTTP 500 | Inspect the backend traceback. |
+| Developer HTTP 403 | Enable developer mode in Settings. |
 
-## Important design rule
+## Scientific scope
 
-Do not make a visual score look more certain than the underlying science. Keep acquisition quality, validation, perturbational evidence, target evidence, structural evidence, safety/regulatory context, and experimental evidence as distinguishable layers.
+CMap, target/network evidence, docking and structural developability support experimental prioritization. They do not establish resistance reversal or clinical efficacy. The UI preserves unavailable evidence and exposes source paths for checking results against pipeline artifacts.

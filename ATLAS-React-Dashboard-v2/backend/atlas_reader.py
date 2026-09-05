@@ -143,14 +143,18 @@ class AtlasReader:
         integrated_path = self.integrated_path()
         integrated = self.read_csv(integrated_path) if integrated_path else pd.DataFrame()
 
-        def find_col(df, needles):
+        def find_col(df, needles, preferred=()):
+            for c in preferred:
+                if c in df.columns:
+                    return c
             for c in df.columns:
                 lc = str(c).lower()
                 if any(n in lc for n in needles):
                     return c
             return None
 
-        docking_col = find_col(integrated, ["docking_score", "docking score", "vina", "binding_affinity"])
+        docking_col = find_col(integrated, [],
+                               ["best_affinity_kcal_mol", "docking_score", "docking score", "vina_score", "binding_affinity"])
         docking_count = int(integrated[docking_col].notna().sum()) if docking_col else len(self.docking()["rows"])
 
         metrics = [
@@ -170,16 +174,16 @@ class AtlasReader:
 
         top_candidates = []
         if not integrated.empty:
-            name_col = find_col(integrated, ["compound", "drug", "pert_iname", "candidate"])
-            cmap_col = find_col(integrated, ["tau", "connectivity"])
-            target_col = find_col(integrated, ["target"])
-            score_col = find_col(integrated, ["integrated", "final_score", "priority_score"])
-            status_col = find_col(integrated, ["priority", "status", "recommendation"])
-            df = integrated.copy()
-            if score_col:
-                numeric = pd.to_numeric(df[score_col], errors="coerce")
-                df = df.assign(_sort=numeric).sort_values("_sort", ascending=False, na_position="last")
-            for _, row in df.head(8).iterrows():
+            name_col = find_col(integrated, ["compound", "drug", "pert_iname", "candidate"],
+                                ["pert_iname", "compound_name", "drug_name", "candidate_name"])
+            cmap_col = find_col(integrated, ["tau", "connectivity"], ["mean_tau", "connectivity_score"])
+            target_col = find_col(integrated, [], ["validated_target_symbol", "target_symbol", "best_network_target", "target"])
+            score_col = find_col(integrated, ["final_score", "priority_score"],
+                                 ["experimental_priority_score", "integrated_prioritization_score", "final_score", "priority_score"])
+            status_col = find_col(integrated, ["priority", "status", "recommendation"],
+                                  ["final_evidence_category", "final_decision", "status", "priority_tier"])
+            # Preserve the same final matrix order exposed by candidates().
+            for _, row in integrated.head(8).iterrows():
                 top_candidates.append({
                     "name": str(clean_value(row.get(name_col)) or "Unnamed") if name_col else "Unnamed",
                     "connectivity_score": clean_value(row.get(cmap_col)) if cmap_col else None,
